@@ -13,11 +13,11 @@ import type {
 } from "../types/commissioning";
 
 type AppMode = "assign" | "inspect";
+export type FloorId = "03" | "04";
 
-const FLOOR_DATA_URL = "/data/floor-04-spaces.json";
-const REGION_DATA_URL = "/data/floor-04-regions.json";
-const ASSIGNMENT_STORAGE_KEY =
-  "lighting-cx-floor-04-region-assignments-v1";
+interface FloorPlanProps {
+  floor: FloorId;
+}
 
 const STATUS_STYLES: Record<
   SpaceStatus | "unassigned",
@@ -59,8 +59,10 @@ function pointsToString(region: FloorRegion): string {
   return region.points.map(([x, y]) => `${x},${y}`).join(" ");
 }
 
-function loadSavedAssignments(): Record<string, string | null> {
-  const savedValue = localStorage.getItem(ASSIGNMENT_STORAGE_KEY);
+function loadSavedAssignments(
+  storageKey: string,
+): Record<string, string | null> {
+  const savedValue = localStorage.getItem(storageKey);
 
   if (!savedValue) {
     return {};
@@ -69,12 +71,17 @@ function loadSavedAssignments(): Record<string, string | null> {
   try {
     return JSON.parse(savedValue) as Record<string, string | null>;
   } catch {
-    localStorage.removeItem(ASSIGNMENT_STORAGE_KEY);
+    localStorage.removeItem(storageKey);
     return {};
   }
 }
 
-export default function FloorPlan() {
+export default function FloorPlan({ floor }: FloorPlanProps) {
+  const floorDataUrl = `/data/floor-${floor}-spaces.json`;
+  const regionDataUrl = `/data/floor-${floor}-regions.json`;
+  const assignmentStorageKey =
+    `lighting-cx-floor-${floor}-region-assignments-v1`;
+
   const [floorData, setFloorData] = useState<FloorData | null>(null);
   const [regionData, setRegionData] = useState<RegionData | null>(null);
   const [mode, setMode] = useState<AppMode>("assign");
@@ -87,19 +94,31 @@ export default function FloorPlan() {
 
   useEffect(() => {
     async function loadData(): Promise<void> {
+      setLoadError("");
+
       try {
         const [floorResponse, regionResponse] = await Promise.all([
-          fetch(FLOOR_DATA_URL),
-          fetch(REGION_DATA_URL),
+          fetch(floorDataUrl),
+          fetch(regionDataUrl),
         ]);
 
         if (!floorResponse.ok || !regionResponse.ok) {
-          throw new Error("The fourth-floor plan data could not be loaded.");
+          throw new Error(`The Floor ${floor} plan data could not be loaded.`);
         }
 
         const loadedFloorData = (await floorResponse.json()) as FloorData;
         const loadedRegionData = (await regionResponse.json()) as RegionData;
-        const savedAssignments = loadSavedAssignments();
+
+        if (
+          loadedFloorData.floor !== floor ||
+          loadedRegionData.floor !== floor
+        ) {
+          throw new Error(`The Floor ${floor} files contain the wrong floor ID.`);
+        }
+
+        const savedAssignments = loadSavedAssignments(
+          assignmentStorageKey,
+        );
 
         setFloorData(loadedFloorData);
         setRegionData({
@@ -114,13 +133,13 @@ export default function FloorPlan() {
         setLoadError(
           error instanceof Error
             ? error.message
-            : "The floor data could not be loaded.",
+            : `The Floor ${floor} data could not be loaded.`,
         );
       }
     }
 
     void loadData();
-  }, []);
+  }, [assignmentStorageKey, floor, floorDataUrl, regionDataUrl]);
 
   const spacesById = useMemo(() => {
     return new Map(
@@ -171,6 +190,17 @@ export default function FloorPlan() {
     setPendingSpaceId(region.assignedSpaceId ?? "");
   }
 
+  function persistAssignments(regions: FloorRegion[]): void {
+    const assignments = Object.fromEntries(
+      regions.map((region) => [region.id, region.assignedSpaceId]),
+    );
+
+    localStorage.setItem(
+      assignmentStorageKey,
+      JSON.stringify(assignments),
+    );
+  }
+
   function saveAssignment(): void {
     if (!regionData || !selectedRegionId || !pendingSpaceId) {
       return;
@@ -209,17 +239,6 @@ export default function FloorPlan() {
     persistAssignments(nextRegions);
   }
 
-  function persistAssignments(regions: FloorRegion[]): void {
-    const assignments = Object.fromEntries(
-      regions.map((region) => [region.id, region.assignedSpaceId]),
-    );
-
-    localStorage.setItem(
-      ASSIGNMENT_STORAGE_KEY,
-      JSON.stringify(assignments),
-    );
-  }
-
   function exportAssignments(): void {
     if (!regionData) {
       return;
@@ -232,7 +251,7 @@ export default function FloorPlan() {
     const link = document.createElement("a");
 
     link.href = url;
-    link.download = "floor-04-regions-assigned.json";
+    link.download = `floor-${floor}-regions-assigned.json`;
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -245,7 +264,7 @@ export default function FloorPlan() {
     }
 
     const shouldReset = window.confirm(
-      "Clear every room assignment on the fourth floor?",
+      `Clear every room assignment on Floor ${floor}?`,
     );
 
     if (!shouldReset) {
@@ -260,20 +279,24 @@ export default function FloorPlan() {
     setRegionData({ ...regionData, regions: nextRegions });
     setSelectedRegionId("");
     setPendingSpaceId("");
-    localStorage.removeItem(ASSIGNMENT_STORAGE_KEY);
+    localStorage.removeItem(assignmentStorageKey);
   }
 
   if (loadError) {
     return (
       <div className="empty-state error-state">
-        <h2>Unable to load the floor</h2>
+        <h2>Unable to load Floor {floor}</h2>
         <p>{loadError}</p>
       </div>
     );
   }
 
   if (!floorData || !regionData) {
-    return <div className="empty-state">Loading the floor plan…</div>;
+    return (
+      <div className="empty-state">
+        Loading the Floor {floor} plan…
+      </div>
+    );
   }
 
   const [, , planWidth, planHeight] = regionData.viewBox
@@ -320,13 +343,21 @@ export default function FloorPlan() {
                   </div>
 
                   <div className="zoom-controls" aria-label="Plan zoom controls">
-                    <button type="button" onClick={() => zoomOut()} aria-label="Zoom out">
+                    <button
+                      type="button"
+                      onClick={() => zoomOut()}
+                      aria-label="Zoom out"
+                    >
                       −
                     </button>
                     <button type="button" onClick={() => resetTransform()}>
                       Reset
                     </button>
-                    <button type="button" onClick={() => zoomIn()} aria-label="Zoom in">
+                    <button
+                      type="button"
+                      onClick={() => zoomIn()}
+                      aria-label="Zoom in"
+                    >
                       +
                     </button>
                   </div>
@@ -341,7 +372,7 @@ export default function FloorPlan() {
                   className="floor-svg"
                   viewBox={regionData.viewBox}
                   role="img"
-                  aria-label="Fourth-floor selectable lighting commissioning plan"
+                  aria-label={`Floor ${floor} selectable lighting commissioning plan`}
                 >
                   <image
                     href={regionData.sourcePlan}
@@ -385,7 +416,8 @@ export default function FloorPlan() {
                           }}
                         >
                           <title>
-                            {assignedSpace?.displayName ?? `${region.label} — unassigned`}
+                            {assignedSpace?.displayName ??
+                              `${region.label} — unassigned`}
                           </title>
                         </polygon>
 
@@ -409,26 +441,27 @@ export default function FloorPlan() {
         </TransformWrapper>
 
         <div className="status-legend">
-          {(Object.keys(STATUS_STYLES) as Array<keyof typeof STATUS_STYLES>).map(
-            (status) => (
-              <div className="legend-item" key={status}>
-                <span
-                  className="legend-swatch"
-                  style={{
-                    background: STATUS_STYLES[status].fill,
-                    borderColor: STATUS_STYLES[status].stroke,
-                  }}
-                />
-                <span>{STATUS_STYLES[status].label}</span>
-              </div>
-            ),
-          )}
+          {(Object.keys(STATUS_STYLES) as Array<
+            keyof typeof STATUS_STYLES
+          >).map((status) => (
+            <div className="legend-item" key={status}>
+              <span
+                className="legend-swatch"
+                style={{
+                  background: STATUS_STYLES[status].fill,
+                  borderColor: STATUS_STYLES[status].stroke,
+                }}
+              />
+              <span>{STATUS_STYLES[status].label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
       <aside className="side-panel">
         {mode === "assign" ? (
           <AssignmentPanel
+            floor={floor}
             selectedRegion={selectedRegion}
             assignedSpace={selectedAssignedSpace}
             pendingSpaceId={pendingSpaceId}
@@ -447,7 +480,8 @@ export default function FloorPlan() {
             <p className="eyebrow">Inspection mode</p>
             <h2>Select an assigned room</h2>
             <p>
-              Click a room that has already been linked to a CSV record.
+              Click a Floor {floor} room that has already been linked to a CSV
+              record.
             </p>
           </div>
         )}
@@ -457,6 +491,7 @@ export default function FloorPlan() {
 }
 
 interface AssignmentPanelProps {
+  floor: FloorId;
   selectedRegion: FloorRegion | undefined;
   assignedSpace: CommissioningSpace | undefined;
   pendingSpaceId: string;
@@ -470,6 +505,7 @@ interface AssignmentPanelProps {
 }
 
 function AssignmentPanel({
+  floor,
   selectedRegion,
   assignedSpace,
   pendingSpaceId,
@@ -484,10 +520,11 @@ function AssignmentPanel({
   return (
     <>
       <div className="panel-heading">
-        <p className="eyebrow">Assignment mode</p>
+        <p className="eyebrow">Floor {floor} assignment</p>
         <h2>Link drawing spaces to CSV rooms</h2>
         <p>
-          Click a prepared region on the plan, then choose its corresponding CSV record.
+          Click a prepared region on the plan, then choose its corresponding CSV
+          record.
         </p>
       </div>
 
@@ -501,7 +538,11 @@ function AssignmentPanel({
                   {assignedSpace?.displayName ?? "No CSV room assigned"}
                 </h3>
               </div>
-              <span className={assignedSpace ? "mapping-badge mapped" : "mapping-badge"}>
+              <span
+                className={
+                  assignedSpace ? "mapping-badge mapped" : "mapping-badge"
+                }
+              >
                 {assignedSpace ? "Assigned" : "Unassigned"}
               </span>
             </div>
@@ -556,10 +597,10 @@ function AssignmentPanel({
 
       <div className="data-actions">
         <button type="button" className="secondary-button" onClick={onExport}>
-          Export assignments
+          Export Floor {floor} assignments
         </button>
         <button type="button" className="secondary-button" onClick={onReset}>
-          Reset assignments
+          Reset Floor {floor} assignments
         </button>
       </div>
     </>
@@ -570,7 +611,7 @@ function InspectionPreview({ space }: { space: CommissioningSpace }) {
   return (
     <>
       <div className="panel-heading">
-        <p className="eyebrow">Inspection mode</p>
+        <p className="eyebrow">Floor {space.floor} inspection</p>
         <h2>{space.roomNo}</h2>
         <p>{space.spaceType}</p>
       </div>

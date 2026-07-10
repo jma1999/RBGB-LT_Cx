@@ -1,0 +1,5500 @@
+{
+  "schemaVersion": 1,
+  "floor": "03",
+  "plan": {
+    "file": "/floors/floor-03-base.svg",
+    "viewBox": "0 0 792 612"
+  },
+  "spaces": [
+    {
+      "id": "03-300-elevator-lobby-002",
+      "sourceRow": 2,
+      "floor": "03",
+      "roomNo": "300",
+      "spaceType": "Elevator Lobby",
+      "displayName": "300 - Elevator Lobby",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305 occupancy sensor",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-n-a-corridor-split-1-003",
+      "sourceRow": 3,
+      "floor": "03",
+      "roomNo": "N/A",
+      "spaceType": "Corridor Split-1",
+      "displayName": "N/A - Corridor Split-1",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-302-lobby-004",
+      "sourceRow": 4,
+      "floor": "03",
+      "roomNo": "302",
+      "spaceType": "Lobby",
+      "displayName": "302 - Lobby",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "CP1",
+          "expectedQty": 12,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "L2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b - wireless 2-button switch dimmer",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-302-ext-lobby-005",
+      "sourceRow": 5,
+      "floor": "03",
+      "roomNo": "302 Ext.",
+      "spaceType": "Lobby",
+      "displayName": "302 Ext. - Lobby",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-302a-badge-office-006",
+      "sourceRow": 6,
+      "floor": "03",
+      "roomNo": "302A",
+      "spaceType": "Badge Office",
+      "displayName": "302A - Badge Office",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-302b-mail-room-007",
+      "sourceRow": 7,
+      "floor": "03",
+      "roomNo": "302B",
+      "spaceType": "Mail Room",
+      "displayName": "302B - Mail Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-302c-storage-008",
+      "sourceRow": 8,
+      "floor": "03",
+      "roomNo": "302C",
+      "spaceType": "Storage",
+      "displayName": "302C - Storage",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-304-conference-room-009",
+      "sourceRow": 9,
+      "floor": "03",
+      "roomNo": "304",
+      "spaceType": "Conference Room",
+      "displayName": "304 - Conference Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3 - wireless 3-scene controller",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-305-multifunctional-breakout-010",
+      "sourceRow": 10,
+      "floor": "03",
+      "roomNo": "305",
+      "spaceType": "Multifunctional Breakout",
+      "displayName": "305 - Multifunctional Breakout",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "L2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "L1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "P4",
+          "expectedQty": 12,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-7",
+          "category": "lighting",
+          "deviceType": "X1 exit luminaire",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b - wireless wall-station dimmer",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "SCPPH-1500 Photosensor",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-311-multifunctional-suite-1-011",
+      "sourceRow": 11,
+      "floor": "03",
+      "roomNo": "311",
+      "spaceType": "Multifunctional Suite 1",
+      "displayName": "311 - Multifunctional Suite 1",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL5",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "SIM - Sensor interface module",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-313-multifunctional-suite-2-012",
+      "sourceRow": 12,
+      "floor": "03",
+      "roomNo": "313",
+      "spaceType": "Multifunctional Suite 2",
+      "displayName": "313 - Multifunctional Suite 2",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL5",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "SIM",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-315-multifunctional-suite-3-013",
+      "sourceRow": 13,
+      "floor": "03",
+      "roomNo": "315",
+      "spaceType": "Multifunctional Suite 3",
+      "displayName": "315 - Multifunctional Suite 3",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL5",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-323-multifunctional-breakout-014",
+      "sourceRow": 14,
+      "floor": "03",
+      "roomNo": "323",
+      "spaceType": "Multifunctional Breakout",
+      "displayName": "323 - Multifunctional Breakout",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 14,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "L1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "P3B",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "P4",
+          "expectedQty": 12,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-7",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-c3-1-corridor-015",
+      "sourceRow": 15,
+      "floor": "03",
+      "roomNo": "C3.1",
+      "spaceType": "Corridor",
+      "displayName": "C3.1 - Corridor",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "B1",
+          "expectedQty": 9,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "D4",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WM - wireless manager",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "S2b - wireless 2-button switch dimmer",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-c3-2-corridor-016",
+      "sourceRow": 16,
+      "floor": "03",
+      "roomNo": "C3.2",
+      "spaceType": "Corridor",
+      "displayName": "C3.2 - Corridor",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-303a-gender-neutral-restroom-017",
+      "sourceRow": 17,
+      "floor": "03",
+      "roomNo": "303A",
+      "spaceType": "Gender Neutral Restroom",
+      "displayName": "303A - Gender Neutral Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-303b-gender-neutral-restroom-018",
+      "sourceRow": 18,
+      "floor": "03",
+      "roomNo": "303B",
+      "spaceType": "Gender Neutral Restroom",
+      "displayName": "303B - Gender Neutral Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-303c-gender-neutral-restroom-019",
+      "sourceRow": 19,
+      "floor": "03",
+      "roomNo": "303C",
+      "spaceType": "Gender Neutral Restroom",
+      "displayName": "303C - Gender Neutral Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-307-women-s-restroom-020",
+      "sourceRow": 20,
+      "floor": "03",
+      "roomNo": "307",
+      "spaceType": "Women's Restroom",
+      "displayName": "307 - Women's Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-309-men-s-restroom-021",
+      "sourceRow": 21,
+      "floor": "03",
+      "roomNo": "309",
+      "spaceType": "Men's Restroom",
+      "displayName": "309 - Men's Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-317-janitor-022",
+      "sourceRow": 22,
+      "floor": "03",
+      "roomNo": "317",
+      "spaceType": "Janitor",
+      "displayName": "317 - Janitor",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc - occupancy sensor",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-319-mechanical-023",
+      "sourceRow": 23,
+      "floor": "03",
+      "roomNo": "319",
+      "spaceType": "Mechanical",
+      "displayName": "319 - Mechanical",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se - emergency switch",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-321a-comm-024",
+      "sourceRow": 24,
+      "floor": "03",
+      "roomNo": "321A",
+      "spaceType": "Comm",
+      "displayName": "321A - Comm",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se - emergency switch",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-321b-electrical-025",
+      "sourceRow": 25,
+      "floor": "03",
+      "roomNo": "321B",
+      "spaceType": "Electrical",
+      "displayName": "321B - Electrical",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-325-furniture-storage-026",
+      "sourceRow": 26,
+      "floor": "03",
+      "roomNo": "325",
+      "spaceType": "Furniture Storage",
+      "displayName": "325 - Furniture Storage",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-n-a-corridor-1-027",
+      "sourceRow": 27,
+      "floor": "03",
+      "roomNo": "N/A",
+      "spaceType": "Corridor-1",
+      "displayName": "N/A - Corridor-1",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-327-mother-s-suite-028",
+      "sourceRow": 28,
+      "floor": "03",
+      "roomNo": "327",
+      "spaceType": "Mother's Suite",
+      "displayName": "327 - Mother's Suite",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-327a-lactation-rm-029",
+      "sourceRow": 29,
+      "floor": "03",
+      "roomNo": "327A",
+      "spaceType": "Lactation Rm",
+      "displayName": "327A - Lactation Rm",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "D1 - Wall Sconce",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-327b-lactation-rm-030",
+      "sourceRow": 30,
+      "floor": "03",
+      "roomNo": "327B",
+      "spaceType": "Lactation Rm",
+      "displayName": "327B - Lactation Rm",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "D1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-327c-lactation-rm-031",
+      "sourceRow": 31,
+      "floor": "03",
+      "roomNo": "327C",
+      "spaceType": "Lactation Rm",
+      "displayName": "327C - Lactation Rm",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "D1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-329-wellness-032",
+      "sourceRow": 32,
+      "floor": "03",
+      "roomNo": "329",
+      "spaceType": "Wellness",
+      "displayName": "329 - Wellness",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "D1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-331-av-storage-033",
+      "sourceRow": 33,
+      "floor": "03",
+      "roomNo": "331",
+      "spaceType": "AV Storage",
+      "displayName": "331 - AV Storage",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-333-collab-room-a-034",
+      "sourceRow": 34,
+      "floor": "03",
+      "roomNo": "333",
+      "spaceType": "Collab Room (A)",
+      "displayName": "333 - Collab Room (A)",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-335-multi-space-035",
+      "sourceRow": 35,
+      "floor": "03",
+      "roomNo": "335",
+      "spaceType": "Multi Space",
+      "displayName": "335 - Multi Space",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "WM",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-5",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-337-huddle-room-b-036",
+      "sourceRow": 36,
+      "floor": "03",
+      "roomNo": "337",
+      "spaceType": "Huddle Room (B)",
+      "displayName": "337 - Huddle Room (B)",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-339-focus-037",
+      "sourceRow": 37,
+      "floor": "03",
+      "roomNo": "339",
+      "spaceType": "Focus",
+      "displayName": "339 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-341-focus-038",
+      "sourceRow": 38,
+      "floor": "03",
+      "roomNo": "341",
+      "spaceType": "Focus",
+      "displayName": "341 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-345-storage-039",
+      "sourceRow": 39,
+      "floor": "03",
+      "roomNo": "345",
+      "spaceType": "Storage",
+      "displayName": "345 - Storage",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-n-a-spare-room-040",
+      "sourceRow": 40,
+      "floor": "03",
+      "roomNo": "N/A",
+      "spaceType": "Spare Room",
+      "displayName": "N/A - Spare Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-n-a-corridor-2-041",
+      "sourceRow": 41,
+      "floor": "03",
+      "roomNo": "N/A",
+      "spaceType": "Corridor-2",
+      "displayName": "N/A - Corridor-2",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-c3-5-corridor-split-1-042",
+      "sourceRow": 42,
+      "floor": "03",
+      "roomNo": "C3.5",
+      "spaceType": "Corridor Split-1",
+      "displayName": "C3.5 - Corridor Split-1",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 9,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-349a-food-prep-043",
+      "sourceRow": 43,
+      "floor": "03",
+      "roomNo": "349A",
+      "spaceType": "Food Prep",
+      "displayName": "349A - Food Prep",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A3",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-349b-food-service-044",
+      "sourceRow": 44,
+      "floor": "03",
+      "roomNo": "349B",
+      "spaceType": "Food Service",
+      "displayName": "349B - Food Service",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A3",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-349c-dry-storage-045",
+      "sourceRow": 45,
+      "floor": "03",
+      "roomNo": "349C",
+      "spaceType": "Dry Storage",
+      "displayName": "349C - Dry Storage",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-349d-office-046",
+      "sourceRow": 46,
+      "floor": "03",
+      "roomNo": "349D",
+      "spaceType": "Office",
+      "displayName": "349D - Office",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-349e-ware-washing-047",
+      "sourceRow": 47,
+      "floor": "03",
+      "roomNo": "349E",
+      "spaceType": "Ware Washing",
+      "displayName": "349E - Ware Washing",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-349-cafe-048",
+      "sourceRow": 48,
+      "floor": "03",
+      "roomNo": "349",
+      "spaceType": "Cafe",
+      "displayName": "349 - Cafe",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 25,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "C3",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "P6",
+          "expectedQty": 9,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "P8",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "J4",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 7,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-364-pantry-050",
+      "sourceRow": 50,
+      "floor": "03",
+      "roomNo": "364",
+      "spaceType": "Pantry",
+      "displayName": "364 - Pantry",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-c3-5-corridor-split-2-051",
+      "sourceRow": 51,
+      "floor": "03",
+      "roomNo": "C3.5",
+      "spaceType": "Corridor Split-2",
+      "displayName": "C3.5 - Corridor Split-2",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-n-a-corridor-split-2-052",
+      "sourceRow": 52,
+      "floor": "03",
+      "roomNo": "N/A",
+      "spaceType": "Corridor Split-2",
+      "displayName": "N/A - Corridor Split-2",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 11,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-308-gender-neutral-restroom-053",
+      "sourceRow": 53,
+      "floor": "03",
+      "roomNo": "308",
+      "spaceType": "Gender Neutral Restroom",
+      "displayName": "308 - Gender Neutral Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1W",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "ER - Emergency Bypass Device",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-306-nurse-waiting-054",
+      "sourceRow": 54,
+      "floor": "03",
+      "roomNo": "306",
+      "spaceType": "Nurse Waiting",
+      "displayName": "306 - Nurse Waiting",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-306a-nurse-s-exam-room-055",
+      "sourceRow": 55,
+      "floor": "03",
+      "roomNo": "306A",
+      "spaceType": "Nurse's Exam Room",
+      "displayName": "306A - Nurse's Exam Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-306b-nurse-s-restroom-056",
+      "sourceRow": 56,
+      "floor": "03",
+      "roomNo": "306B",
+      "spaceType": "Nurse's Restroom",
+      "displayName": "306B - Nurse's Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "ER",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-310-men-s-restroom-057",
+      "sourceRow": 57,
+      "floor": "03",
+      "roomNo": "310",
+      "spaceType": "Men's Restroom",
+      "displayName": "310 - Men's Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-312-women-s-restroom-058",
+      "sourceRow": 58,
+      "floor": "03",
+      "roomNo": "312",
+      "spaceType": "Women's Restroom",
+      "displayName": "312 - Women's Restroom",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-360a-co-working-059",
+      "sourceRow": 59,
+      "floor": "03",
+      "roomNo": "360A",
+      "spaceType": "Co-Working",
+      "displayName": "360A - Co-Working",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P5",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-360-multi-space-060",
+      "sourceRow": 60,
+      "floor": "03",
+      "roomNo": "360",
+      "spaceType": "Multi-Space",
+      "displayName": "360 - Multi-Space",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "H2 track light",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "CP2",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 15,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "P7",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-7",
+          "category": "lighting",
+          "deviceType": "CP1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-5",
+          "category": "control",
+          "deviceType": "WM",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-362-large-conference-room-061",
+      "sourceRow": 61,
+      "floor": "03",
+      "roomNo": "362",
+      "spaceType": "Large Conference Room",
+      "displayName": "362 - Large Conference Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-358-huddle-room-062",
+      "sourceRow": 62,
+      "floor": "03",
+      "roomNo": "358",
+      "spaceType": "Huddle Room",
+      "displayName": "358 - Huddle Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-356-focus-063",
+      "sourceRow": 63,
+      "floor": "03",
+      "roomNo": "356",
+      "spaceType": "Focus",
+      "displayName": "356 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-354-focus-064",
+      "sourceRow": 64,
+      "floor": "03",
+      "roomNo": "354",
+      "spaceType": "Focus",
+      "displayName": "354 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-352-focus-065",
+      "sourceRow": 65,
+      "floor": "03",
+      "roomNo": "352",
+      "spaceType": "Focus",
+      "displayName": "352 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-350-focus-066",
+      "sourceRow": 66,
+      "floor": "03",
+      "roomNo": "350",
+      "spaceType": "Focus",
+      "displayName": "350 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-348-focus-067",
+      "sourceRow": 67,
+      "floor": "03",
+      "roomNo": "348",
+      "spaceType": "Focus",
+      "displayName": "348 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-346-focus-068",
+      "sourceRow": 68,
+      "floor": "03",
+      "roomNo": "346",
+      "spaceType": "Focus",
+      "displayName": "346 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-344-huddle-room-b-069",
+      "sourceRow": 69,
+      "floor": "03",
+      "roomNo": "344",
+      "spaceType": "Huddle Room (B)",
+      "displayName": "344 - Huddle Room (B)",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-342-collab-room-b-070",
+      "sourceRow": 70,
+      "floor": "03",
+      "roomNo": "342",
+      "spaceType": "Collab Room (B)",
+      "displayName": "342 - Collab Room (B)",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-334-multi-space-071",
+      "sourceRow": 71,
+      "floor": "03",
+      "roomNo": "334",
+      "spaceType": "Multi-Space",
+      "displayName": "334 - Multi-Space",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "CP1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "P7",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-328a-control-room-072",
+      "sourceRow": 72,
+      "floor": "03",
+      "roomNo": "328A",
+      "spaceType": "Control Room",
+      "displayName": "328A - Control Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-328-broadcast-studio-073",
+      "sourceRow": 73,
+      "floor": "03",
+      "roomNo": "328",
+      "spaceType": "Broadcast Studio",
+      "displayName": "328 - Broadcast Studio",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-320-multi-space-074",
+      "sourceRow": 74,
+      "floor": "03",
+      "roomNo": "320",
+      "spaceType": "Multi-Space",
+      "displayName": "320 - Multi-Space",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 15,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "CP1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-5",
+          "category": "control",
+          "deviceType": "WM",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-n-a-lobby-075",
+      "sourceRow": 75,
+      "floor": "03",
+      "roomNo": "N/A",
+      "spaceType": "Lobby",
+      "displayName": "N/A - Lobby",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "P3B",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-314-training-room-076",
+      "sourceRow": 76,
+      "floor": "03",
+      "roomNo": "314",
+      "spaceType": "Training Room",
+      "displayName": "314 - Training Room",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "PL5",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-326-focus-077",
+      "sourceRow": 77,
+      "floor": "03",
+      "roomNo": "326",
+      "spaceType": "Focus",
+      "displayName": "326 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-324-focus-078",
+      "sourceRow": 78,
+      "floor": "03",
+      "roomNo": "324",
+      "spaceType": "Focus",
+      "displayName": "324 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-322-focus-079",
+      "sourceRow": 79,
+      "floor": "03",
+      "roomNo": "322",
+      "spaceType": "Focus",
+      "displayName": "322 - Focus",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-318-decompression-080",
+      "sourceRow": 80,
+      "floor": "03",
+      "roomNo": "318",
+      "spaceType": "Decompression",
+      "displayName": "318 - Decompression",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "P2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-316-collab-room-b-081",
+      "sourceRow": 81,
+      "floor": "03",
+      "roomNo": "316",
+      "spaceType": "Collab Room (B)",
+      "displayName": "316 - Collab Room (B)",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-330-copy-print-082",
+      "sourceRow": 82,
+      "floor": "03",
+      "roomNo": "330",
+      "spaceType": "Copy/Print",
+      "displayName": "330 - Copy/Print",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-c3-7-corridor-083",
+      "sourceRow": 83,
+      "floor": "03",
+      "roomNo": "C3.7",
+      "spaceType": "Corridor",
+      "displayName": "C3.7 - Corridor",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-336b-electrical-084",
+      "sourceRow": 84,
+      "floor": "03",
+      "roomNo": "336B",
+      "spaceType": "Electrical",
+      "displayName": "336B - Electrical",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "L3A",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "SSU - System Support Unit",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "ETH-SW - Ethernet Switch",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-336a-comm-085",
+      "sourceRow": 85,
+      "floor": "03",
+      "roomNo": "336A",
+      "spaceType": "Comm",
+      "displayName": "336A - Comm",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-338-mechanical-086",
+      "sourceRow": 86,
+      "floor": "03",
+      "roomNo": "338",
+      "spaceType": "Mechanical",
+      "displayName": "338 - Mechanical",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-340-janitor-087",
+      "sourceRow": 87,
+      "floor": "03",
+      "roomNo": "340",
+      "spaceType": "Janitor",
+      "displayName": "340 - Janitor",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    }
+  ]
+}
