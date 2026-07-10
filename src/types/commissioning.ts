@@ -1,7 +1,6 @@
 export type Point = [number, number];
 
 export type SpaceStatus =
-  | "unmapped"
   | "not_inspected"
   | "in_progress"
   | "passed"
@@ -51,4 +50,28 @@ export interface FloorData {
     viewBox: string;
   };
   spaces: CommissioningSpace[];
+}
+
+export interface FloorRegion {
+  id: string;
+  label: string;
+  points: Point[];
+  centroid: Point;
+  area: number;
+  assignedSpaceId: string | null;
+  status: "unassigned";
+}
+
+export interface RegionData {
+  schemaVersion: number;
+  floor: string;
+  viewBox: string;
+  sourcePlan: string;
+  generation: {
+    method: string;
+    regionCount: number;
+    reviewRequired: boolean;
+    note: string;
+  };
+  regions: FloorRegion[];
 }

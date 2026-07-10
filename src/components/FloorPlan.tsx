@@ -1,35 +1,32 @@
+import { useEffect, useMemo, useState } from "react";
 import {
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  type MouseEvent as ReactMouseEvent,
-} from "react";
+  TransformComponent,
+  TransformWrapper,
+} from "react-zoom-pan-pinch";
 
 import type {
   CommissioningSpace,
   FloorData,
-  Point,
+  FloorRegion,
+  RegionData,
   SpaceStatus,
 } from "../types/commissioning";
 
-type AppMode = "map" | "inspect";
+type AppMode = "assign" | "inspect";
 
 const FLOOR_DATA_URL = "/data/floor-04-spaces.json";
-const STORAGE_KEY = "lighting-cx-floor-04-data-v1";
+const REGION_DATA_URL = "/data/floor-04-regions.json";
+const ASSIGNMENT_STORAGE_KEY =
+  "lighting-cx-floor-04-region-assignments-v1";
 
 const STATUS_STYLES: Record<
-  SpaceStatus,
-  {
-    fill: string;
-    stroke: string;
-    label: string;
-  }
+  SpaceStatus | "unassigned",
+  { fill: string; stroke: string; label: string }
 > = {
-  unmapped: {
+  unassigned: {
     fill: "#f1f5f9",
     stroke: "#94a3b8",
-    label: "Unmapped",
+    label: "Unassigned",
   },
   not_inspected: {
     fill: "#dbeafe",
@@ -58,71 +55,61 @@ const STATUS_STYLES: Record<
   },
 };
 
-function isMapped(space: CommissioningSpace): boolean {
-  return space.polygon.length >= 3;
+function pointsToString(region: FloorRegion): string {
+  return region.points.map(([x, y]) => `${x},${y}`).join(" ");
 }
 
-function getPolygonCentre(points: Point[]): Point {
-  if (points.length === 0) {
-    return [0, 0];
+function loadSavedAssignments(): Record<string, string | null> {
+  const savedValue = localStorage.getItem(ASSIGNMENT_STORAGE_KEY);
+
+  if (!savedValue) {
+    return {};
   }
 
-  const totals = points.reduce(
-    (sum, [x, y]) => {
-      return [sum[0] + x, sum[1] + y] as Point;
-    },
-    [0, 0] as Point,
-  );
-
-  return [
-    totals[0] / points.length,
-    totals[1] / points.length,
-  ];
-}
-
-function formatQuantity(quantity: number | null): string {
-  return quantity === null ? "Quantity not specified" : `Expected: ${quantity}`;
+  try {
+    return JSON.parse(savedValue) as Record<string, string | null>;
+  } catch {
+    localStorage.removeItem(ASSIGNMENT_STORAGE_KEY);
+    return {};
+  }
 }
 
 export default function FloorPlan() {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-
   const [floorData, setFloorData] = useState<FloorData | null>(null);
-  const [mode, setMode] = useState<AppMode>("map");
-  const [selectedSpaceId, setSelectedSpaceId] = useState("");
-  const [hoveredSpaceId, setHoveredSpaceId] = useState<string | null>(null);
-  const [draftPoints, setDraftPoints] = useState<Point[]>([]);
+  const [regionData, setRegionData] = useState<RegionData | null>(null);
+  const [mode, setMode] = useState<AppMode>("assign");
+  const [selectedRegionId, setSelectedRegionId] = useState("");
+  const [pendingSpaceId, setPendingSpaceId] = useState("");
+  const [hoveredRegionId, setHoveredRegionId] = useState<string | null>(
+    null,
+  );
   const [loadError, setLoadError] = useState("");
 
   useEffect(() => {
-    async function loadFloor(): Promise<void> {
+    async function loadData(): Promise<void> {
       try {
-        const response = await fetch(FLOOR_DATA_URL);
+        const [floorResponse, regionResponse] = await Promise.all([
+          fetch(FLOOR_DATA_URL),
+          fetch(REGION_DATA_URL),
+        ]);
 
-        if (!response.ok) {
-          throw new Error("The fourth-floor data file could not be loaded.");
+        if (!floorResponse.ok || !regionResponse.ok) {
+          throw new Error("The fourth-floor plan data could not be loaded.");
         }
 
-        const originalData = (await response.json()) as FloorData;
-        const locallySavedData = localStorage.getItem(STORAGE_KEY);
+        const loadedFloorData = (await floorResponse.json()) as FloorData;
+        const loadedRegionData = (await regionResponse.json()) as RegionData;
+        const savedAssignments = loadSavedAssignments();
 
-        if (locallySavedData) {
-          try {
-            const parsedData = JSON.parse(locallySavedData) as FloorData;
-
-            if (
-              parsedData.floor === originalData.floor &&
-              Array.isArray(parsedData.spaces)
-            ) {
-              setFloorData(parsedData);
-              return;
-            }
-          } catch {
-            localStorage.removeItem(STORAGE_KEY);
-          }
-        }
-
-        setFloorData(originalData);
+        setFloorData(loadedFloorData);
+        setRegionData({
+          ...loadedRegionData,
+          regions: loadedRegionData.regions.map((region) => ({
+            ...region,
+            assignedSpaceId:
+              savedAssignments[region.id] ?? region.assignedSpaceId,
+          })),
+        });
       } catch (error) {
         setLoadError(
           error instanceof Error
@@ -132,194 +119,148 @@ export default function FloorPlan() {
       }
     }
 
-    void loadFloor();
+    void loadData();
   }, []);
 
-  useEffect(() => {
-    if (floorData) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(floorData));
-    }
+  const spacesById = useMemo(() => {
+    return new Map(
+      floorData?.spaces.map((space) => [space.id, space]) ?? [],
+    );
   }, [floorData]);
 
-  const selectedSpace = useMemo(() => {
-    return floorData?.spaces.find(
-      (space) => space.id === selectedSpaceId,
+  const selectedRegion = useMemo(() => {
+    return regionData?.regions.find(
+      (region) => region.id === selectedRegionId,
     );
-  }, [floorData, selectedSpaceId]);
+  }, [regionData, selectedRegionId]);
 
-  const mappedCount = useMemo(() => {
-    return floorData?.spaces.filter(isMapped).length ?? 0;
-  }, [floorData]);
+  const selectedAssignedSpace = selectedRegion?.assignedSpaceId
+    ? spacesById.get(selectedRegion.assignedSpaceId)
+    : undefined;
 
-  function changeMode(nextMode: AppMode): void {
-    setMode(nextMode);
-    setDraftPoints([]);
-  }
-
-  function handleCanvasClick(
-    event: ReactMouseEvent<SVGSVGElement>,
-  ): void {
-    if (mode !== "map" || !selectedSpaceId) {
-      return;
-    }
-
-    const svg = svgRef.current;
-
-    if (!svg) {
-      return;
-    }
-
-    const screenMatrix = svg.getScreenCTM();
-
-    if (!screenMatrix) {
-      return;
-    }
-
-    const svgPoint = svg.createSVGPoint();
-    svgPoint.x = event.clientX;
-    svgPoint.y = event.clientY;
-
-    const transformedPoint = svgPoint.matrixTransform(
-      screenMatrix.inverse(),
+  const assignedSpaceIds = useMemo(() => {
+    return new Set(
+      regionData?.regions
+        .map((region) => region.assignedSpaceId)
+        .filter((spaceId): spaceId is string => Boolean(spaceId)) ?? [],
     );
+  }, [regionData]);
 
-    const newPoint: Point = [
-      Math.round(transformedPoint.x * 10) / 10,
-      Math.round(transformedPoint.y * 10) / 10,
-    ];
-
-    setDraftPoints((currentPoints) => [
-      ...currentPoints,
-      newPoint,
-    ]);
-  }
-
-  function handleSpaceClick(
-    event: ReactMouseEvent<SVGPolygonElement>,
-    spaceId: string,
-  ): void {
-    event.stopPropagation();
-    setSelectedSpaceId(spaceId);
-    setDraftPoints([]);
-  }
-
-  function saveBoundary(): void {
-    if (!floorData || !selectedSpaceId || draftPoints.length < 3) {
-      return;
-    }
-
-    setFloorData({
-      ...floorData,
-      spaces: floorData.spaces.map((space) => {
-        if (space.id !== selectedSpaceId) {
-          return space;
-        }
-
-        return {
-          ...space,
-          polygon: draftPoints,
-          status:
-            space.status === "unmapped"
-              ? "not_inspected"
-              : space.status,
-        };
-      }),
-    });
-
-    setDraftPoints([]);
-  }
-
-  function undoLastPoint(): void {
-    setDraftPoints((currentPoints) =>
-      currentPoints.slice(0, -1),
-    );
-  }
-
-  function cancelDraft(): void {
-    setDraftPoints([]);
-  }
-
-  function removeSelectedBoundary(): void {
-    if (!floorData || !selectedSpaceId || !selectedSpace) {
-      return;
-    }
-
-    const shouldRemove = window.confirm(
-      `Remove the saved boundary for ${selectedSpace.displayName}?`,
-    );
-
-    if (!shouldRemove) {
-      return;
-    }
-
-    setFloorData({
-      ...floorData,
-      spaces: floorData.spaces.map((space) => {
-        if (space.id !== selectedSpaceId) {
-          return space;
-        }
-
-        return {
-          ...space,
-          polygon: [],
-        };
-      }),
-    });
-
-    setDraftPoints([]);
-  }
-
-  function exportMappedData(): void {
+  const availableSpaces = useMemo(() => {
     if (!floorData) {
+      return [];
+    }
+
+    return floorData.spaces.filter((space) => {
+      return (
+        !assignedSpaceIds.has(space.id) ||
+        space.id === selectedRegion?.assignedSpaceId
+      );
+    });
+  }, [assignedSpaceIds, floorData, selectedRegion]);
+
+  const assignedCount =
+    regionData?.regions.filter((region) => region.assignedSpaceId).length ?? 0;
+
+  const unusedCsvCount = floorData
+    ? floorData.spaces.length - assignedSpaceIds.size
+    : 0;
+
+  function selectRegion(region: FloorRegion): void {
+    setSelectedRegionId(region.id);
+    setPendingSpaceId(region.assignedSpaceId ?? "");
+  }
+
+  function saveAssignment(): void {
+    if (!regionData || !selectedRegionId || !pendingSpaceId) {
       return;
     }
 
-    const jsonText = JSON.stringify(floorData, null, 2);
-    const blob = new Blob([jsonText], {
+    const nextRegions = regionData.regions.map((region) => {
+      if (region.id !== selectedRegionId) {
+        return region;
+      }
+
+      return {
+        ...region,
+        assignedSpaceId: pendingSpaceId,
+      };
+    });
+
+    setRegionData({ ...regionData, regions: nextRegions });
+    persistAssignments(nextRegions);
+  }
+
+  function clearAssignment(): void {
+    if (!regionData || !selectedRegionId) {
+      return;
+    }
+
+    const nextRegions = regionData.regions.map((region) => {
+      if (region.id !== selectedRegionId) {
+        return region;
+      }
+
+      return { ...region, assignedSpaceId: null };
+    });
+
+    setRegionData({ ...regionData, regions: nextRegions });
+    setPendingSpaceId("");
+    persistAssignments(nextRegions);
+  }
+
+  function persistAssignments(regions: FloorRegion[]): void {
+    const assignments = Object.fromEntries(
+      regions.map((region) => [region.id, region.assignedSpaceId]),
+    );
+
+    localStorage.setItem(
+      ASSIGNMENT_STORAGE_KEY,
+      JSON.stringify(assignments),
+    );
+  }
+
+  function exportAssignments(): void {
+    if (!regionData) {
+      return;
+    }
+
+    const blob = new Blob([JSON.stringify(regionData, null, 2)], {
       type: "application/json",
     });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
 
-    const downloadUrl = URL.createObjectURL(blob);
-    const downloadLink = document.createElement("a");
-
-    downloadLink.href = downloadUrl;
-    downloadLink.download = "floor-04-spaces-mapped.json";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    downloadLink.remove();
-
-    URL.revokeObjectURL(downloadUrl);
+    link.href = url;
+    link.download = "floor-04-regions-assigned.json";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
   }
 
-  async function resetAllMapping(): Promise<void> {
+  function resetAssignments(): void {
+    if (!regionData) {
+      return;
+    }
+
     const shouldReset = window.confirm(
-      "Remove every saved room boundary and restore the original fourth-floor data?",
+      "Clear every room assignment on the fourth floor?",
     );
 
     if (!shouldReset) {
       return;
     }
 
-    try {
-      const response = await fetch(FLOOR_DATA_URL);
+    const nextRegions = regionData.regions.map((region) => ({
+      ...region,
+      assignedSpaceId: null,
+    }));
 
-      if (!response.ok) {
-        throw new Error("The original floor data could not be restored.");
-      }
-
-      const originalData = (await response.json()) as FloorData;
-
-      localStorage.removeItem(STORAGE_KEY);
-      setFloorData(originalData);
-      setSelectedSpaceId("");
-      setDraftPoints([]);
-    } catch (error) {
-      setLoadError(
-        error instanceof Error
-          ? error.message
-          : "The original data could not be restored.",
-      );
-    }
+    setRegionData({ ...regionData, regions: nextRegions });
+    setSelectedRegionId("");
+    setPendingSpaceId("");
+    localStorage.removeItem(ASSIGNMENT_STORAGE_KEY);
   }
 
   if (loadError) {
@@ -331,408 +272,334 @@ export default function FloorPlan() {
     );
   }
 
-  if (!floorData) {
-    return (
-      <div className="empty-state">
-        <p>Loading the fourth-floor plan…</p>
-      </div>
-    );
+  if (!floorData || !regionData) {
+    return <div className="empty-state">Loading the floor plan…</div>;
   }
 
-  const [, , planWidth, planHeight] = floorData.plan.viewBox
+  const [, , planWidth, planHeight] = regionData.viewBox
     .split(/\s+/)
     .map(Number);
-
-  const draftPointString = draftPoints
-    .map(([x, y]) => `${x},${y}`)
-    .join(" ");
 
   return (
     <div className="workspace">
       <section className="plan-card">
-        <div className="plan-toolbar">
-          <div
-            className="mode-switcher"
-            aria-label="Application mode"
-          >
-            <button
-              type="button"
-              className={mode === "map" ? "active" : ""}
-              aria-pressed={mode === "map"}
-              onClick={() => changeMode("map")}
-            >
-              Map spaces
-            </button>
+        <TransformWrapper
+          initialScale={1}
+          minScale={0.65}
+          maxScale={6}
+          centerOnInit
+          limitToBounds={false}
+          doubleClick={{ disabled: true }}
+          wheel={{ step: 0.12 }}
+          panning={{ excluded: ["region-shape"] }}
+        >
+          {({ zoomIn, zoomOut, resetTransform }) => (
+            <>
+              <div className="plan-toolbar">
+                <div className="mode-switcher" aria-label="Application mode">
+                  <button
+                    type="button"
+                    className={mode === "assign" ? "active" : ""}
+                    onClick={() => setMode("assign")}
+                  >
+                    Assign spaces
+                  </button>
+                  <button
+                    type="button"
+                    className={mode === "inspect" ? "active" : ""}
+                    onClick={() => setMode("inspect")}
+                  >
+                    Inspect
+                  </button>
+                </div>
 
-            <button
-              type="button"
-              className={mode === "inspect" ? "active" : ""}
-              aria-pressed={mode === "inspect"}
-              onClick={() => changeMode("inspect")}
-            >
-              Inspect
-            </button>
-          </div>
+                <div className="toolbar-right">
+                  <div className="mapping-progress">
+                    <strong>{assignedCount}</strong>
+                    <span>of {regionData.regions.length} regions assigned</span>
+                  </div>
 
-          <div className="mapping-progress">
-            <strong>{mappedCount}</strong>
-            <span>of {floorData.spaces.length} spaces mapped</span>
-          </div>
-        </div>
+                  <div className="zoom-controls" aria-label="Plan zoom controls">
+                    <button type="button" onClick={() => zoomOut()} aria-label="Zoom out">
+                      −
+                    </button>
+                    <button type="button" onClick={() => resetTransform()}>
+                      Reset
+                    </button>
+                    <button type="button" onClick={() => zoomIn()} aria-label="Zoom in">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-        <div className="plan-scroll-area">
-          <svg
-            ref={svgRef}
-            viewBox={floorData.plan.viewBox}
-            role="img"
-            aria-label={`Floor ${floorData.floor} lighting commissioning plan`}
-            onClick={handleCanvasClick}
-            className={mode === "map" ? "mapping-cursor" : ""}
-          >
-            <image
-              href={floorData.plan.file}
-              x="0"
-              y="0"
-              width={planWidth}
-              height={planHeight}
-              preserveAspectRatio="xMidYMid meet"
-              pointerEvents="none"
-            />
+              <TransformComponent
+                wrapperClass="zoom-wrapper"
+                contentClass="zoom-content"
+              >
+                <svg
+                  className="floor-svg"
+                  viewBox={regionData.viewBox}
+                  role="img"
+                  aria-label="Fourth-floor selectable lighting commissioning plan"
+                >
+                  <image
+                    href={regionData.sourcePlan}
+                    x="0"
+                    y="0"
+                    width={planWidth}
+                    height={planHeight}
+                    preserveAspectRatio="xMidYMid meet"
+                    pointerEvents="none"
+                  />
 
-            {floorData.spaces
-              .filter(isMapped)
-              .map((space) => {
-                const statusStyle =
-                  STATUS_STYLES[space.status];
-                const points = space.polygon
-                  .map(([x, y]) => `${x},${y}`)
-                  .join(" ");
+                  {regionData.regions.map((region) => {
+                    const assignedSpace = region.assignedSpaceId
+                      ? spacesById.get(region.assignedSpaceId)
+                      : undefined;
+                    const visualStatus = assignedSpace?.status ?? "unassigned";
+                    const style = STATUS_STYLES[visualStatus];
+                    const isSelected = selectedRegionId === region.id;
+                    const isHovered = hoveredRegionId === region.id;
+                    const [labelX, labelY] = region.centroid;
+                    const label = assignedSpace
+                      ? assignedSpace.roomNo === "N/A"
+                        ? region.label
+                        : assignedSpace.roomNo
+                      : region.label;
 
-                const isHovered =
-                  hoveredSpaceId === space.id;
-                const isSelected =
-                  selectedSpaceId === space.id;
+                    return (
+                      <g key={region.id}>
+                        <polygon
+                          className="region-shape"
+                          points={pointsToString(region)}
+                          fill={style.fill}
+                          fillOpacity={isSelected || isHovered ? 0.78 : 0.38}
+                          stroke={isSelected ? "#0f172a" : style.stroke}
+                          strokeWidth={isSelected || isHovered ? 2.2 : 1}
+                          onPointerEnter={() => setHoveredRegionId(region.id)}
+                          onPointerLeave={() => setHoveredRegionId(null)}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            selectRegion(region);
+                          }}
+                        >
+                          <title>
+                            {assignedSpace?.displayName ?? `${region.label} — unassigned`}
+                          </title>
+                        </polygon>
 
-                const [labelX, labelY] =
-                  getPolygonCentre(space.polygon);
-
-                return (
-                  <g key={space.id}>
-                    <polygon
-                      points={points}
-                      fill={statusStyle.fill}
-                      fillOpacity={
-                        isHovered || isSelected ? 0.8 : 0.55
-                      }
-                      stroke={statusStyle.stroke}
-                      strokeWidth={
-                        isHovered || isSelected ? 2.4 : 1.2
-                      }
-                      onPointerEnter={() =>
-                        setHoveredSpaceId(space.id)
-                      }
-                      onPointerLeave={() =>
-                        setHoveredSpaceId(null)
-                      }
-                      onClick={(event) =>
-                        handleSpaceClick(event, space.id)
-                      }
-                      className="room-polygon"
-                    >
-                      <title>
-                        {space.displayName} —{" "}
-                        {statusStyle.label}
-                      </title>
-                    </polygon>
-
-                    <text
-                      x={labelX}
-                      y={labelY}
-                      textAnchor="middle"
-                      dominantBaseline="middle"
-                      className="room-label"
-                      pointerEvents="none"
-                    >
-                      {space.roomNo}
-                    </text>
-                  </g>
-                );
-              })}
-
-            {mode === "map" && draftPoints.length >= 3 && (
-              <polygon
-                points={draftPointString}
-                className="draft-polygon"
-                pointerEvents="none"
-              />
-            )}
-
-            {mode === "map" && draftPoints.length >= 2 && (
-              <polyline
-                points={draftPointString}
-                className="draft-line"
-                pointerEvents="none"
-              />
-            )}
-
-            {mode === "map" &&
-              draftPoints.map(([x, y], index) => (
-                <circle
-                  key={`${x}-${y}-${index}`}
-                  cx={x}
-                  cy={y}
-                  r={index === 0 ? 4.5 : 3.3}
-                  className={
-                    index === 0
-                      ? "draft-point first-point"
-                      : "draft-point"
-                  }
-                  pointerEvents="none"
-                />
-              ))}
-          </svg>
-        </div>
+                        <text
+                          x={labelX}
+                          y={labelY}
+                          textAnchor="middle"
+                          dominantBaseline="middle"
+                          className="region-label"
+                          pointerEvents="none"
+                        >
+                          {label}
+                        </text>
+                      </g>
+                    );
+                  })}
+                </svg>
+              </TransformComponent>
+            </>
+          )}
+        </TransformWrapper>
 
         <div className="status-legend">
-          {(
-            [
-              "not_inspected",
-              "in_progress",
-              "passed",
-              "issue",
-            ] as SpaceStatus[]
-          ).map((status) => (
-            <div className="legend-item" key={status}>
-              <span
-                className="legend-swatch"
-                style={{
-                  background: STATUS_STYLES[status].fill,
-                  borderColor:
-                    STATUS_STYLES[status].stroke,
-                }}
-              />
-              <span>{STATUS_STYLES[status].label}</span>
-            </div>
-          ))}
+          {(Object.keys(STATUS_STYLES) as Array<keyof typeof STATUS_STYLES>).map(
+            (status) => (
+              <div className="legend-item" key={status}>
+                <span
+                  className="legend-swatch"
+                  style={{
+                    background: STATUS_STYLES[status].fill,
+                    borderColor: STATUS_STYLES[status].stroke,
+                  }}
+                />
+                <span>{STATUS_STYLES[status].label}</span>
+              </div>
+            ),
+          )}
         </div>
       </section>
 
       <aside className="side-panel">
-        {mode === "map" ? (
-          <>
-            <div className="panel-heading">
-              <p className="eyebrow">Setup mode</p>
-              <h2>Map room boundaries</h2>
-              <p>
-                Select a space, then click around its
-                boundary on the plan.
-              </p>
-            </div>
-
-            <label className="form-field">
-              <span>Select a CSV space</span>
-
-              <select
-                value={selectedSpaceId}
-                onChange={(event) => {
-                  setSelectedSpaceId(event.target.value);
-                  setDraftPoints([]);
-                }}
-              >
-                <option value="">Choose a space…</option>
-
-                {floorData.spaces.map((space) => (
-                  <option key={space.id} value={space.id}>
-                    {isMapped(space) ? "✓ " : ""}
-                    {space.displayName}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            {selectedSpace ? (
-              <div className="selected-space-card">
-                <div className="selected-space-header">
-                  <div>
-                    <p className="room-number">
-                      {selectedSpace.roomNo}
-                    </p>
-                    <h3>{selectedSpace.spaceType}</h3>
-                  </div>
-
-                  <span
-                    className={
-                      isMapped(selectedSpace)
-                        ? "mapping-badge mapped"
-                        : "mapping-badge"
-                    }
-                  >
-                    {isMapped(selectedSpace)
-                      ? "Mapped"
-                      : "Not mapped"}
-                  </span>
-                </div>
-
-                <div className="device-summary">
-                  <span>
-                    {
-                      selectedSpace.items.filter(
-                        (item) =>
-                          item.category === "lighting",
-                      ).length
-                    }{" "}
-                    lighting types
-                  </span>
-
-                  <span>
-                    {
-                      selectedSpace.items.filter(
-                        (item) =>
-                          item.category === "control",
-                      ).length
-                    }{" "}
-                    control types
-                  </span>
-                </div>
-              </div>
-            ) : (
-              <div className="panel-message">
-                Select a room before drawing.
-              </div>
-            )}
-
-            <div className="drawing-instructions">
-              <h3>Drawing the boundary</h3>
-              <p>
-                Click each corner of the room. Use enough
-                points to follow irregular room shapes.
-              </p>
-
-              <div className="point-count">
-                <span>Boundary points</span>
-                <strong>{draftPoints.length}</strong>
-              </div>
-            </div>
-
-            <div className="button-grid">
-              <button
-                type="button"
-                className="secondary-button"
-                onClick={undoLastPoint}
-                disabled={draftPoints.length === 0}
-              >
-                Undo point
-              </button>
-
-              <button
-                type="button"
-                className="secondary-button"
-                onClick={cancelDraft}
-                disabled={draftPoints.length === 0}
-              >
-                Cancel drawing
-              </button>
-
-              <button
-                type="button"
-                className="primary-button full-width"
-                onClick={saveBoundary}
-                disabled={
-                  !selectedSpaceId ||
-                  draftPoints.length < 3
-                }
-              >
-                Save room boundary
-              </button>
-            </div>
-
-            {selectedSpace &&
-              isMapped(selectedSpace) && (
-                <button
-                  type="button"
-                  className="text-danger-button"
-                  onClick={removeSelectedBoundary}
-                >
-                  Remove saved boundary
-                </button>
-              )}
-
-            <div className="panel-divider" />
-
-            <div className="data-actions">
-              <button
-                type="button"
-                className="secondary-button"
-                onClick={exportMappedData}
-              >
-                Export mapped JSON
-              </button>
-
-              <button
-                type="button"
-                className="secondary-button"
-                onClick={() => void resetAllMapping()}
-              >
-                Reset all mapping
-              </button>
-            </div>
-          </>
-        ) : selectedSpace ? (
-          <>
-            <div className="panel-heading">
-              <p className="eyebrow">Inspection mode</p>
-              <h2>{selectedSpace.roomNo}</h2>
-              <p>{selectedSpace.spaceType}</p>
-            </div>
-
-            <div className="inspection-status">
-              <span>Status</span>
-              <strong>
-                {
-                  STATUS_STYLES[selectedSpace.status]
-                    .label
-                }
-              </strong>
-            </div>
-
-            <div className="expected-items">
-              <h3>Expected devices</h3>
-
-              {selectedSpace.items.map((item) => (
-                <div
-                  className="expected-item"
-                  key={item.id}
-                >
-                  <div>
-                    <strong>{item.deviceType}</strong>
-                    <span className="item-category">
-                      {item.category}
-                    </span>
-                  </div>
-
-                  <span>
-                    {formatQuantity(item.expectedQty)}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="panel-message">
-              The interactive inspection checklist will be
-              added in the next step.
-            </div>
-          </>
+        {mode === "assign" ? (
+          <AssignmentPanel
+            selectedRegion={selectedRegion}
+            assignedSpace={selectedAssignedSpace}
+            pendingSpaceId={pendingSpaceId}
+            availableSpaces={availableSpaces}
+            unusedCsvCount={unusedCsvCount}
+            onPendingSpaceChange={setPendingSpaceId}
+            onSave={saveAssignment}
+            onClear={clearAssignment}
+            onExport={exportAssignments}
+            onReset={resetAssignments}
+          />
+        ) : selectedAssignedSpace ? (
+          <InspectionPreview space={selectedAssignedSpace} />
         ) : (
           <div className="empty-side-panel">
             <p className="eyebrow">Inspection mode</p>
-            <h2>Select a mapped space</h2>
+            <h2>Select an assigned room</h2>
             <p>
-              Click a room on the floor plan to view its
-              expected fixtures and controls.
+              Click a room that has already been linked to a CSV record.
             </p>
           </div>
         )}
       </aside>
     </div>
+  );
+}
+
+interface AssignmentPanelProps {
+  selectedRegion: FloorRegion | undefined;
+  assignedSpace: CommissioningSpace | undefined;
+  pendingSpaceId: string;
+  availableSpaces: CommissioningSpace[];
+  unusedCsvCount: number;
+  onPendingSpaceChange: (spaceId: string) => void;
+  onSave: () => void;
+  onClear: () => void;
+  onExport: () => void;
+  onReset: () => void;
+}
+
+function AssignmentPanel({
+  selectedRegion,
+  assignedSpace,
+  pendingSpaceId,
+  availableSpaces,
+  unusedCsvCount,
+  onPendingSpaceChange,
+  onSave,
+  onClear,
+  onExport,
+  onReset,
+}: AssignmentPanelProps) {
+  return (
+    <>
+      <div className="panel-heading">
+        <p className="eyebrow">Assignment mode</p>
+        <h2>Link drawing spaces to CSV rooms</h2>
+        <p>
+          Click a prepared region on the plan, then choose its corresponding CSV record.
+        </p>
+      </div>
+
+      {selectedRegion ? (
+        <>
+          <div className="selected-space-card">
+            <div className="selected-space-header">
+              <div>
+                <p className="room-number">{selectedRegion.label}</p>
+                <h3>
+                  {assignedSpace?.displayName ?? "No CSV room assigned"}
+                </h3>
+              </div>
+              <span className={assignedSpace ? "mapping-badge mapped" : "mapping-badge"}>
+                {assignedSpace ? "Assigned" : "Unassigned"}
+              </span>
+            </div>
+          </div>
+
+          <label className="form-field">
+            <span>CSV room or space</span>
+            <select
+              value={pendingSpaceId}
+              onChange={(event) => onPendingSpaceChange(event.target.value)}
+            >
+              <option value="">Choose a CSV room…</option>
+              {availableSpaces.map((space) => (
+                <option value={space.id} key={space.id}>
+                  {space.displayName}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <button
+            type="button"
+            className="primary-button full-width"
+            disabled={!pendingSpaceId}
+            onClick={onSave}
+          >
+            Save assignment
+          </button>
+
+          {assignedSpace && (
+            <button
+              type="button"
+              className="text-danger-button"
+              onClick={onClear}
+            >
+              Clear this assignment
+            </button>
+          )}
+        </>
+      ) : (
+        <div className="panel-message">
+          Select one of the shaded regions on the plan to begin.
+        </div>
+      )}
+
+      <div className="assignment-summary">
+        <span>CSV records not yet used</span>
+        <strong>{unusedCsvCount}</strong>
+      </div>
+
+      <div className="panel-divider" />
+
+      <div className="data-actions">
+        <button type="button" className="secondary-button" onClick={onExport}>
+          Export assignments
+        </button>
+        <button type="button" className="secondary-button" onClick={onReset}>
+          Reset assignments
+        </button>
+      </div>
+    </>
+  );
+}
+
+function InspectionPreview({ space }: { space: CommissioningSpace }) {
+  return (
+    <>
+      <div className="panel-heading">
+        <p className="eyebrow">Inspection mode</p>
+        <h2>{space.roomNo}</h2>
+        <p>{space.spaceType}</p>
+      </div>
+
+      <div className="inspection-status">
+        <span>Status</span>
+        <strong>{STATUS_STYLES[space.status].label}</strong>
+      </div>
+
+      <div className="expected-items">
+        <h3>Expected devices</h3>
+        {space.items.map((item) => (
+          <div className="expected-item" key={item.id}>
+            <div>
+              <strong>{item.deviceType}</strong>
+              <span className="item-category">{item.category}</span>
+            </div>
+            <span>
+              {item.expectedQty === null
+                ? "Quantity not specified"
+                : `Expected: ${item.expectedQty}`}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div className="panel-message">
+        The full field checklist is the next phase.
+      </div>
+    </>
   );
 }
