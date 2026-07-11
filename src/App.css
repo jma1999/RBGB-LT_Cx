@@ -685,3 +685,231 @@ button:disabled {
     min-height: 500px;
   }
 }
+
+/* Add these rules to the end of src/App.css */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.google-connect-wrap {
+  display: grid;
+  justify-items: end;
+  gap: 5px;
+}
+
+.google-connect-button {
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  font-weight: 750;
+}
+
+.google-connect-button:hover:not(:disabled) {
+  border-color: #93c5fd;
+  background: #dbeafe;
+}
+
+.auth-error {
+  max-width: 360px;
+  color: #b91c1c;
+  font-size: 11px;
+  text-align: right;
+}
+
+.google-account-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px 8px 12px;
+  border: 1px solid #bbf7d0;
+  border-radius: 11px;
+  background: #f0fdf4;
+}
+
+.google-account-card span,
+.google-account-card strong {
+  display: block;
+}
+
+.google-account-card span {
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.google-account-card strong {
+  max-width: 230px;
+  overflow: hidden;
+  color: #166534;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.google-account-card button {
+  padding: 7px 9px;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  color: #166534;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sync-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: 1px solid #dbe3ee;
+  border-radius: 999px;
+  color: #64748b;
+  background: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.sync-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.sync-indicator.synced .sync-dot {
+  background: #22c55e;
+}
+
+.sync-indicator.loading .sync-dot,
+.sync-indicator.saving .sync-dot {
+  background: #3b82f6;
+}
+
+.sync-indicator.error .sync-dot {
+  background: #ef4444;
+}
+
+.cloud-sync-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 13px;
+  border: 1px solid #dbe3ee;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.cloud-sync-card strong {
+  color: #334155;
+  font-size: 13px;
+}
+
+.cloud-sync-card p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.cloud-sync-card.synced {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.cloud-sync-card.error {
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+
+.inline-link-button {
+  margin-left: 5px;
+  padding: 0;
+  border: 0;
+  color: #1d4ed8;
+  background: transparent;
+  font-weight: 750;
+  text-decoration: underline;
+}
+
+.comments-section {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e5eaf1;
+}
+
+.comments-section h3 {
+  margin: 0 0 9px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.comments-section textarea {
+  width: 100%;
+  min-height: 84px;
+  margin-bottom: 8px;
+  padding: 10px;
+  resize: vertical;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #1e293b;
+  outline: none;
+  background: #ffffff;
+}
+
+.comments-section textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 12%);
+}
+
+.comments-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.comment-card {
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.comment-card p {
+  margin: 0 0 7px;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.comment-card span,
+.muted-text {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+@media (max-width: 980px) {
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .google-connect-wrap {
+    justify-items: start;
+  }
+
+  .auth-error {
+    text-align: left;
+  }
+}
