@@ -31,6 +31,7 @@ export interface CommissioningSpace {
   roomNo: string;
   spaceType: string;
   displayName: string;
+  regionId?: string | null;
   status: SpaceStatus;
   polygon: Point[];
   daylightZone: string | null;

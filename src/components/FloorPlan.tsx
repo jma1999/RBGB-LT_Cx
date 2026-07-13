@@ -116,7 +116,7 @@ export default function FloorPlan({
   const floorDataUrl = `/data/floor-${floor}-spaces.json`;
   const regionDataUrl = `/data/floor-${floor}-regions.json`;
   const assignmentStorageKey =
-    `lighting-cx-floor-${floor}-region-assignments-v2-cache`;
+    `lighting-cx-floor-${floor}-region-assignments-v3-cache`;
 
   const [floorData, setFloorData] = useState<FloorData | null>(null);
   const [regionData, setRegionData] = useState<RegionData | null>(null);
@@ -162,18 +162,65 @@ export default function FloorPlan({
           throw new Error(`The Floor ${floor} files contain the wrong floor ID.`);
         }
 
+        const validRegionIds = new Set(
+          loadedRegionData.regions.map((region) => region.id),
+        );
+
+        const jsonAssignmentsByRegion = new Map<string, string>();
+
+        for (const space of loadedFloorData.spaces) {
+          const regionId = space.regionId?.trim();
+
+          if (!regionId) {
+            continue;
+          }
+
+          if (!validRegionIds.has(regionId)) {
+            throw new Error(
+              `${space.displayName} references an unknown region: ${regionId}`,
+            );
+          }
+
+          const existingSpaceId = jsonAssignmentsByRegion.get(regionId);
+
+          if (existingSpaceId) {
+            const existingSpace = loadedFloorData.spaces.find(
+              (spaceItem) => spaceItem.id === existingSpaceId,
+            );
+
+            throw new Error(
+              `${regionId} is assigned to both ${
+                existingSpace?.displayName ?? existingSpaceId
+              } and ${space.displayName}.`,
+            );
+          }
+
+          jsonAssignmentsByRegion.set(regionId, space.id);
+        }
+
         const cachedAssignments = loadCachedAssignments(
           assignmentStorageKey,
         );
 
         setFloorData(loadedFloorData);
+
         setRegionData({
           ...loadedRegionData,
-          regions: loadedRegionData.regions.map((region) => ({
-            ...region,
-            assignedSpaceId:
-              cachedAssignments[region.id] ?? region.assignedSpaceId,
-          })),
+          regions: loadedRegionData.regions.map((region) => {
+            const hasCachedAssignment =
+              Object.prototype.hasOwnProperty.call(
+                cachedAssignments,
+                region.id,
+              );
+
+            return {
+              ...region,
+              assignedSpaceId: hasCachedAssignment
+                ? cachedAssignments[region.id]
+                : jsonAssignmentsByRegion.get(region.id) ??
+                  region.assignedSpaceId,
+            };
+          }),
         });
       } catch (error) {
         setLoadError(
