@@ -116,7 +116,7 @@ export default function FloorPlan({
   const floorDataUrl = `/data/floor-${floor}-spaces.json`;
   const regionDataUrl = `/data/floor-${floor}-regions.json`;
   const assignmentStorageKey =
-    `lighting-cx-floor-${floor}-region-assignments-v3-cache`;
+    `lighting-cx-floor-${floor}-region-assignments-v4-cache`;
 
   const [floorData, setFloorData] = useState<FloorData | null>(null);
   const [regionData, setRegionData] = useState<RegionData | null>(null);
