@@ -1358,3 +1358,105 @@ button:disabled {
   font-size: 10px;
   line-height: 1.4;
 }
+
+/* -------------------------------------------------------
+   Fixed desktop workspace with independently scrolling pane
+-------------------------------------------------------- */
+
+@media (min-width: 981px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .app-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .app-header {
+    flex: 0 0 auto;
+  }
+
+  .workspace {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* Keep the complete floor-plan section inside the viewport */
+  .plan-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .plan-toolbar {
+    flex: 0 0 auto;
+  }
+
+  /* Override the previous fixed 620px plan height */
+  .zoom-wrapper {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .zoom-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 22px;
+  }
+
+  .status-legend {
+    flex: 0 0 auto;
+  }
+
+  /* Only the right-hand panel scrolls */
+  .side-panel {
+    height: 100%;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+}
+
+@media (min-width: 981px) {
+  .side-panel::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .side-panel::-webkit-scrollbar-track {
+    background: #f8fafc;
+  }
+
+  .side-panel::-webkit-scrollbar-thumb {
+    border: 3px solid #f8fafc;
+    border-radius: 999px;
+    background: #cbd5e1;
+  }
+
+  .side-panel::-webkit-scrollbar-thumb:hover {
+    background: #94b8a9;
+  }
+
+  .side-panel {
+    scrollbar-color: #cbd5e1 #f8fafc;
+    scrollbar-width: thin;
+  }
+}
