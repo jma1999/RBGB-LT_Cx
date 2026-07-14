@@ -3012,12 +3012,13 @@
       "issueIds": []
     },
     {
-      "id": "03-364-pantry-050",
-      "sourceRow": 50,
+      "id": "03-364-pantry-047",
+      "sourceRow": 47,
       "floor": "03",
       "roomNo": "364",
       "spaceType": "Pantry",
       "displayName": "364 - Pantry",
+      "regionId": "region-074",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3033,7 +3034,7 @@
           "expectedQty": 6,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3060,128 +3061,13 @@
       "issueIds": []
     },
     {
-      "id": "03-c3-5-corridor-split-2-051",
-      "sourceRow": 51,
-      "floor": "03",
-      "roomNo": "C3.5",
-      "spaceType": "Corridor Split-2",
-      "displayName": "C3.5 - Corridor Split-2",
-      "status": "not_inspected",
-      "polygon": [],
-      "daylightZone": null,
-      "emergencyFixtures": null,
-      "testedBy": "",
-      "testedAt": null,
-      "notes": "",
-      "items": [
-        {
-          "id": "lighting-1",
-          "category": "lighting",
-          "deviceType": "C2",
-          "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-1",
-          "category": "control",
-          "deviceType": "DT-305",
-          "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        }
-      ],
-      "issueIds": []
-    },
-    {
-      "id": "03-n-a-corridor-split-2-052",
-      "sourceRow": 52,
-      "floor": "03",
-      "roomNo": "N/A",
-      "spaceType": "Corridor Split-2",
-      "displayName": "N/A - Corridor Split-2",
-      "status": "not_inspected",
-      "polygon": [],
-      "daylightZone": null,
-      "emergencyFixtures": null,
-      "testedBy": "",
-      "testedAt": null,
-      "notes": "",
-      "items": [
-        {
-          "id": "lighting-1",
-          "category": "lighting",
-          "deviceType": "C2",
-          "expectedQty": 11,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "lighting-2",
-          "category": "lighting",
-          "deviceType": "X1",
-          "expectedQty": 3,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "lighting-3",
-          "category": "lighting",
-          "deviceType": "D2",
-          "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-1",
-          "category": "control",
-          "deviceType": "DT-305",
-          "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        }
-      ],
-      "issueIds": []
-    },
-    {
-      "id": "03-308-gender-neutral-restroom-053",
-      "sourceRow": 53,
+      "id": "03-308-gender-neutral-restroom-048",
+      "sourceRow": 48,
       "floor": "03",
       "roomNo": "308",
       "spaceType": "Gender Neutral Restroom",
       "displayName": "308 - Gender Neutral Restroom",
+      "regionId": "region-031",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3197,7 +3083,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3207,7 +3093,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3217,7 +3103,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wall sconce light",
           "issueIds": []
         },
         {
@@ -3227,29 +3113,30 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "occupancy sensor",
           "issueIds": []
         },
         {
           "id": "control-2",
           "category": "control",
-          "deviceType": "ER - Emergency Bypass Device",
+          "deviceType": "ER",
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "emergency bypass device",
           "issueIds": []
         }
       ],
       "issueIds": []
     },
     {
-      "id": "03-306-nurse-waiting-054",
-      "sourceRow": 54,
+      "id": "03-306-nurse-waiting-049",
+      "sourceRow": 49,
       "floor": "03",
       "roomNo": "306",
       "spaceType": "Nurse Waiting",
       "displayName": "306 - Nurse Waiting",
+      "regionId": "region-026",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3265,7 +3152,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "2x4-ft LED troffer",
           "issueIds": []
         },
         {
@@ -3275,7 +3162,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -3302,12 +3189,13 @@
       "issueIds": []
     },
     {
-      "id": "03-306a-nurse-s-exam-room-055",
-      "sourceRow": 55,
+      "id": "03-306a-nurse-s-exam-room-050",
+      "sourceRow": 50,
       "floor": "03",
       "roomNo": "306A",
       "spaceType": "Nurse's Exam Room",
       "displayName": "306A - Nurse's Exam Room",
+      "regionId": "region-048",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3323,7 +3211,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "2x4-ft LED troffer",
           "issueIds": []
         },
         {
@@ -3333,7 +3221,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -3360,12 +3248,13 @@
       "issueIds": []
     },
     {
-      "id": "03-306b-nurse-s-restroom-056",
-      "sourceRow": 56,
+      "id": "03-306b-nurse-s-restroom-051",
+      "sourceRow": 51,
       "floor": "03",
       "roomNo": "306B",
       "spaceType": "Nurse's Restroom",
       "displayName": "306B - Nurse's Restroom",
+      "regionId": "region-056",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3381,7 +3270,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3391,7 +3280,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wall sconce light",
           "issueIds": []
         },
         {
@@ -3401,7 +3290,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "occupancy sensor",
           "issueIds": []
         },
         {
@@ -3411,19 +3300,20 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "emergency bypass device",
           "issueIds": []
         }
       ],
       "issueIds": []
     },
     {
-      "id": "03-310-men-s-restroom-057",
-      "sourceRow": 57,
+      "id": "03-310-men-s-restroom-052",
+      "sourceRow": 52,
       "floor": "03",
       "roomNo": "310",
       "spaceType": "Men's Restroom",
       "displayName": "310 - Men's Restroom",
+      "regionId": "region-027",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3439,7 +3329,7 @@
           "expectedQty": 5,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3449,7 +3339,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "linear perimeter light",
           "issueIds": []
         },
         {
@@ -3459,7 +3349,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wall sconce light",
           "issueIds": []
         },
         {
@@ -3469,7 +3359,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 2-button switch dimmer",
           "issueIds": []
         },
         {
@@ -3496,12 +3386,13 @@
       "issueIds": []
     },
     {
-      "id": "03-312-women-s-restroom-058",
-      "sourceRow": 58,
+      "id": "03-312-women-s-restroom-053",
+      "sourceRow": 53,
       "floor": "03",
       "roomNo": "312",
       "spaceType": "Women's Restroom",
       "displayName": "312 - Women's Restroom",
+      "regionId": "region-050",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3517,7 +3408,7 @@
           "expectedQty": 4,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3527,7 +3418,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "linear perimeter light",
           "issueIds": []
         },
         {
@@ -3537,7 +3428,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wall sconce light",
           "issueIds": []
         },
         {
@@ -3547,7 +3438,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 2-button switch dimmer",
           "issueIds": []
         },
         {
@@ -3574,12 +3465,13 @@
       "issueIds": []
     },
     {
-      "id": "03-360a-co-working-059",
-      "sourceRow": 59,
+      "id": "03-360a-co-working-054",
+      "sourceRow": 54,
       "floor": "03",
       "roomNo": "360A",
       "spaceType": "Co-Working",
       "displayName": "360A - Co-Working",
+      "regionId": "region-083",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3595,7 +3487,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "chain-hung dome light",
           "issueIds": []
         },
         {
@@ -3605,7 +3497,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -3632,12 +3524,13 @@
       "issueIds": []
     },
     {
-      "id": "03-360-multi-space-060",
-      "sourceRow": 60,
+      "id": "03-360-multi-space-055",
+      "sourceRow": 55,
       "floor": "03",
       "roomNo": "360",
       "spaceType": "Multi-Space",
       "displayName": "360 - Multi-Space",
+      "regionId": "region-082",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3653,7 +3546,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "exit sign",
           "issueIds": []
         },
         {
@@ -3663,7 +3556,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light near wall",
           "issueIds": []
         },
         {
@@ -3673,7 +3566,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "track light",
           "issueIds": []
         },
         {
@@ -3683,7 +3576,7 @@
           "expectedQty": 8,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "microcylinder downlight near coworking area",
           "issueIds": []
         },
         {
@@ -3693,7 +3586,7 @@
           "expectedQty": 15,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -3703,7 +3596,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "fabric diffuser circular light at room end",
           "issueIds": []
         },
         {
@@ -3713,7 +3606,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "microcylinder downlight in middle of room",
           "issueIds": []
         },
         {
@@ -3723,7 +3616,7 @@
           "expectedQty": 5,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -3733,7 +3626,7 @@
           "expectedQty": 4,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "photosensor",
           "issueIds": []
         },
         {
@@ -3770,12 +3663,13 @@
       "issueIds": []
     },
     {
-      "id": "03-362-large-conference-room-061",
-      "sourceRow": 61,
+      "id": "03-362-large-conference-room-056",
+      "sourceRow": 56,
       "floor": "03",
       "roomNo": "362",
       "spaceType": "Large Conference Room",
       "displayName": "362 - Large Conference Room",
+      "regionId": "region-084",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3791,7 +3685,7 @@
           "expectedQty": 8,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -3801,7 +3695,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "linear chandelier",
           "issueIds": []
         },
         {
@@ -3811,7 +3705,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "uniform thin light rectangle on ceiling",
           "issueIds": []
         },
         {
@@ -3821,7 +3715,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 3-scene controller",
           "issueIds": []
         },
         {
@@ -3848,12 +3742,13 @@
       "issueIds": []
     },
     {
-      "id": "03-358-huddle-room-062",
-      "sourceRow": 62,
+      "id": "03-358-huddle-room-057",
+      "sourceRow": 57,
       "floor": "03",
       "roomNo": "358",
       "spaceType": "Huddle Room",
       "displayName": "358 - Huddle Room",
+      "regionId": "region-072",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3869,7 +3764,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -3879,7 +3774,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -3906,12 +3801,13 @@
       "issueIds": []
     },
     {
-      "id": "03-356-focus-063",
-      "sourceRow": 63,
+      "id": "03-356-focus-058",
+      "sourceRow": 58,
       "floor": "03",
       "roomNo": "356",
       "spaceType": "Focus",
       "displayName": "356 - Focus",
+      "regionId": "region-071",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3927,7 +3823,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -3937,7 +3833,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -3964,12 +3860,13 @@
       "issueIds": []
     },
     {
-      "id": "03-354-focus-064",
-      "sourceRow": 64,
+      "id": "03-354-focus-059",
+      "sourceRow": 59,
       "floor": "03",
       "roomNo": "354",
       "spaceType": "Focus",
       "displayName": "354 - Focus",
+      "regionId": "region-070",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -3985,7 +3882,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -3995,7 +3892,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4022,12 +3919,13 @@
       "issueIds": []
     },
     {
-      "id": "03-352-focus-065",
-      "sourceRow": 65,
+      "id": "03-352-focus-060",
+      "sourceRow": 60,
       "floor": "03",
       "roomNo": "352",
       "spaceType": "Focus",
       "displayName": "352 - Focus",
+      "regionId": "region-069",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4043,7 +3941,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4053,7 +3951,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4080,12 +3978,13 @@
       "issueIds": []
     },
     {
-      "id": "03-350-focus-066",
-      "sourceRow": 66,
+      "id": "03-350-focus-061",
+      "sourceRow": 61,
       "floor": "03",
       "roomNo": "350",
       "spaceType": "Focus",
       "displayName": "350 - Focus",
+      "regionId": "region-068",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4101,7 +4000,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4111,7 +4010,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4138,12 +4037,13 @@
       "issueIds": []
     },
     {
-      "id": "03-348-focus-067",
-      "sourceRow": 67,
+      "id": "03-348-focus-062",
+      "sourceRow": 62,
       "floor": "03",
       "roomNo": "348",
       "spaceType": "Focus",
       "displayName": "348 - Focus",
+      "regionId": "region-067",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4159,7 +4059,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4169,7 +4069,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4196,12 +4096,13 @@
       "issueIds": []
     },
     {
-      "id": "03-346-focus-068",
-      "sourceRow": 68,
+      "id": "03-346-focus-063",
+      "sourceRow": 63,
       "floor": "03",
       "roomNo": "346",
       "spaceType": "Focus",
       "displayName": "346 - Focus",
+      "regionId": "region-066",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4217,7 +4118,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4227,7 +4128,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4254,12 +4155,13 @@
       "issueIds": []
     },
     {
-      "id": "03-344-huddle-room-b-069",
-      "sourceRow": 69,
+      "id": "03-344-huddle-room-b-064",
+      "sourceRow": 64,
       "floor": "03",
       "roomNo": "344",
       "spaceType": "Huddle Room (B)",
       "displayName": "344 - Huddle Room (B)",
+      "regionId": "region-065",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4275,7 +4177,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4285,7 +4187,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4312,12 +4214,13 @@
       "issueIds": []
     },
     {
-      "id": "03-342-collab-room-b-070",
-      "sourceRow": 70,
+      "id": "03-342-collab-room-b-065",
+      "sourceRow": 65,
       "floor": "03",
       "roomNo": "342",
       "spaceType": "Collab Room (B)",
       "displayName": "342 - Collab Room (B)",
+      "regionId": "region-064",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4333,7 +4236,7 @@
           "expectedQty": 6,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -4343,7 +4246,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -4353,7 +4256,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 3-scene controller",
           "issueIds": []
         },
         {
@@ -4380,12 +4283,13 @@
       "issueIds": []
     },
     {
-      "id": "03-334-multi-space-071",
-      "sourceRow": 71,
+      "id": "03-334-multi-space-066",
+      "sourceRow": 66,
       "floor": "03",
       "roomNo": "334",
       "spaceType": "Multi-Space",
       "displayName": "334 - Multi-Space",
+      "regionId": "region-032",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4401,7 +4305,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light near wall",
           "issueIds": []
         },
         {
@@ -4411,7 +4315,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "exit sign",
           "issueIds": []
         },
         {
@@ -4421,7 +4325,7 @@
           "expectedQty": 10,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -4431,7 +4335,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "microcylinder downlight in middle of room",
           "issueIds": []
         },
         {
@@ -4441,7 +4345,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "fabric diffuser circular light at room end",
           "issueIds": []
         },
         {
@@ -4451,7 +4355,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4461,7 +4365,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "photosensor",
           "issueIds": []
         },
         {
@@ -4488,12 +4392,13 @@
       "issueIds": []
     },
     {
-      "id": "03-328a-control-room-072",
-      "sourceRow": 72,
+      "id": "03-328a-control-room-067",
+      "sourceRow": 67,
       "floor": "03",
       "roomNo": "328A",
       "spaceType": "Control Room",
       "displayName": "328A - Control Room",
+      "regionId": "region-021",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4509,7 +4414,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "2x2-ft LED troffer",
           "issueIds": []
         },
         {
@@ -4519,7 +4424,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4546,12 +4451,13 @@
       "issueIds": []
     },
     {
-      "id": "03-328-broadcast-studio-073",
-      "sourceRow": 73,
+      "id": "03-328-broadcast-studio-068",
+      "sourceRow": 68,
       "floor": "03",
       "roomNo": "328",
       "spaceType": "Broadcast Studio",
       "displayName": "328 - Broadcast Studio",
+      "regionId": "region-022",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4567,7 +4473,7 @@
           "expectedQty": 6,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "2x2-ft LED troffer",
           "issueIds": []
         },
         {
@@ -4577,7 +4483,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 2-button switch dimmer",
           "issueIds": []
         },
         {
@@ -4604,12 +4510,13 @@
       "issueIds": []
     },
     {
-      "id": "03-320-multi-space-074",
-      "sourceRow": 74,
+      "id": "03-320-multi-space-069",
+      "sourceRow": 69,
       "floor": "03",
       "roomNo": "320",
       "spaceType": "Multi-Space",
       "displayName": "320 - Multi-Space",
+      "regionId": "region-003",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4625,7 +4532,7 @@
           "expectedQty": 15,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -4635,7 +4542,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "microcylinder downlight in middle of room",
           "issueIds": []
         },
         {
@@ -4645,7 +4552,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light near wall",
           "issueIds": []
         },
         {
@@ -4655,7 +4562,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "exit sign",
           "issueIds": []
         },
         {
@@ -4665,7 +4572,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4675,7 +4582,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "photosensor",
           "issueIds": []
         },
         {
@@ -4712,12 +4619,13 @@
       "issueIds": []
     },
     {
-      "id": "03-n-a-lobby-075",
-      "sourceRow": 75,
+      "id": "03-n-a-lobby-070",
+      "sourceRow": 70,
       "floor": "03",
       "roomNo": "N/A",
       "spaceType": "Lobby",
       "displayName": "N/A - Lobby",
+      "regionId": "region-019",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4733,7 +4641,7 @@
           "expectedQty": 4,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -4743,7 +4651,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "exit sign",
           "issueIds": []
         },
         {
@@ -4753,7 +4661,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "matte shell suspended light",
           "issueIds": []
         },
         {
@@ -4780,12 +4688,13 @@
       "issueIds": []
     },
     {
-      "id": "03-314-training-room-076",
-      "sourceRow": 76,
+      "id": "03-314-training-room-071",
+      "sourceRow": 71,
       "floor": "03",
       "roomNo": "314",
       "spaceType": "Training Room",
       "displayName": "314 - Training Room",
+      "regionId": "region-005",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4801,7 +4710,7 @@
           "expectedQty": 8,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended ceiling louvre light",
           "issueIds": []
         },
         {
@@ -4811,7 +4720,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "exit sign",
           "issueIds": []
         },
         {
@@ -4821,7 +4730,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4848,12 +4757,13 @@
       "issueIds": []
     },
     {
-      "id": "03-326-focus-077",
-      "sourceRow": 77,
+      "id": "03-326-focus-072",
+      "sourceRow": 72,
       "floor": "03",
       "roomNo": "326",
       "spaceType": "Focus",
       "displayName": "326 - Focus",
+      "regionId": "region-014",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4869,7 +4779,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4879,7 +4789,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4906,12 +4816,13 @@
       "issueIds": []
     },
     {
-      "id": "03-324-focus-078",
-      "sourceRow": 78,
+      "id": "03-324-focus-073",
+      "sourceRow": 73,
       "floor": "03",
       "roomNo": "324",
       "spaceType": "Focus",
       "displayName": "324 - Focus",
+      "regionId": "region-015",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4927,7 +4838,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4937,7 +4848,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -4964,12 +4875,13 @@
       "issueIds": []
     },
     {
-      "id": "03-322-focus-079",
-      "sourceRow": 79,
+      "id": "03-322-focus-074",
+      "sourceRow": 74,
       "floor": "03",
       "roomNo": "322",
       "spaceType": "Focus",
       "displayName": "322 - Focus",
+      "regionId": "region-016",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -4985,7 +4897,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed linear light",
           "issueIds": []
         },
         {
@@ -4995,7 +4907,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -5022,12 +4934,13 @@
       "issueIds": []
     },
     {
-      "id": "03-318-decompression-080",
-      "sourceRow": 80,
+      "id": "03-318-decompression-075",
+      "sourceRow": 75,
       "floor": "03",
       "roomNo": "318",
       "spaceType": "Decompression",
       "displayName": "318 - Decompression",
+      "regionId": "region-017",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5043,7 +4956,7 @@
           "expectedQty": 6,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -5053,7 +4966,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "felt shell hanging light",
           "issueIds": []
         },
         {
@@ -5063,7 +4976,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless wall-station dimmer",
           "issueIds": []
         },
         {
@@ -5090,12 +5003,13 @@
       "issueIds": []
     },
     {
-      "id": "03-316-collab-room-b-081",
-      "sourceRow": 81,
+      "id": "03-316-collab-room-b-076",
+      "sourceRow": 76,
       "floor": "03",
       "roomNo": "316",
       "spaceType": "Collab Room (B)",
       "displayName": "316 - Collab Room (B)",
+      "regionId": "region-018",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5111,7 +5025,7 @@
           "expectedQty": 8,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "4-in LED downlight",
           "issueIds": []
         },
         {
@@ -5121,7 +5035,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -5131,7 +5045,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 3-scene controller",
           "issueIds": []
         },
         {
@@ -5158,12 +5072,13 @@
       "issueIds": []
     },
     {
-      "id": "03-330-copy-print-082",
-      "sourceRow": 82,
+      "id": "03-330-copy-print-077",
+      "sourceRow": 77,
       "floor": "03",
       "roomNo": "330",
       "spaceType": "Copy/Print",
       "displayName": "330 - Copy/Print",
+      "regionId": "region-052",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5179,7 +5094,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "2x4-ft LED troffer",
           "issueIds": []
         },
         {
@@ -5189,7 +5104,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "wireless 2-button switch dimmer",
           "issueIds": []
         },
         {
@@ -5216,12 +5131,13 @@
       "issueIds": []
     },
     {
-      "id": "03-c3-7-corridor-083",
-      "sourceRow": 83,
+      "id": "03-c3-7-corridor-078",
+      "sourceRow": 78,
       "floor": "03",
       "roomNo": "C3.7",
       "spaceType": "Corridor",
       "displayName": "C3.7 - Corridor",
+      "regionId": "region-057",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5237,7 +5153,7 @@
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "exit sign",
           "issueIds": []
         },
         {
@@ -5247,7 +5163,7 @@
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "recessed mount light near perpendicular walls",
           "issueIds": []
         },
         {
@@ -5274,12 +5190,13 @@
       "issueIds": []
     },
     {
-      "id": "03-336b-electrical-084",
-      "sourceRow": 84,
+      "id": "03-336b-electrical-079",
+      "sourceRow": 79,
       "floor": "03",
       "roomNo": "336B",
       "spaceType": "Electrical",
       "displayName": "336B - Electrical",
+      "regionId": "region-024",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5295,7 +5212,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -5305,39 +5222,40 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "uniform thin light near wall",
           "issueIds": []
         },
         {
           "id": "control-1",
           "category": "control",
-          "deviceType": "SSU - System Support Unit",
+          "deviceType": "SSU",
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "system support unit",
           "issueIds": []
         },
         {
           "id": "control-2",
           "category": "control",
-          "deviceType": "ETH-SW - Ethernet Switch",
+          "deviceType": "ETH-SW",
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "ethernet switch",
           "issueIds": []
         }
       ],
       "issueIds": []
     },
     {
-      "id": "03-336a-comm-085",
-      "sourceRow": 85,
+      "id": "03-336a-comm-080",
+      "sourceRow": 80,
       "floor": "03",
       "roomNo": "336A",
       "spaceType": "Comm",
       "displayName": "336A - Comm",
+      "regionId": "region-045",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5353,7 +5271,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -5363,19 +5281,20 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "emergency switch",
           "issueIds": []
         }
       ],
       "issueIds": []
     },
     {
-      "id": "03-338-mechanical-086",
-      "sourceRow": 86,
+      "id": "03-338-mechanical-081",
+      "sourceRow": 81,
       "floor": "03",
       "roomNo": "338",
       "spaceType": "Mechanical",
       "displayName": "338 - Mechanical",
+      "regionId": "region-035",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5391,7 +5310,7 @@
           "expectedQty": 5,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -5401,19 +5320,20 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "emergency switch",
           "issueIds": []
         }
       ],
       "issueIds": []
     },
     {
-      "id": "03-340-janitor-087",
-      "sourceRow": 87,
+      "id": "03-340-janitor-082",
+      "sourceRow": 82,
       "floor": "03",
       "roomNo": "340",
       "spaceType": "Janitor",
       "displayName": "340 - Janitor",
+      "regionId": "region-047",
       "status": "not_inspected",
       "polygon": [],
       "daylightZone": null,
@@ -5429,7 +5349,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "suspended linear light",
           "issueIds": []
         },
         {
@@ -5439,7 +5359,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "",
+          "notes": "occupancy sensor",
           "issueIds": []
         }
       ],
