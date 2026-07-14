@@ -3562,7 +3562,7 @@
         {
           "id": "lighting-3",
           "category": "lighting",
-          "deviceType": "H2 track light",
+          "deviceType": "H2",
           "expectedQty": 3,
           "observedQty": null,
           "result": "not_checked",
