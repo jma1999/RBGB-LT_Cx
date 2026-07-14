@@ -46,12 +46,34 @@ button:disabled {
 }
 
 .app-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 22px;
+  gap: 48px;
+}
+
+.header-copy {
+  justify-self: start;
+  text-align: left;
+}
+
+.header-copy h1 {
+  margin: 6px 0 8px;
+}
+
+.header-description {
+  margin: 0;
+}
+
+.header-actions {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  max-width: 1600px;
-  margin: 0 auto 22px;
-  gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  justify-self: end;
 }
 
 .app-header h1 {

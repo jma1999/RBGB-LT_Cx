@@ -65,59 +65,22 @@ export default function App() {
   return (
     <main className="app-shell">
       <header className="app-header">
-        <div>
-          <p className="eyebrow">Internal commissioning tool</p>
-          <h1>Lighting Commissioning</h1>
+        <div className="header-copy">
+          <p className="eyebrow">RBGB Internal Tool</p>
+          <h1>Cx-LT</h1>
           <p className="header-description">
             Map spaces, verify fixtures and document commissioning results.
           </p>
         </div>
 
         <div className="header-actions">
-          {googleUser ? (
-            <div className="google-account-card">
-              <div>
-                <span>Google Sheets connected</span>
-                <strong>{googleUser.email}</strong>
-              </div>
-              <button type="button" onClick={handleDisconnectGoogle}>
-                Disconnect
-              </button>
-            </div>
-          ) : (
-            <div className="google-connect-wrap">
-              <button
-                type="button"
-                className="google-connect-button"
-                onClick={() => void handleConnectGoogle()}
-                disabled={
-                  authStatus === "initializing" || authStatus === "connecting"
-                }
-              >
-                {authStatus === "connecting"
-                  ? "Connecting…"
-                  : "Connect Google Sheets"}
-              </button>
-              {authError && <span className="auth-error">{authError}</span>}
-            </div>
-          )}
+          <button className="google-connect-button">
+            Connect Google Sheets
+          </button>
 
-          <div className="floor-selector" aria-label="Floor selection">
-            <button
-              type="button"
-              className={selectedFloor === "03" ? "active" : ""}
-              aria-pressed={selectedFloor === "03"}
-              onClick={() => setSelectedFloor("03")}
-            >
-              Floor 03
-            </button>
-
-            <button
-              type="button"
-              className={selectedFloor === "04" ? "active" : ""}
-              aria-pressed={selectedFloor === "04"}
-              onClick={() => setSelectedFloor("04")}
-            >
+          <div className="floor-selector">
+            <button type="button">Floor 03</button>
+            <button type="button" className="active">
               Floor 04
             </button>
           </div>
