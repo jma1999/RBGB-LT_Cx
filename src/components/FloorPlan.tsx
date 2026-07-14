@@ -4,15 +4,24 @@ import {
   TransformWrapper,
 } from "react-zoom-pan-pinch";
 
+import InspectionPanel from "./InspectionPanel";
 import {
   addComment,
+  createIssue,
   loadAssignments,
   loadComments,
+  loadFloorChecklistResults,
+  loadFloorIssues,
+  resolveIssue,
+  saveChecklistResults,
   upsertAssignment,
   type GoogleUser,
+  type SheetChecklistResult,
   type SheetComment,
+  type SheetIssue,
 } from "../services/googleSheets";
 import type {
+  ChecklistItem,
   CommissioningSpace,
   FloorData,
   FloorRegion,
@@ -22,7 +31,12 @@ import type {
 
 type AppMode = "assign" | "inspect";
 export type FloorId = "03" | "04";
-type SyncStatus = "disconnected" | "loading" | "synced" | "saving" | "error";
+type SyncStatus =
+  | "disconnected"
+  | "loading"
+  | "synced"
+  | "saving"
+  | "error";
 
 interface FloorPlanProps {
   floor: FloorId;
@@ -108,6 +122,129 @@ function formatTimestamp(value: string): string {
   return date.toLocaleString();
 }
 
+function calculateSpaceStatus(
+  items: ChecklistItem[],
+  issues: SheetIssue[],
+): SpaceStatus {
+  if (issues.some((issue) => issue.status === "open")) {
+    return "issue";
+  }
+
+  if (items.some((item) => item.result === "issue")) {
+    return "issue";
+  }
+
+  if (items.length === 0) {
+    return "not_inspected";
+  }
+
+  if (items.every((item) => item.result === "not_applicable")) {
+    return "not_applicable";
+  }
+
+  if (
+    items.every(
+      (item) =>
+        item.result === "pass" || item.result === "not_applicable",
+    )
+  ) {
+    return "passed";
+  }
+
+  if (
+    items.some(
+      (item) =>
+        item.result !== "not_checked" ||
+        item.observedQty !== null ||
+        (item.inspectionNotes ?? "").trim() !== "",
+    )
+  ) {
+    return "in_progress";
+  }
+
+  return "not_inspected";
+}
+
+function applyInspectionData(
+  data: FloorData,
+  checklistResults: SheetChecklistResult[],
+  issues: SheetIssue[],
+): FloorData {
+  const resultsByKey = new Map(
+    checklistResults.map((result) => [
+      `${result.spaceId}::${result.checklistItemId}`,
+      result,
+    ]),
+  );
+
+  return {
+    ...data,
+    spaces: data.spaces.map((space) => {
+      const items = space.items.map((item) => {
+        const saved = resultsByKey.get(`${space.id}::${item.id}`);
+
+        if (!saved) {
+          return item;
+        }
+
+        return {
+          ...item,
+          observedQty: saved.observedQty,
+          result: saved.result,
+          inspectionNotes: saved.notes,
+        };
+      });
+
+      const spaceIssues = issues.filter((issue) => issue.spaceId === space.id);
+      const spaceResults = checklistResults
+        .filter((result) => result.spaceId === space.id)
+        .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+      const latestResult = spaceResults[0];
+
+      return {
+        ...space,
+        items,
+        status: calculateSpaceStatus(items, spaceIssues),
+        testedBy: latestResult?.updatedBy ?? space.testedBy,
+        testedAt: latestResult?.updatedAt ?? space.testedAt,
+      };
+    }),
+  };
+}
+
+function mergeChecklistResults(
+  existing: SheetChecklistResult[],
+  saved: SheetChecklistResult[],
+): SheetChecklistResult[] {
+  const savedByKey = new Map(
+    saved.map((result) => [
+      `${result.floor}::${result.spaceId}::${result.checklistItemId}`,
+      result,
+    ]),
+  );
+
+  const merged = existing.map((result) => {
+    const key = `${result.floor}::${result.spaceId}::${result.checklistItemId}`;
+    return savedByKey.get(key) ?? result;
+  });
+
+  const existingKeys = new Set(
+    existing.map(
+      (result) =>
+        `${result.floor}::${result.spaceId}::${result.checklistItemId}`,
+    ),
+  );
+
+  for (const result of saved) {
+    const key = `${result.floor}::${result.spaceId}::${result.checklistItemId}`;
+    if (!existingKeys.has(key)) {
+      merged.push(result);
+    }
+  }
+
+  return merged;
+}
+
 export default function FloorPlan({
   floor,
   googleUser,
@@ -120,7 +257,11 @@ export default function FloorPlan({
 
   const [floorData, setFloorData] = useState<FloorData | null>(null);
   const [regionData, setRegionData] = useState<RegionData | null>(null);
-  const [mode, setMode] = useState<AppMode>("assign");
+  const [checklistResults, setChecklistResults] = useState<
+    SheetChecklistResult[]
+  >([]);
+  const [sheetIssues, setSheetIssues] = useState<SheetIssue[]>([]);
+  const [mode, setMode] = useState<AppMode>("inspect");
   const [selectedRegionId, setSelectedRegionId] = useState("");
   const [pendingSpaceId, setPendingSpaceId] = useState("");
   const [hoveredRegionId, setHoveredRegionId] = useState<string | null>(
@@ -129,7 +270,7 @@ export default function FloorPlan({
   const [loadError, setLoadError] = useState("");
   const [syncStatus, setSyncStatus] = useState<SyncStatus>("disconnected");
   const [syncMessage, setSyncMessage] = useState(
-    "Connect Google Sheets to load shared assignments.",
+    "Connect Google Sheets to load shared data.",
   );
   const [comments, setComments] = useState<SheetComment[]>([]);
   const [commentText, setCommentText] = useState("");
@@ -141,6 +282,8 @@ export default function FloorPlan({
       setSelectedRegionId("");
       setPendingSpaceId("");
       setComments([]);
+      setChecklistResults([]);
+      setSheetIssues([]);
 
       try {
         const [floorResponse, regionResponse] = await Promise.all([
@@ -165,7 +308,6 @@ export default function FloorPlan({
         const validRegionIds = new Set(
           loadedRegionData.regions.map((region) => region.id),
         );
-
         const jsonAssignmentsByRegion = new Map<string, string>();
 
         for (const space of loadedFloorData.spaces) {
@@ -182,10 +324,9 @@ export default function FloorPlan({
           }
 
           const existingSpaceId = jsonAssignmentsByRegion.get(regionId);
-
           if (existingSpaceId) {
             const existingSpace = loadedFloorData.spaces.find(
-              (spaceItem) => spaceItem.id === existingSpaceId,
+              (candidate) => candidate.id === existingSpaceId,
             );
 
             throw new Error(
@@ -203,7 +344,6 @@ export default function FloorPlan({
         );
 
         setFloorData(loadedFloorData);
-
         setRegionData({
           ...loadedRegionData,
           regions: loadedRegionData.regions.map((region) => {
@@ -235,9 +375,9 @@ export default function FloorPlan({
   }, [assignmentStorageKey, floor, floorDataUrl, regionDataUrl]);
 
   useEffect(() => {
-    if (!googleUser || !regionData) {
+    if (!googleUser || !regionData || !floorData) {
       setSyncStatus("disconnected");
-      setSyncMessage("Connect Google Sheets to load shared assignments.");
+      setSyncMessage("Connect Google Sheets to load shared data.");
       return;
     }
 
@@ -245,10 +385,15 @@ export default function FloorPlan({
 
     async function syncFromGoogle(): Promise<void> {
       setSyncStatus("loading");
-      setSyncMessage("Loading shared assignments from Google Sheets…");
+      setSyncMessage("Loading assignments and inspections from Google Sheets…");
 
       try {
-        const cloudAssignments = await loadAssignments(floor);
+        const [cloudAssignments, cloudResults, cloudIssues] =
+          await Promise.all([
+            loadAssignments(floor),
+            loadFloorChecklistResults(floor),
+            loadFloorIssues(floor),
+          ]);
 
         if (cancelled) {
           return;
@@ -257,13 +402,19 @@ export default function FloorPlan({
         const nextRegions = regionData.regions.map((region) => ({
           ...region,
           assignedSpaceId:
-            Object.prototype.hasOwnProperty.call(cloudAssignments, region.id)
+            Object.prototype.hasOwnProperty.call(
+              cloudAssignments,
+              region.id,
+            )
               ? cloudAssignments[region.id]
               : region.assignedSpaceId,
         }));
 
         setRegionData({ ...regionData, regions: nextRegions });
         cacheAssignments(assignmentStorageKey, nextRegions);
+        setChecklistResults(cloudResults);
+        setSheetIssues(cloudIssues);
+        setFloorData(applyInspectionData(floorData, cloudResults, cloudIssues));
         setSyncStatus("synced");
         setSyncMessage(`Shared data synced as ${googleUser.email}.`);
       } catch (error) {
@@ -275,7 +426,7 @@ export default function FloorPlan({
         setSyncMessage(
           error instanceof Error
             ? error.message
-            : "Shared assignments could not be loaded.",
+            : "Shared commissioning data could not be loaded.",
         );
       }
     }
@@ -285,9 +436,9 @@ export default function FloorPlan({
     return () => {
       cancelled = true;
     };
-    // Sync once after a floor loads or the Google account changes.
+    // Sync once when a floor is loaded or the signed-in account changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [floor, googleUser?.email, Boolean(regionData)]);
+  }, [floor, googleUser?.email, floorData?.floor, regionData?.floor]);
 
   const spacesById = useMemo(() => {
     return new Map(
@@ -332,6 +483,10 @@ export default function FloorPlan({
   const unusedCsvCount = floorData
     ? floorData.spaces.length - assignedSpaceIds.size
     : 0;
+
+  const selectedSpaceIssues = selectedAssignedSpace
+    ? sheetIssues.filter((issue) => issue.spaceId === selectedAssignedSpace.id)
+    : [];
 
   useEffect(() => {
     if (!googleUser || !selectedRegionId) {
@@ -470,17 +625,22 @@ export default function FloorPlan({
     }
   }
 
-  async function reloadSharedAssignments(): Promise<void> {
-    if (!googleUser || !regionData) {
+  async function reloadSharedData(): Promise<void> {
+    if (!googleUser || !regionData || !floorData) {
       onConnectGoogle();
       return;
     }
 
     setSyncStatus("loading");
-    setSyncMessage("Reloading assignments from Google Sheets…");
+    setSyncMessage("Reloading data from Google Sheets…");
 
     try {
-      const cloudAssignments = await loadAssignments(floor);
+      const [cloudAssignments, cloudResults, cloudIssues] = await Promise.all([
+        loadAssignments(floor),
+        loadFloorChecklistResults(floor),
+        loadFloorIssues(floor),
+      ]);
+
       const nextRegions = regionData.regions.map((region) => ({
         ...region,
         assignedSpaceId:
@@ -491,6 +651,9 @@ export default function FloorPlan({
 
       setRegionData({ ...regionData, regions: nextRegions });
       cacheAssignments(assignmentStorageKey, nextRegions);
+      setChecklistResults(cloudResults);
+      setSheetIssues(cloudIssues);
+      setFloorData(applyInspectionData(floorData, cloudResults, cloudIssues));
       setSyncStatus("synced");
       setSyncMessage("Latest Google Sheet data loaded.");
     } catch (error) {
@@ -498,7 +661,7 @@ export default function FloorPlan({
       setSyncMessage(
         error instanceof Error
           ? error.message
-          : "Shared assignments could not be reloaded.",
+          : "Shared data could not be reloaded.",
       );
     }
   }
@@ -521,7 +684,7 @@ export default function FloorPlan({
         roomNo: selectedAssignedSpace?.roomNo ?? "",
         comment: trimmedComment,
         createdBy: googleUser.email,
-        category: "General",
+        category: mode === "inspect" ? "Inspection" : "Assignment",
       });
 
       setComments((currentComments) => [savedComment, ...currentComments]);
@@ -534,6 +697,125 @@ export default function FloorPlan({
         error instanceof Error
           ? error.message
           : "The comment could not be saved.",
+      );
+    }
+  }
+
+  async function saveInspection(
+    items: ChecklistItem[],
+    issueDescriptions: Record<string, string>,
+  ): Promise<void> {
+    if (!googleUser || !selectedAssignedSpace || !selectedRegion || !floorData) {
+      return;
+    }
+
+    setSyncStatus("saving");
+    setSyncMessage("Saving inspection results to Google Sheets…");
+
+    try {
+      const savedResults = await saveChecklistResults(
+        items.map((item) => ({
+          floor,
+          spaceId: selectedAssignedSpace.id,
+          checklistItemId: item.id,
+          deviceType: item.deviceType,
+          expectedQty: item.expectedQty,
+          observedQty: item.observedQty,
+          result: item.result,
+          notes: item.inspectionNotes ?? "",
+          updatedBy: googleUser.email,
+        })),
+      );
+
+      const existingOpenIssueItemIds = new Set(
+        sheetIssues
+          .filter(
+            (issue) =>
+              issue.spaceId === selectedAssignedSpace.id &&
+              issue.status === "open",
+          )
+          .map((issue) => issue.checklistItemId),
+      );
+
+      const createdIssues: SheetIssue[] = [];
+      for (const item of items) {
+        const description = issueDescriptions[item.id]?.trim();
+
+        if (
+          item.result !== "issue" ||
+          !description ||
+          existingOpenIssueItemIds.has(item.id)
+        ) {
+          continue;
+        }
+
+        const savedIssue = await createIssue({
+          floor,
+          regionId: selectedRegion.id,
+          spaceId: selectedAssignedSpace.id,
+          roomNo: selectedAssignedSpace.roomNo,
+          checklistItemId: item.id,
+          issueDescription: description,
+          createdBy: googleUser.email,
+        });
+        createdIssues.push(savedIssue);
+      }
+
+      const nextResults = mergeChecklistResults(
+        checklistResults,
+        savedResults,
+      );
+      const nextIssues = [...sheetIssues, ...createdIssues];
+
+      setChecklistResults(nextResults);
+      setSheetIssues(nextIssues);
+      setFloorData(applyInspectionData(floorData, nextResults, nextIssues));
+      setSyncStatus("synced");
+      setSyncMessage(
+        createdIssues.length > 0
+          ? `Inspection saved and ${createdIssues.length} issue${
+              createdIssues.length === 1 ? "" : "s"
+            } raised.`
+          : "Inspection saved to Google Sheets.",
+      );
+    } catch (error) {
+      setSyncStatus("error");
+      setSyncMessage(
+        error instanceof Error
+          ? error.message
+          : "The inspection could not be saved.",
+      );
+    }
+  }
+
+  async function markIssueResolved(issue: SheetIssue): Promise<void> {
+    if (!googleUser || !floorData) {
+      return;
+    }
+
+    setSyncStatus("saving");
+    setSyncMessage("Resolving issue in Google Sheets…");
+
+    try {
+      const resolved = await resolveIssue(issue.issueId, googleUser.email);
+      const nextIssues = sheetIssues.map((candidate) =>
+        candidate.issueId === resolved.issueId ? resolved : candidate,
+      );
+
+      setSheetIssues(nextIssues);
+      setFloorData(
+        applyInspectionData(floorData, checklistResults, nextIssues),
+      );
+      setSyncStatus("synced");
+      setSyncMessage(
+        "Issue marked resolved. Update the item result and save the inspection after retesting.",
+      );
+    } catch (error) {
+      setSyncStatus("error");
+      setSyncMessage(
+        error instanceof Error
+          ? error.message
+          : "The issue could not be resolved.",
       );
     }
   }
@@ -568,9 +850,7 @@ export default function FloorPlan({
 
   if (!floorData || !regionData) {
     return (
-      <div className="empty-state">
-        Loading the Floor {floor} plan…
-      </div>
+      <div className="empty-state">Loading the Floor {floor} plan…</div>
     );
   }
 
@@ -614,7 +894,9 @@ export default function FloorPlan({
                 <div className="toolbar-right">
                   <div className={`sync-indicator ${syncStatus}`}>
                     <span className="sync-dot" />
-                    <span>{syncStatus === "saving" ? "Saving" : syncStatus}</span>
+                    <span>
+                      {syncStatus === "saving" ? "Saving" : syncStatus}
+                    </span>
                   </div>
 
                   <div className="mapping-progress">
@@ -688,7 +970,9 @@ export default function FloorPlan({
                           fillOpacity={isSelected || isHovered ? 0.78 : 0.38}
                           stroke={isSelected ? "#0f172a" : style.stroke}
                           strokeWidth={isSelected || isHovered ? 2.2 : 1}
-                          onPointerEnter={() => setHoveredRegionId(region.id)}
+                          onPointerEnter={() =>
+                            setHoveredRegionId(region.id)
+                          }
                           onPointerLeave={() => setHoveredRegionId(null)}
                           onClick={(event) => {
                             event.stopPropagation();
@@ -774,18 +1058,39 @@ export default function FloorPlan({
             onClear={() => void clearAssignment()}
             onAddComment={() => void submitComment()}
             onExport={exportAssignments}
-            onReload={() => void reloadSharedAssignments()}
+            onReload={() => void reloadSharedData()}
             onConnect={onConnectGoogle}
           />
-        ) : selectedAssignedSpace ? (
-          <InspectionPreview space={selectedAssignedSpace} />
+        ) : selectedAssignedSpace && selectedRegion ? (
+          <InspectionPanel
+            space={selectedAssignedSpace}
+            region={selectedRegion}
+            issues={selectedSpaceIssues}
+            comments={comments}
+            commentsLoading={commentsLoading}
+            googleConnected={Boolean(googleUser)}
+            saving={syncStatus === "saving"}
+            commentText={commentText}
+            onCommentTextChange={setCommentText}
+            onSave={(items, descriptions) =>
+              void saveInspection(items, descriptions)
+            }
+            onResolveIssue={(issue) => void markIssueResolved(issue)}
+            onAddComment={() => void submitComment()}
+            onConnect={onConnectGoogle}
+          />
         ) : (
           <div className="empty-side-panel">
             <p className="eyebrow">Inspection mode</p>
-            <h2>Select an assigned room</h2>
+            <h2>
+              {selectedRegion
+                ? "Assign this region first"
+                : "Select an assigned room"}
+            </h2>
             <p>
-              Click a Floor {floor} room that has already been linked to a CSV
-              record.
+              {selectedRegion
+                ? "This drawing region is not linked to a CSV room yet. Switch to Assign spaces to link it."
+                : `Click a Floor ${floor} room that has already been linked to a CSV record.`}
             </p>
           </div>
         )}
@@ -843,8 +1148,8 @@ function AssignmentPanel({
         <p className="eyebrow">Floor {floor} assignment</p>
         <h2>Link drawing spaces to CSV rooms</h2>
         <p>
-          Click a prepared region on the plan, then choose its corresponding CSV
-          record.
+          Prepared JSON assignments appear automatically. Use this panel only
+          when an assignment needs to be corrected later.
         </p>
       </div>
 
@@ -913,11 +1218,11 @@ function AssignmentPanel({
           )}
 
           <section className="comments-section">
-            <h3>Comments</h3>
+            <h3>Assignment comments</h3>
             <textarea
               value={commentText}
               onChange={(event) => onCommentTextChange(event.target.value)}
-              placeholder="Add an assignment, access, or field note…"
+              placeholder="Add an assignment, access, or coordination note…"
               rows={3}
               disabled={!googleConnected || saving}
             />
@@ -938,6 +1243,7 @@ function AssignmentPanel({
               ) : (
                 comments.map((comment) => (
                   <article className="comment-card" key={comment.commentId}>
+                    <span className="comment-category">{comment.category}</span>
                     <p>{comment.comment}</p>
                     <span>
                       {comment.createdBy} · {formatTimestamp(comment.createdAt)}
@@ -968,45 +1274,6 @@ function AssignmentPanel({
         <button type="button" className="secondary-button" onClick={onExport}>
           Export Floor {floor} assignments
         </button>
-      </div>
-    </>
-  );
-}
-
-function InspectionPreview({ space }: { space: CommissioningSpace }) {
-  return (
-    <>
-      <div className="panel-heading">
-        <p className="eyebrow">Floor {space.floor} inspection</p>
-        <h2>{space.roomNo}</h2>
-        <p>{space.spaceType}</p>
-      </div>
-
-      <div className="inspection-status">
-        <span>Status</span>
-        <strong>{STATUS_STYLES[space.status].label}</strong>
-      </div>
-
-      <div className="expected-items">
-        <h3>Expected devices</h3>
-        {space.items.map((item) => (
-          <div className="expected-item" key={item.id}>
-            <div>
-              <strong>{item.deviceType}</strong>
-              <span className="item-category">{item.category}</span>
-            </div>
-            <span>
-              {item.expectedQty === null
-                ? "Quantity not specified"
-                : `Expected: ${item.expectedQty}`}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      <div className="panel-message">
-        Checklist results and issues will use the same Google Sheet connection in
-        the next phase.
       </div>
     </>
   );

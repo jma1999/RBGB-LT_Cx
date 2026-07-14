@@ -913,3 +913,448 @@ button:disabled {
     text-align: left;
   }
 }
+
+/* Add these rules to the END of src/App.css. */
+
+/* Give the field checklist enough room while keeping the plan dominant. */
+.workspace {
+  grid-template-columns: minmax(0, 1fr) 430px;
+}
+
+.inspection-panel-heading {
+  margin-bottom: 16px;
+}
+
+.inspection-overview {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.inspection-overview > div {
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.inspection-overview span,
+.inspection-overview strong {
+  display: block;
+}
+
+.inspection-overview span {
+  margin-bottom: 4px;
+  color: #648b7f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.inspection-overview strong {
+  overflow: hidden;
+  color: #1e3b2f;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.space-status.status-not_inspected {
+  color: #1d4ed8;
+}
+
+.space-status.status-in_progress {
+  color: #b45309;
+}
+
+.space-status.status-passed {
+  color: #15803d;
+}
+
+.space-status.status-issue {
+  color: #b91c1c;
+}
+
+.space-status.status-not_applicable {
+  color: #64748b;
+}
+
+.inspection-progress {
+  height: 7px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.inspection-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #2ca389;
+  transition: width 160ms ease;
+}
+
+.inspection-group {
+  margin-bottom: 24px;
+}
+
+.inspection-group-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.inspection-group-heading h3 {
+  margin: 0;
+  color: #335547;
+  font-size: 14px;
+}
+
+.inspection-group-heading span {
+  color: #94b8b0;
+  font-size: 11px;
+}
+
+.inspection-items {
+  display: grid;
+  gap: 10px;
+}
+
+.inspection-item-card {
+  padding: 13px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 3%);
+}
+
+.inspection-item-card.result-pass {
+  border-color: #bbf7d0;
+  background: #fbfffc;
+}
+
+.inspection-item-card.result-issue {
+  border-color: #fecaca;
+  background: #fffafa;
+}
+
+.inspection-item-card.result-not_applicable {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.inspection-item-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.inspection-item-title strong,
+.inspection-item-title span {
+  display: block;
+}
+
+.inspection-item-title > div:first-child strong {
+  color: #1e3b34;
+  font-size: 15px;
+}
+
+.inspection-item-title > div:first-child span {
+  margin-top: 2px;
+  color: #94b8a7;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.expected-quantity {
+  min-width: 58px;
+  padding: 6px 8px;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  text-align: center;
+  background: #eff6ff;
+}
+
+.expected-quantity span {
+  color: #648b81;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.expected-quantity strong {
+  margin-top: 1px;
+  color: #149b63;
+  font-size: 16px;
+}
+
+.observed-field,
+.item-notes-field,
+.issue-description-field {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.observed-field > span,
+.item-notes-field > span,
+.issue-description-field > span {
+  color: #476958;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.observed-field input,
+.item-notes-field textarea,
+.issue-description-field textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #1e293b;
+  outline: none;
+  background: #ffffff;
+}
+
+.observed-field input {
+  min-height: 39px;
+  padding: 8px 10px;
+}
+
+.item-notes-field textarea,
+.issue-description-field textarea {
+  padding: 9px 10px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.observed-field input:focus,
+.item-notes-field textarea:focus,
+.issue-description-field textarea:focus {
+  border-color: #3dad7e;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 11%);
+}
+
+.result-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.result-selector button {
+  min-height: 36px;
+  padding: 7px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #64748b;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.result-selector button:hover {
+  border-color: #93fdd1;
+  color: #15a35c;
+  background: #f8fbff;
+}
+
+.result-selector button[data-result="pass"].active {
+  border-color: #86efac;
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+.result-selector button[data-result="issue"].active {
+  border-color: #fca5a5;
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.result-selector button[data-result="not_applicable"].active {
+  border-color: #94a3b8;
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.result-selector .clear-result-button {
+  grid-column: 1 / -1;
+  min-height: auto;
+  padding: 4px;
+  border: 0;
+  color: #94a3b8;
+  background: transparent;
+  font-size: 10px;
+}
+
+.issue-description-field {
+  padding: 11px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fff7f7;
+}
+
+.issue-description-field > span {
+  color: #b91c1c;
+}
+
+.open-issue-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fff7f7;
+}
+
+.open-issue-card span {
+  color: #b91c1c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.open-issue-card p {
+  margin: 4px 0 5px;
+  color: #7f1d1d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.open-issue-card small {
+  color: #9f1239;
+  font-size: 9px;
+}
+
+.open-issue-card button {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  border: 1px solid #fca5a5;
+  border-radius: 7px;
+  color: #b91c1c;
+  background: #ffffff;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.inspection-validation-message {
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  color: #b91c1c;
+  background: #fff7f7;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.inspection-save-bar {
+  position: sticky;
+  bottom: -24px;
+  z-index: 3;
+  margin: 0 -24px;
+  padding: 14px 24px 17px;
+  border-top: 1px solid #dbe3ee;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 -8px 20px rgb(15 23 42 / 5%);
+  backdrop-filter: blur(8px);
+}
+
+.inspection-save-bar p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.inspection-comments-section {
+  margin-top: 24px;
+}
+
+.comment-category {
+  display: inline-block !important;
+  margin-bottom: 5px;
+  padding: 3px 6px;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  color: #13a042 !important;
+  background: #eff6ff;
+  font-size: 9px !important;
+  font-weight: 750;
+}
+
+@media (max-width: 1100px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr) 390px;
+  }
+}
+
+@media (max-width: 980px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .inspection-save-bar {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .inspection-overview {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .inspection-overview > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.fixture-reference-note,
+.space-reference-note {
+  margin-top: 12px;
+  padding: 10px 11px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background: #f8fbff;
+}
+
+.space-reference-note {
+  margin: 0 0 14px;
+}
+
+.fixture-reference-note span,
+.space-reference-note span {
+  display: block;
+  margin-bottom: 4px;
+  color: #14a34f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.fixture-reference-note p,
+.space-reference-note p {
+  margin: 0;
+  color: #475569;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.last-inspection-meta {
+  margin: -8px 0 18px;
+  color: #94a3b8;
+  font-size: 10px;
+  line-height: 1.4;
+}

@@ -11,6 +11,11 @@ declare global {
             callback: (response: GoogleTokenResponse) => void;
             error_callback?: (error: GoogleOAuthError) => void;
           }): GoogleTokenClient;
+          hasGrantedAllScopes(
+            tokenResponse: GoogleTokenResponse,
+            firstScope: string,
+            ...restScopes: string[]
+          ): boolean;
           revoke(
             token: string,
             callback: (response: { successful: boolean }) => void,
@@ -22,7 +27,9 @@ declare global {
 
   interface GoogleTokenClient {
     callback: (response: GoogleTokenResponse) => void;
-    requestAccessToken(options?: { prompt?: "" | "consent" | "select_account" }): void;
+    requestAccessToken(options?: {
+      prompt?: "" | "consent" | "select_account";
+    }): void;
   }
 
   interface GoogleTokenResponse {

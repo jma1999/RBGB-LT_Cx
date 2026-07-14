@@ -1,11 +1,12 @@
+import type { ChecklistResult } from "../types/commissioning";
+
 const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID as string | undefined;
 const SPREADSHEET_ID = import.meta.env
   .VITE_GOOGLE_SPREADSHEET_ID as string | undefined;
 
-const GOOGLE_SCOPE = [
-  "https://www.googleapis.com/auth/spreadsheets",
-  "https://www.googleapis.com/auth/userinfo.email",
-].join(" ");
+const SHEETS_SCOPE = "https://www.googleapis.com/auth/spreadsheets";
+const EMAIL_SCOPE = "https://www.googleapis.com/auth/userinfo.email";
+const GOOGLE_SCOPE = [SHEETS_SCOPE, EMAIL_SCOPE].join(" ");
 
 const SHEETS_API_BASE = "https://sheets.googleapis.com/v4/spreadsheets";
 const USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
@@ -44,16 +45,52 @@ export interface SheetComment {
   category: string;
 }
 
+export interface SheetChecklistResult {
+  floor: string;
+  spaceId: string;
+  checklistItemId: string;
+  deviceType: string;
+  expectedQty: number | null;
+  observedQty: number | null;
+  result: ChecklistResult;
+  notes: string;
+  updatedBy: string;
+  updatedAt: string;
+  revision: number;
+}
+
+export type IssueStatus = "open" | "resolved";
+
+export interface SheetIssue {
+  issueId: string;
+  floor: string;
+  regionId: string;
+  spaceId: string;
+  roomNo: string;
+  checklistItemId: string;
+  issueDescription: string;
+  status: IssueStatus;
+  createdBy: string;
+  createdAt: string;
+  resolvedBy: string;
+  resolvedAt: string;
+}
+
 interface ValueRangeResponse {
   range?: string;
   majorDimension?: string;
   values?: Array<Array<string | number | boolean>>;
 }
 
+interface BatchUpdateData {
+  range: string;
+  values: Array<Array<string | number | boolean>>;
+}
+
 function requireConfiguration(): { clientId: string; spreadsheetId: string } {
   if (!CLIENT_ID || !SPREADSHEET_ID) {
     throw new Error(
-      "Google Sheets is not configured. Add VITE_GOOGLE_CLIENT_ID and VITE_GOOGLE_SPREADSHEET_ID to your .env file.",
+      "Google Sheets is not configured. Add VITE_GOOGLE_CLIENT_ID and VITE_GOOGLE_SPREADSHEET_ID to your .env.local file.",
     );
   }
 
@@ -112,6 +149,27 @@ export async function connectGoogleSheets(): Promise<GoogleUser> {
             response.error_description ??
               response.error ??
               "Google authorization was not completed.",
+          ),
+        );
+        return;
+      }
+
+      const hasRequiredScopes =
+        window.google?.accounts.oauth2.hasGrantedAllScopes(
+          response,
+          SHEETS_SCOPE,
+          EMAIL_SCOPE,
+        ) ?? false;
+
+      if (!hasRequiredScopes) {
+        window.google?.accounts.oauth2.revoke(
+          response.access_token,
+          () => undefined,
+        );
+
+        reject(
+          new Error(
+            "Google Sheets permission was not granted. Reconnect and approve spreadsheet access.",
           ),
         );
         return;
@@ -233,11 +291,26 @@ async function updateValues(
   range: string,
   values: Array<Array<string | number | boolean>>,
 ): Promise<void> {
+  await authenticatedFetch(`${rangeUrl(range)}?valueInputOption=RAW`, {
+    method: "PUT",
+    body: JSON.stringify({ values }),
+  });
+}
+
+async function batchUpdateValues(data: BatchUpdateData[]): Promise<void> {
+  if (data.length === 0) {
+    return;
+  }
+
+  const { spreadsheetId } = requireConfiguration();
   await authenticatedFetch(
-    `${rangeUrl(range)}?valueInputOption=RAW`,
+    `${SHEETS_API_BASE}/${spreadsheetId}/values:batchUpdate`,
     {
-      method: "PUT",
-      body: JSON.stringify({ values }),
+      method: "POST",
+      body: JSON.stringify({
+        valueInputOption: "RAW",
+        data,
+      }),
     },
   );
 }
@@ -246,6 +319,10 @@ async function appendValues(
   range: string,
   values: Array<Array<string | number | boolean>>,
 ): Promise<void> {
+  if (values.length === 0) {
+    return;
+  }
+
   await authenticatedFetch(
     `${rangeUrl(range)}:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`,
     {
@@ -259,9 +336,32 @@ function stringValue(value: unknown): string {
   return value === undefined || value === null ? "" : String(value);
 }
 
+function nullableNumber(value: unknown): number | null {
+  if (value === undefined || value === null || value === "") {
+    return null;
+  }
+
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 function numberValue(value: unknown, fallback = 0): number {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : fallback;
+}
+
+function checklistResultValue(value: unknown): ChecklistResult {
+  const result = stringValue(value);
+
+  if (
+    result === "pass" ||
+    result === "issue" ||
+    result === "not_applicable"
+  ) {
+    return result;
+  }
+
+  return "not_checked";
 }
 
 export async function loadAssignments(
@@ -320,10 +420,9 @@ export async function upsertAssignment(
 
   if (existingIndex >= 0) {
     const sheetRow = existingIndex + 2;
-    await updateValues(
-      `RegionAssignments!A${sheetRow}:I${sheetRow}`,
-      [rowValues],
-    );
+    await updateValues(`RegionAssignments!A${sheetRow}:I${sheetRow}`, [
+      rowValues,
+    ]);
   } else {
     await appendValues("RegionAssignments!A:I", [rowValues]);
   }
@@ -368,29 +467,6 @@ export async function loadComments(
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 }
 
-async function appendActivity(input: {
-  eventType: string;
-  floor: string;
-  regionId: string;
-  spaceId: string;
-  user: string;
-  payload: unknown;
-}): Promise<void> {
-  await appendValues("ActivityLog!A:H", [
-    [
-      globalThis.crypto?.randomUUID?.() ??
-        `event-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
-      input.eventType,
-      input.floor,
-      input.regionId,
-      input.spaceId,
-      input.user,
-      new Date().toISOString(),
-      JSON.stringify(input.payload),
-    ],
-  ]);
-}
-
 export async function addComment(
   comment: Omit<SheetComment, "commentId" | "createdAt">,
 ): Promise<SheetComment> {
@@ -426,4 +502,250 @@ export async function addComment(
   });
 
   return savedComment;
+}
+
+export async function loadFloorChecklistResults(
+  floor: string,
+): Promise<SheetChecklistResult[]> {
+  const response = await getValues("ChecklistResults!A2:K");
+
+  return (response.values ?? [])
+    .filter((row) => stringValue(row[0]) === floor)
+    .map((row) => ({
+      floor: stringValue(row[0]),
+      spaceId: stringValue(row[1]),
+      checklistItemId: stringValue(row[2]),
+      deviceType: stringValue(row[3]),
+      expectedQty: nullableNumber(row[4]),
+      observedQty: nullableNumber(row[5]),
+      result: checklistResultValue(row[6]),
+      notes: stringValue(row[7]),
+      updatedBy: stringValue(row[8]),
+      updatedAt: stringValue(row[9]),
+      revision: numberValue(row[10]),
+    }));
+}
+
+export async function saveChecklistResults(
+  inputResults: Array<
+    Omit<SheetChecklistResult, "updatedAt" | "revision">
+  >,
+): Promise<SheetChecklistResult[]> {
+  if (inputResults.length === 0) {
+    return [];
+  }
+
+  const response = await getValues("ChecklistResults!A2:K");
+  const rows = response.values ?? [];
+  const now = new Date().toISOString();
+  const updates: BatchUpdateData[] = [];
+  const appends: Array<Array<string | number | boolean>> = [];
+  const savedResults: SheetChecklistResult[] = [];
+
+  for (const input of inputResults) {
+    const existingIndex = rows.findIndex(
+      (row) =>
+        stringValue(row[0]) === input.floor &&
+        stringValue(row[1]) === input.spaceId &&
+        stringValue(row[2]) === input.checklistItemId,
+    );
+
+    const saved: SheetChecklistResult = {
+      ...input,
+      updatedAt: now,
+      revision:
+        existingIndex >= 0 ? numberValue(rows[existingIndex][10]) + 1 : 1,
+    };
+
+    const values: Array<string | number | boolean> = [
+      saved.floor,
+      saved.spaceId,
+      saved.checklistItemId,
+      saved.deviceType,
+      saved.expectedQty ?? "",
+      saved.observedQty ?? "",
+      saved.result,
+      saved.notes,
+      saved.updatedBy,
+      saved.updatedAt,
+      saved.revision,
+    ];
+
+    if (existingIndex >= 0) {
+      const sheetRow = existingIndex + 2;
+      updates.push({
+        range: `ChecklistResults!A${sheetRow}:K${sheetRow}`,
+        values: [values],
+      });
+    } else {
+      appends.push(values);
+    }
+
+    savedResults.push(saved);
+  }
+
+  await batchUpdateValues(updates);
+  await appendValues("ChecklistResults!A:K", appends);
+
+  const firstResult = savedResults[0];
+  await appendActivity({
+    eventType: "inspection_saved",
+    floor: firstResult.floor,
+    regionId: "",
+    spaceId: firstResult.spaceId,
+    user: firstResult.updatedBy,
+    payload: savedResults,
+  });
+
+  return savedResults;
+}
+
+export async function loadFloorIssues(floor: string): Promise<SheetIssue[]> {
+  const response = await getValues("Issues!A2:L");
+
+  return (response.values ?? [])
+    .filter((row) => stringValue(row[1]) === floor)
+    .map((row) => ({
+      issueId: stringValue(row[0]),
+      floor: stringValue(row[1]),
+      regionId: stringValue(row[2]),
+      spaceId: stringValue(row[3]),
+      roomNo: stringValue(row[4]),
+      checklistItemId: stringValue(row[5]),
+      issueDescription: stringValue(row[6]),
+      status: stringValue(row[7]) === "resolved" ? "resolved" : "open",
+      createdBy: stringValue(row[8]),
+      createdAt: stringValue(row[9]),
+      resolvedBy: stringValue(row[10]),
+      resolvedAt: stringValue(row[11]),
+    }));
+}
+
+export async function createIssue(
+  issue: Omit<
+    SheetIssue,
+    "issueId" | "status" | "createdAt" | "resolvedBy" | "resolvedAt"
+  >,
+): Promise<SheetIssue> {
+  const savedIssue: SheetIssue = {
+    ...issue,
+    issueId:
+      globalThis.crypto?.randomUUID?.() ??
+      `issue-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+    status: "open",
+    createdAt: new Date().toISOString(),
+    resolvedBy: "",
+    resolvedAt: "",
+  };
+
+  await appendValues("Issues!A:L", [
+    [
+      savedIssue.issueId,
+      savedIssue.floor,
+      savedIssue.regionId,
+      savedIssue.spaceId,
+      savedIssue.roomNo,
+      savedIssue.checklistItemId,
+      savedIssue.issueDescription,
+      savedIssue.status,
+      savedIssue.createdBy,
+      savedIssue.createdAt,
+      savedIssue.resolvedBy,
+      savedIssue.resolvedAt,
+    ],
+  ]);
+
+  await appendActivity({
+    eventType: "issue_created",
+    floor: savedIssue.floor,
+    regionId: savedIssue.regionId,
+    spaceId: savedIssue.spaceId,
+    user: savedIssue.createdBy,
+    payload: savedIssue,
+  });
+
+  return savedIssue;
+}
+
+export async function resolveIssue(
+  issueId: string,
+  resolvedBy: string,
+): Promise<SheetIssue> {
+  const response = await getValues("Issues!A2:L");
+  const rows = response.values ?? [];
+  const existingIndex = rows.findIndex(
+    (row) => stringValue(row[0]) === issueId,
+  );
+
+  if (existingIndex < 0) {
+    throw new Error("The selected issue could not be found in Google Sheets.");
+  }
+
+  const row = rows[existingIndex];
+  const resolvedIssue: SheetIssue = {
+    issueId: stringValue(row[0]),
+    floor: stringValue(row[1]),
+    regionId: stringValue(row[2]),
+    spaceId: stringValue(row[3]),
+    roomNo: stringValue(row[4]),
+    checklistItemId: stringValue(row[5]),
+    issueDescription: stringValue(row[6]),
+    status: "resolved",
+    createdBy: stringValue(row[8]),
+    createdAt: stringValue(row[9]),
+    resolvedBy,
+    resolvedAt: new Date().toISOString(),
+  };
+
+  const sheetRow = existingIndex + 2;
+  await updateValues(`Issues!A${sheetRow}:L${sheetRow}`, [
+    [
+      resolvedIssue.issueId,
+      resolvedIssue.floor,
+      resolvedIssue.regionId,
+      resolvedIssue.spaceId,
+      resolvedIssue.roomNo,
+      resolvedIssue.checklistItemId,
+      resolvedIssue.issueDescription,
+      resolvedIssue.status,
+      resolvedIssue.createdBy,
+      resolvedIssue.createdAt,
+      resolvedIssue.resolvedBy,
+      resolvedIssue.resolvedAt,
+    ],
+  ]);
+
+  await appendActivity({
+    eventType: "issue_resolved",
+    floor: resolvedIssue.floor,
+    regionId: resolvedIssue.regionId,
+    spaceId: resolvedIssue.spaceId,
+    user: resolvedBy,
+    payload: resolvedIssue,
+  });
+
+  return resolvedIssue;
+}
+
+async function appendActivity(input: {
+  eventType: string;
+  floor: string;
+  regionId: string;
+  spaceId: string;
+  user: string;
+  payload: unknown;
+}): Promise<void> {
+  await appendValues("ActivityLog!A:H", [
+    [
+      globalThis.crypto?.randomUUID?.() ??
+        `event-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+      input.eventType,
+      input.floor,
+      input.regionId,
+      input.spaceId,
+      input.user,
+      new Date().toISOString(),
+      JSON.stringify(input.payload),
+    ],
+  ]);
 }

@@ -20,7 +20,10 @@ export interface ChecklistItem {
   expectedQty: number | null;
   observedQty: number | null;
   result: ChecklistResult;
+  /** Read-only fixture/control description prepared in spaces.json. */
   notes: string;
+  /** Field observation saved to Google Sheets. */
+  inspectionNotes?: string;
   issueIds: string[];
 }
 
@@ -31,6 +34,7 @@ export interface CommissioningSpace {
   roomNo: string;
   spaceType: string;
   displayName: string;
+  /** Optional prepared assignment stored in floor-XX-spaces.json. */
   regionId?: string | null;
   status: SpaceStatus;
   polygon: Point[];
