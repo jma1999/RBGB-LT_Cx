@@ -74,13 +74,60 @@ export default function App() {
         </div>
 
         <div className="header-actions">
-          <button className="google-connect-button">
-            Connect Google Sheets
-          </button>
+          {googleUser ? (
+            <div className="google-account-card">
+              <div>
+                <span>Google Sheets connected</span>
+                <strong>{googleUser.email}</strong>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleDisconnectGoogle}
+              >
+                Disconnect
+              </button>
+            </div>
+          ) : (
+            <div className="google-connect-wrap">
+              <button
+                type="button"
+                className="google-connect-button"
+                onClick={() => void handleConnectGoogle()}
+                disabled={
+                  authStatus === "initializing" ||
+                  authStatus === "connecting"
+                }
+              >
+                {authStatus === "initializing"
+                  ? "Loading Google…"
+                  : authStatus === "connecting"
+                    ? "Connecting…"
+                    : "Connect Google Sheets"}
+              </button>
+
+              {authError && (
+                <span className="auth-error">
+                  {authError}
+                </span>
+              )}
+            </div>
+          )}
 
           <div className="floor-selector">
-            <button type="button">Floor 03</button>
-            <button type="button" className="active">
+            <button
+              type="button"
+              className={selectedFloor === "03" ? "active" : ""}
+              onClick={() => setSelectedFloor("03")}
+            >
+              Floor 03
+            </button>
+
+            <button
+              type="button"
+              className={selectedFloor === "04" ? "active" : ""}
+              onClick={() => setSelectedFloor("04")}
+            >
               Floor 04
             </button>
           </div>
