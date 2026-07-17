@@ -5,6 +5,7 @@ import FloorPlan, {
 import {
   connectGoogleSheets,
   disconnectGoogleSheets,
+  GoogleAuthorizationCancelledError,
   initializeGoogleSheets,
   type GoogleUser,
 } from "./services/googleSheets";
@@ -46,6 +47,13 @@ export default function App() {
       setAuthStatus("connected");
     } catch (error) {
       setGoogleUser(null);
+
+      if (error instanceof GoogleAuthorizationCancelledError) {
+        setAuthStatus("disconnected");
+        setAuthError("");
+        return;
+      }
+
       setAuthStatus("error");
       setAuthError(
         error instanceof Error

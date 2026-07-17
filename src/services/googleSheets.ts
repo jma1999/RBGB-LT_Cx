@@ -21,6 +21,13 @@ export interface GoogleUser {
   picture?: string;
 }
 
+export class GoogleAuthorizationCancelledError extends Error {
+  constructor() {
+    super("Google Sheets connection was cancelled.");
+    this.name = "GoogleAuthorizationCancelledError";
+  }
+}
+
 export interface SheetAssignment {
   floor: string;
   regionId: string;
@@ -115,18 +122,8 @@ async function waitForGoogleIdentity(timeoutMs = 10_000): Promise<void> {
 }
 
 export async function initializeGoogleSheets(): Promise<void> {
-  const { clientId } = requireConfiguration();
+  requireConfiguration();
   await waitForGoogleIdentity();
-
-  if (tokenClient) {
-    return;
-  }
-
-  tokenClient = window.google!.accounts.oauth2.initTokenClient({
-    client_id: clientId,
-    scope: GOOGLE_SCOPE,
-    callback: () => undefined,
-  });
 }
 
 export function isGoogleSheetsConnected(): boolean {
@@ -134,61 +131,118 @@ export function isGoogleSheetsConnected(): boolean {
 }
 
 export async function connectGoogleSheets(): Promise<GoogleUser> {
-  await initializeGoogleSheets();
+  const { clientId } = requireConfiguration();
+  await waitForGoogleIdentity();
 
   return new Promise<GoogleUser>((resolve, reject) => {
-    if (!tokenClient) {
-      reject(new Error("Google authentication has not initialized."));
-      return;
+    let settled = false;
+
+    function resolveOnce(user: GoogleUser): void {
+      if (settled) {
+        return;
+      }
+
+      settled = true;
+      resolve(user);
     }
 
-    tokenClient.callback = async (response) => {
-      if (response.error || !response.access_token) {
-        reject(
-          new Error(
-            response.error_description ??
-              response.error ??
-              "Google authorization was not completed.",
-          ),
-        );
+    function rejectOnce(error: unknown): void {
+      if (settled) {
         return;
       }
 
-      const hasRequiredScopes =
-        window.google?.accounts.oauth2.hasGrantedAllScopes(
-          response,
-          SHEETS_SCOPE,
-          EMAIL_SCOPE,
-        ) ?? false;
+      settled = true;
+      reject(error);
+    }
 
-      if (!hasRequiredScopes) {
-        window.google?.accounts.oauth2.revoke(
-          response.access_token,
-          () => undefined,
-        );
+    tokenClient = window.google!.accounts.oauth2.initTokenClient({
+      client_id: clientId,
+      scope: GOOGLE_SCOPE,
 
-        reject(
+      callback: async (response) => {
+        if (response.error || !response.access_token) {
+          rejectOnce(
+            new Error(
+              response.error_description ??
+                response.error ??
+                "Google authorization was not completed.",
+            ),
+          );
+          return;
+        }
+
+        const hasRequiredScopes =
+          window.google?.accounts.oauth2.hasGrantedAllScopes(
+            response,
+            SHEETS_SCOPE,
+            EMAIL_SCOPE,
+          ) ?? false;
+
+        if (!hasRequiredScopes) {
+          window.google?.accounts.oauth2.revoke(
+            response.access_token,
+            () => undefined,
+          );
+
+          rejectOnce(
+            new Error(
+              "Google Sheets permission was not granted. Reconnect and approve spreadsheet access.",
+            ),
+          );
+          return;
+        }
+
+        accessToken = response.access_token;
+        tokenExpiresAt =
+          Date.now() +
+          Math.max(
+            0,
+            Number(response.expires_in ?? 3600),
+          ) *
+            1000;
+
+        try {
+          const user = await fetchGoogleUser();
+          resolveOnce(user);
+        } catch (error) {
+          disconnectGoogleSheets();
+          rejectOnce(error);
+        }
+      },
+
+      error_callback: (error) => {
+        if (error.type === "popup_closed") {
+          rejectOnce(
+            new GoogleAuthorizationCancelledError(),
+          );
+          return;
+        }
+
+        if (error.type === "popup_failed_to_open") {
+          rejectOnce(
+            new Error(
+              "The Google authorization window could not be opened. Check whether your browser blocked the popup.",
+            ),
+          );
+          return;
+        }
+
+        rejectOnce(
           new Error(
-            "Google Sheets permission was not granted. Reconnect and approve spreadsheet access.",
+            error.message ??
+              "Google authorization could not be completed.",
           ),
         );
-        return;
-      }
+      },
+    });
 
-      accessToken = response.access_token;
-      tokenExpiresAt =
-        Date.now() + Math.max(0, Number(response.expires_in ?? 3600)) * 1000;
-
-      try {
-        const user = await fetchGoogleUser();
-        resolve(user);
-      } catch (error) {
-        disconnectGoogleSheets();
-        reject(error);
-      }
-    };
-
-    tokenClient.requestAccessToken({ prompt: "consent" });
+    try {
+      tokenClient.requestAccessToken({
+        prompt: "consent",
+      });
+    } catch (error) {
+      rejectOnce(error);
+    }
   });
 }
 
