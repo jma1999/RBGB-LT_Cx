@@ -41,16 +41,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -60,7 +50,7 @@
       "sourceRow": 3,
       "floor": "03",
       "roomNo": "C3.5",
-      "spaceType": "Corridor Split-1",
+      "spaceType": "Corridor",
       "displayName": "C3.5 - Corridor",
       "regionId": "region-036",
       "status": "not_inspected",
@@ -116,16 +106,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 10,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -219,16 +199,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -264,16 +234,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -327,16 +287,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -382,16 +332,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -480,16 +420,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -597,16 +527,6 @@
         {
           "id": "control-3",
           "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
           "deviceType": "SCPPH-1500",
           "expectedQty": 1,
           "observedQty": null,
@@ -676,31 +596,11 @@
         {
           "id": "control-2",
           "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
           "deviceType": "S4b",
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
           "notes": "wireless wall-station dimmer",
-          "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
-          "deviceType": "SIM",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "sensor interface module",
           "issueIds": []
         }
       ],
@@ -765,31 +665,11 @@
         {
           "id": "control-2",
           "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
           "deviceType": "S4b",
           "expectedQty": 2,
           "observedQty": null,
           "result": "not_checked",
           "notes": "wireless wall-station dimmer",
-          "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
-          "deviceType": "SIM",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "sensor interface module",
           "issueIds": []
         }
       ],
@@ -853,16 +733,6 @@
         },
         {
           "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
           "category": "control",
           "deviceType": "S4b",
           "expectedQty": 1,
@@ -983,16 +853,6 @@
         {
           "id": "control-3",
           "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
           "deviceType": "S4b",
           "expectedQty": 1,
           "observedQty": null,
@@ -1082,26 +942,6 @@
         {
           "id": "control-2",
           "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WM",
-          "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "wireless manager",
-          "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
           "deviceType": "S2b",
           "expectedQty": 1,
           "observedQty": null,
@@ -1157,16 +997,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -1212,16 +1042,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -1275,16 +1095,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -1330,16 +1140,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -1413,16 +1213,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -1488,16 +1278,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -1697,16 +1477,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -1766,16 +1536,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -1821,16 +1581,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -1894,16 +1644,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -1949,16 +1689,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2012,16 +1742,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -2067,16 +1787,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2136,16 +1846,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2233,26 +1933,6 @@
         {
           "id": "control-3",
           "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
-          "deviceType": "WM",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-5",
-          "category": "control",
           "deviceType": "S4b",
           "expectedQty": 3,
           "observedQty": null,
@@ -2308,16 +1988,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -2363,16 +2033,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2426,16 +2086,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -2485,27 +2135,17 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
     },
     {
-      "id": "03-n-a-spare-room-039",
+      "id": "03-n-a-ele-room-039",
       "sourceRow": 39,
       "floor": "03",
       "roomNo": "N/A",
-      "spaceType": "Spare Room",
-      "displayName": "N/A - Spare Room",
+      "spaceType": "Electrical",
+      "displayName": "N/A - Electrical Room",
       "regionId": "region-060",
       "status": "not_inspected",
       "polygon": [],
@@ -2543,7 +2183,7 @@
       "sourceRow": 40,
       "floor": "03",
       "roomNo": "N/A",
-      "spaceType": "Corridor-2",
+      "spaceType": "Corridor",
       "displayName": "N/A - Corridor-2",
       "regionId": "region-063",
       "status": "not_inspected",
@@ -2589,16 +2229,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2652,16 +2282,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -2707,16 +2327,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2770,16 +2380,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -2825,16 +2425,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -2888,16 +2478,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -2932,10 +2512,10 @@
           "id": "lighting-2",
           "category": "lighting",
           "deviceType": "C1",
-          "expectedQty": 25,
+          "expectedQty": 20,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "4-in LED downlight",
+          "notes": "4-in LED downlight; 18 outside design ceiling, 2 inside design ceiling near horse-shoe",
           "issueIds": []
         },
         {
@@ -2945,7 +2525,7 @@
           "expectedQty": 10,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "LED downlight",
+          "notes": "LED downlights in horse-shoe",
           "issueIds": []
         },
         {
@@ -2979,6 +2559,16 @@
           "issueIds": []
         },
         {
+          "id": "lighting-7",
+          "category": "lighting",
+          "deviceType": "CP2",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights around horse-shoe interior (changed from C1 via RFI)",
+          "issueIds": []
+        },
+        {
           "id": "control-1",
           "category": "control",
           "deviceType": "S2b",
@@ -2993,16 +2583,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 7,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3042,16 +2622,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3115,16 +2685,6 @@
           "result": "not_checked",
           "notes": "occupancy sensor",
           "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "ER",
-          "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "emergency bypass device",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -3170,16 +2730,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3233,16 +2783,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -3291,16 +2831,6 @@
           "observedQty": null,
           "result": "not_checked",
           "notes": "occupancy sensor",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "ER",
-          "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "emergency bypass device",
           "issueIds": []
         }
       ],
@@ -3367,16 +2897,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3450,16 +2970,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -3505,16 +3015,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3638,26 +3138,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-5",
-          "category": "control",
-          "deviceType": "WM",
-          "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -3705,7 +3185,7 @@
           "expectedQty": 1,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "uniform thin light rectangle on ceiling",
+          "notes": "REMOVED (via RFI) uniform thin light rectangle on ceiling",
           "issueIds": []
         },
         {
@@ -3723,16 +3203,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3786,16 +3256,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -3841,16 +3301,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -3904,16 +3354,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -3959,16 +3399,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4022,16 +3452,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4077,16 +3497,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4140,16 +3550,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4195,16 +3595,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4264,16 +3654,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 2,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4377,16 +3757,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4436,16 +3806,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4491,16 +3851,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4594,26 +3944,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-4",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-5",
-          "category": "control",
-          "deviceType": "WM",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4669,16 +3999,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4742,16 +4062,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4797,16 +4107,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4860,16 +4160,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -4915,16 +4205,6 @@
           "category": "control",
           "deviceType": "DT-205",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -4988,16 +4268,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -5057,16 +4327,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -5112,16 +4372,6 @@
           "category": "control",
           "deviceType": "DT-305",
           "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
-        },
-        {
-          "id": "control-3",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
           "observedQty": null,
           "result": "not_checked",
           "notes": "",
@@ -5175,16 +4425,6 @@
           "result": "not_checked",
           "notes": "",
           "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "WALC",
-          "expectedQty": null,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "",
-          "issueIds": []
         }
       ],
       "issueIds": []
@@ -5223,26 +4463,6 @@
           "observedQty": null,
           "result": "not_checked",
           "notes": "uniform thin light near wall",
-          "issueIds": []
-        },
-        {
-          "id": "control-1",
-          "category": "control",
-          "deviceType": "SSU",
-          "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "system support unit",
-          "issueIds": []
-        },
-        {
-          "id": "control-2",
-          "category": "control",
-          "deviceType": "ETH-SW",
-          "expectedQty": 1,
-          "observedQty": null,
-          "result": "not_checked",
-          "notes": "ethernet switch",
           "issueIds": []
         }
       ],
