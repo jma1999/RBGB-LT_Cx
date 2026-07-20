@@ -1,0 +1,53 @@
+﻿deviceType,category,description,defaultTestTemplate
+A1,lighting,2x4-ft LED troffer,lighting-standard
+A2,lighting,2x2-ft LED troffer,lighting-standard
+A3,lighting,2x4-ft LED flat panel,lighting-standard
+AL1,lighting,recessed linear light,lighting-standard
+AL2,lighting,recessed linear light,lighting-standard
+AL3,lighting,recessed linear light near wall,lighting-standard
+B1,lighting,LED surface mount ceiling light,lighting-standard
+C1,lighting,4-in LED downlight,lighting-standard
+C1W,lighting,4-in LED downlight,lighting-standard
+C2,lighting,4-in LED downlight,lighting-standard
+C3,lighting,LED downlights in horse-shoe,lighting-standard
+CP1,lighting,microcylinder downlight,lighting-standard
+CP1A,lighting,microcylinder downlights at dining area near window,lighting-standard
+CP2,lighting,microcylinder downlights around horse-shoe interior (changed from C1 via RFI),lighting-standard
+D1,lighting,wall sconce light,lighting-standard
+D2,lighting,glass sconce lights near restrooms,lighting-standard
+D3,lighting,sconce light,lighting-standard
+D4,lighting,folded LED sconce light,lighting-standard
+DT-205,control,,control-standard
+DT-305,control,,control-standard
+DT-305 occupancy sensor,control,,control-standard
+H2,lighting,track light,lighting-standard
+J1,lighting,linear perimeter light on right wall,lighting-standard
+J2,lighting,recessed mount light near cafe,lighting-standard
+J3,lighting,linear ceiling cove light around suspended ceiling,lighting-standard
+J4,lighting,flex design cove light,lighting-standard
+L1,lighting,uniform thin light rectangle on ceiling,lighting-standard
+L2,lighting,uniform thin light on adjacent walls,lighting-standard
+L3A,lighting,uniform thin light near wall,lighting-standard
+P1,lighting,suspended ceiling light,lighting-standard
+P2,lighting,felt shell hanging light,lighting-standard
+P3,lighting,blue crystal suspended light at right end of room,lighting-standard
+P3B,lighting,matte shell suspended light,lighting-standard
+P4,lighting,felt shell hanging light,lighting-standard
+P5,lighting,chain-hung dome light,lighting-standard
+P6,lighting,chandelier,lighting-standard
+P7,lighting,fabric diffuser circular light at room end,lighting-standard
+P8,lighting,sphere pendant light,lighting-standard
+PL1,lighting,suspended linear light,lighting-standard
+PL2,lighting,suspended linear light,lighting-standard
+PL3,lighting,linear chandelier,lighting-standard
+PL4,lighting,linear chandelier,lighting-standard
+PL5,lighting,suspended ceiling louvre light,lighting-standard
+S2b,control,wireless 2-button switch dimmer,control-standard
+S4b,control,wireless wall-station dimmer,wall-dimmer
+Sc3,control,wireless 3-scene controller,scene-controller
+SCPPH-1500,control,photosensor,photosensor
+Se,control,emergency switch,control-standard
+Soc,control,occupancy sensor,control-standard
+T1,lighting,suspended linear light,lighting-standard
+WALC,control,,control-standard
+X1,lighting,exit sign,exit-sign

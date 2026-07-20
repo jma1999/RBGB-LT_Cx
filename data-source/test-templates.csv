@@ -1,0 +1,24 @@
+﻿templateKey,testId,label,instructions,sortOrder
+lighting-standard,switching,Fixture switches on and off correctly,,1
+lighting-standard,correct-zone,Fixture responds with the correct lighting zone,,2
+lighting-standard,stable-output,Fixture operates without flicker or unexpected shutdown,,3
+lighting-standard,physical-condition,"Fixture is secure, aligned and free from visible damage",,4
+exit-sign,normal-operation,Exit sign is illuminated during normal operation,,1
+exit-sign,legend-direction,Legend and directional arrow are correct and clearly visible,,2
+exit-sign,physical-condition,Exit sign is secure and free from visible damage,,3
+exit-sign,emergency-operation,Exit sign remains illuminated during the approved emergency-power test,Perform only when the project testing procedure permits an emergency-power test.,4
+scene-controller,button-response,Each button responds correctly,,1
+scene-controller,correct-scenes,Each programmed scene recalls the correct lighting state,Test every scene applicable to the space.,2
+scene-controller,correct-zone,The controller operates only the intended lighting zones,,3
+scene-controller,labels-indicators,Labels and indicator lights are correct and visible,,4
+wall-dimmer,on-off,Wall station switches the assigned lighting on and off,,1
+wall-dimmer,raise-lower,Raise and lower controls adjust the assigned lighting correctly,,2
+wall-dimmer,smooth-dimming,Lighting dims smoothly without flicker,,3
+wall-dimmer,correct-zone,The wall station controls only the intended lighting zones,,4
+photosensor,daylight-response,Photosensor responds to changing daylight conditions,Use the approved method for simulating or varying daylight.,1
+photosensor,correct-zone,Photosensor controls only the intended daylight zone,,2
+photosensor,setpoint-response,Lighting output responds at the intended photosensor setpoint,,3
+photosensor,stable-operation,Photosensor operation is stable without hunting or rapid cycling,,4
+control-standard,device-response,Control device responds correctly,,1
+control-standard,correct-load,The correct lighting loads respond,,2
+control-standard,labels-indicators,Labels and indicators are correct and visible,,3

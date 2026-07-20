@@ -1,0 +1,4909 @@
+{
+  "schemaVersion": 1,
+  "floor": "04",
+  "plan": {
+    "file": "/floors/floor-04-base.svg",
+    "viewBox": "0 0 792 612"
+  },
+  "spaces": [
+    {
+      "id": "04-400-elevator-lobby-002",
+      "sourceRow": 2,
+      "floor": "04",
+      "roomNo": "400",
+      "spaceType": "Elevator Lobby",
+      "displayName": "400 - Elevator Lobby",
+      "regionId": "region-043", 
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended matrix ceiling light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-c4-1-7-corridor-003",
+      "sourceRow": 3,
+      "floor": "04",
+      "roomNo": "C4.1-7",
+      "spaceType": "Corridor",
+      "displayName": "C4.1-7 - Corridor",
+      "regionId": "region-046",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 23,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 9,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-402-library-004",
+      "sourceRow": 4,
+      "floor": "04",
+      "roomNo": "402",
+      "spaceType": "Library",
+      "displayName": "402 - Library",
+      "regionId": "region-006",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 16,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed mount light near left wall",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "rectangular ceiling cove light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "AL1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "P3",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "blue crystal suspended light at right end of room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-419-large-collab-room-005",
+      "sourceRow": 5,
+      "floor": "04",
+      "roomNo": "419",
+      "spaceType": "Large Collab Room",
+      "displayName": "419 - Large Collab Room",
+      "regionId": "region-009",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear chandelier",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-439-multi-space-006",
+      "sourceRow": 6,
+      "floor": "04",
+      "roomNo": "439",
+      "spaceType": "Multi-Space",
+      "displayName": "439 - Multi-Space",
+      "regionId": "region-002",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light near wall",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "CP2",
+          "expectedQty": 11,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights around meeting room and middle of room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "H2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "track light near meeting room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 15,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-439a-meeting-room-007",
+      "sourceRow": 7,
+      "floor": "04",
+      "roomNo": "439A",
+      "spaceType": "Meeting Room",
+      "displayName": "439A - Meeting Room",
+      "regionId": "region-004",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P5",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "chain-hung dome light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-443-focus-008",
+      "sourceRow": 8,
+      "floor": "04",
+      "roomNo": "443",
+      "spaceType": "Focus",
+      "displayName": "443 - Focus",
+      "regionId": "region-017",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-441-focus-009",
+      "sourceRow": 9,
+      "floor": "04",
+      "roomNo": "441",
+      "spaceType": "Focus",
+      "displayName": "441 - Focus",
+      "regionId": "region-016",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-437-huddle-room-b-010",
+      "sourceRow": 10,
+      "floor": "04",
+      "roomNo": "437",
+      "spaceType": "Huddle Room (B)",
+      "displayName": "437 - Huddle Room (B)",
+      "regionId": "region-018",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-435-focus-011",
+      "sourceRow": 11,
+      "floor": "04",
+      "roomNo": "435",
+      "spaceType": "Focus",
+      "displayName": "435 - Focus",
+      "regionId": "region-096",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-433-focus-012",
+      "sourceRow": 12,
+      "floor": "04",
+      "roomNo": "433",
+      "spaceType": "Focus",
+      "displayName": "433 - Focus",
+      "regionId": "region-095",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-431-focus-013",
+      "sourceRow": 13,
+      "floor": "04",
+      "roomNo": "431",
+      "spaceType": "Focus",
+      "displayName": "431 - Focus",
+      "regionId": "region-094",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-429-focus-014",
+      "sourceRow": 14,
+      "floor": "04",
+      "roomNo": "429",
+      "spaceType": "Focus",
+      "displayName": "429 - Focus",
+      "regionId": "region-093",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-427-focus-015",
+      "sourceRow": 15,
+      "floor": "04",
+      "roomNo": "427",
+      "spaceType": "Focus",
+      "displayName": "427 - Focus",
+      "regionId": "region-092",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-425-focus-016",
+      "sourceRow": 16,
+      "floor": "04",
+      "roomNo": "425",
+      "spaceType": "Focus",
+      "displayName": "425 - Focus",
+      "regionId": "region-091",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-423-huddle-room-b-017",
+      "sourceRow": 17,
+      "floor": "04",
+      "roomNo": "423",
+      "spaceType": "Huddle Room (B)",
+      "displayName": "423 - Huddle Room (B)",
+      "regionId": "region-090",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-n-a-corridor-1-018",
+      "sourceRow": 18,
+      "floor": "04",
+      "roomNo": "N/A",
+      "spaceType": "Corridor",
+      "displayName": "N/A - Corridor-1",
+      "regionId": "region-037",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 9,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 11,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed mount lights on perpendicular walls",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-407-wellness-019",
+      "sourceRow": 19,
+      "floor": "04",
+      "roomNo": "407",
+      "spaceType": "Wellness",
+      "displayName": "407 - Wellness",
+      "regionId": "region-060",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear wall light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wall sconce light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-405-gender-neutral-restroom-020",
+      "sourceRow": 20,
+      "floor": "04",
+      "roomNo": "405",
+      "spaceType": "Gender Neutral Restroom",
+      "displayName": "405 - Gender Neutral Restroom",
+      "regionId": "region-027",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wall sconce light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-405a-shower-021",
+      "sourceRow": 21,
+      "floor": "04",
+      "roomNo": "405A",
+      "spaceType": "Shower",
+      "displayName": "405A - Shower",
+      "regionId": "region-047",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1W",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-411-men-s-restroom-022",
+      "sourceRow": 22,
+      "floor": "04",
+      "roomNo": "411",
+      "spaceType": "Men's Restroom",
+      "displayName": "411 - Men's Restroom",
+      "regionId": "region-055",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear wall light at room end",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wall sconce light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-409-women-s-restroom-023",
+      "sourceRow": 23,
+      "floor": "04",
+      "roomNo": "409",
+      "spaceType": "Women's Restroom",
+      "displayName": "409 - Women's Restroom",
+      "regionId": "region-030",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear wall light at room end",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wall sconce light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-413-janitor-024",
+      "sourceRow": 24,
+      "floor": "04",
+      "roomNo": "413",
+      "spaceType": "Janitor",
+      "displayName": "413 - Janitor",
+      "regionId": "region-033",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "occupancy sensor",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-415-mechanical-025",
+      "sourceRow": 25,
+      "floor": "04",
+      "roomNo": "415",
+      "spaceType": "Mechanical",
+      "displayName": "415 - Mechanical",
+      "regionId": "region-049",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "emergency switch",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-417a-comm-026",
+      "sourceRow": 26,
+      "floor": "04",
+      "roomNo": "417A",
+      "spaceType": "Comm",
+      "displayName": "417A - Comm",
+      "regionId": "region-029",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "emergency switch",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-417b-electrical-027",
+      "sourceRow": 27,
+      "floor": "04",
+      "roomNo": "417B",
+      "spaceType": "Electrical",
+      "displayName": "417B - Electrical",
+      "regionId": "region-052",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-471-storage-028",
+      "sourceRow": 28,
+      "floor": "04",
+      "roomNo": "471",
+      "spaceType": "Storage",
+      "displayName": "471 - Storage",
+      "regionId": "region-064",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-459-storage-029",
+      "sourceRow": 29,
+      "floor": "04",
+      "roomNo": "459",
+      "spaceType": "Storage",
+      "displayName": "459 - Storage",
+      "regionId": "region-025",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-445-huddle-room-030",
+      "sourceRow": 30,
+      "floor": "04",
+      "roomNo": "445",
+      "spaceType": "Huddle Room",
+      "displayName": "445 - Huddle Room",
+      "regionId": "region-007",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-447-huddle-room-031",
+      "sourceRow": 31,
+      "floor": "04",
+      "roomNo": "447",
+      "spaceType": "Huddle Room",
+      "displayName": "447 - Huddle Room",
+      "regionId": "region-008",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-457-multi-space-032",
+      "sourceRow": 32,
+      "floor": "04",
+      "roomNo": "457",
+      "spaceType": "Multi-Space",
+      "displayName": "457 - Multi-Space",
+      "regionId": "region-026",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light near adjacent walls",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "P2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "felt shell hanging lights at room end",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "L2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "uniform thin light at room end and adjacent wall",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-457a-focus-033",
+      "sourceRow": 33,
+      "floor": "04",
+      "roomNo": "457A",
+      "spaceType": "Focus",
+      "displayName": "457A - Focus",
+      "regionId": "region-062",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-461-focus-034",
+      "sourceRow": 34,
+      "floor": "04",
+      "roomNo": "461",
+      "spaceType": "Focus",
+      "displayName": "461 - Focus",
+      "regionId": "region-038",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-463-focus-035",
+      "sourceRow": 35,
+      "floor": "04",
+      "roomNo": "463",
+      "spaceType": "Focus",
+      "displayName": "463 - Focus",
+      "regionId": "region-058",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-467-conference-036",
+      "sourceRow": 36,
+      "floor": "04",
+      "roomNo": "467",
+      "spaceType": "Conference",
+      "displayName": "467 - Conference",
+      "regionId": "region-081",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL4",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear chandelier",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "rectangular ceiling cove light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-469-servery-037",
+      "sourceRow": 37,
+      "floor": "04",
+      "roomNo": "469",
+      "spaceType": "Servery",
+      "displayName": "469 - Servery",
+      "regionId": "region-089",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "2x4-ft LED panel",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-491-multi-space-038",
+      "sourceRow": 38,
+      "floor": "04",
+      "roomNo": "491",
+      "spaceType": "Multi-Space",
+      "displayName": "491 - Multi-Space",
+      "regionId": "region-084",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light near wall",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 15,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "CP2",
+          "expectedQty": 11,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights around co-working and middle of room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "H2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "track light near co-working room",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-491a-co-working-039",
+      "sourceRow": 39,
+      "floor": "04",
+      "roomNo": "491A",
+      "spaceType": "Co-Working",
+      "displayName": "491A - Co-Working",
+      "regionId": "region-086",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P5",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "chain-hung dome light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-473-focus-040",
+      "sourceRow": 40,
+      "floor": "04",
+      "roomNo": "473",
+      "spaceType": "Focus",
+      "displayName": "473 - Focus",
+      "regionId": "region-079",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-475-focus-041",
+      "sourceRow": 41,
+      "floor": "04",
+      "roomNo": "475",
+      "spaceType": "Focus",
+      "displayName": "475 - Focus",
+      "regionId": "region-078",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-477-collab-room-a-042",
+      "sourceRow": 42,
+      "floor": "04",
+      "roomNo": "477",
+      "spaceType": "Collab Room (A)",
+      "displayName": "477 - Collab Room (A)",
+      "regionId": "region-067",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-479-huddle-room-a-043",
+      "sourceRow": 43,
+      "floor": "04",
+      "roomNo": "479",
+      "spaceType": "Huddle Room (A)",
+      "displayName": "479 - Huddle Room (A)",
+      "regionId": "region-066",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-481-huddle-room-a-044",
+      "sourceRow": 44,
+      "floor": "04",
+      "roomNo": "481",
+      "spaceType": "Huddle Room (A)",
+      "displayName": "481 - Huddle Room (A)",
+      "regionId": "region-065",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-483-focus-045",
+      "sourceRow": 45,
+      "floor": "04",
+      "roomNo": "483",
+      "spaceType": "Focus",
+      "displayName": "483 - Focus",
+      "regionId": "region-077",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-485-focus-046",
+      "sourceRow": 46,
+      "floor": "04",
+      "roomNo": "485",
+      "spaceType": "Focus",
+      "displayName": "485 - Focus",
+      "regionId": "region-063",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-487-retreat-047",
+      "sourceRow": 47,
+      "floor": "04",
+      "roomNo": "487",
+      "spaceType": "Retreat",
+      "displayName": "487 - Retreat",
+      "regionId": "region-083",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 13,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "L2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "uniform thin lights near cafe support",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "J4",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "flex cove light perimeter above central area",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "CP1A",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights at dining area near window",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "P4",
+          "expectedQty": 16,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "felt shell hanging lights at central area",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-7",
+          "category": "lighting",
+          "deviceType": "P3",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "blue crystal suspended lights at wall dining area",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer; might be just 1",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-487a-cafe-support-048",
+      "sourceRow": 48,
+      "floor": "04",
+      "roomNo": "487A",
+      "spaceType": "Cafe Support",
+      "displayName": "487A - Cafe Support",
+      "regionId": "region-082",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A3",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "2x4-ft LED panel",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-480-it-storage-049",
+      "sourceRow": 49,
+      "floor": "04",
+      "roomNo": "480",
+      "spaceType": "IT Storage",
+      "displayName": "480 - IT Storage",
+      "regionId": "region-059",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "2x4-ft LED troffer",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "occupancy sensor",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-478-pantry-050",
+      "sourceRow": 50,
+      "floor": "04",
+      "roomNo": "478",
+      "spaceType": "Pantry",
+      "displayName": "478 - Pantry",
+      "regionId": "region-080",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer; might be outside pantry",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-408-men-s-restroom-051",
+      "sourceRow": 51,
+      "floor": "04",
+      "roomNo": "408",
+      "spaceType": "Men's Restroom",
+      "displayName": "408 - Men's Restroom",
+      "regionId": "region-031",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear wall light at room end",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wall sconce light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-410-women-s-restroom-052",
+      "sourceRow": 52,
+      "floor": "04",
+      "roomNo": "410",
+      "spaceType": "Women's Restroom",
+      "displayName": "410 - Women's Restroom",
+      "regionId": "region-054",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear wall light at room end",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "D3",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wall sconce light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-476-large-conference-room-053",
+      "sourceRow": 53,
+      "floor": "04",
+      "roomNo": "476",
+      "spaceType": "Large Conference Room",
+      "displayName": "476 - Large Conference Room",
+      "regionId": "region-088",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear chandelier",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "rectangular ceiling cove light; might be removed (no RFI found)",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-458-multi-space-054",
+      "sourceRow": 54,
+      "floor": "04",
+      "roomNo": "458",
+      "spaceType": "Multi-Space",
+      "displayName": "458 - Multi-Space",
+      "regionId": "region-085",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light near wall",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 15,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "CP2",
+          "expectedQty": 11,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights around co-working and middle of room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "H2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "track light near co-working room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "P7",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "fabric diffuser circular light at room end",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-4",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-458a-co-working-055",
+      "sourceRow": 55,
+      "floor": "04",
+      "roomNo": "458A",
+      "spaceType": "Co-Working",
+      "displayName": "458A - Co-Working",
+      "regionId": "region-087",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P5",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "chain-hung dome light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-474-huddle-room-a-056",
+      "sourceRow": 56,
+      "floor": "04",
+      "roomNo": "474",
+      "spaceType": "Huddle Room (A)",
+      "displayName": "474 - Huddle Room (A)",
+      "regionId": "region-076",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-472-focus-057",
+      "sourceRow": 57,
+      "floor": "04",
+      "roomNo": "472",
+      "spaceType": "Focus",
+      "displayName": "472 - Focus",
+      "regionId": "region-075",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-470-focus-58",
+      "sourceRow": 58,
+      "floor": "04",
+      "roomNo": "470",
+      "spaceType": "Focus",
+      "displayName": "470 - Focus",
+      "regionId": "region-074",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-468-focus-059",
+      "sourceRow": 59,
+      "floor": "04",
+      "roomNo": "468",
+      "spaceType": "Focus",
+      "displayName": "468 - Focus",
+      "regionId": "region-073",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-466-focus-060",
+      "sourceRow": 60,
+      "floor": "04",
+      "roomNo": "466",
+      "spaceType": "Focus",
+      "displayName": "466 - Focus",
+      "regionId": "region-072",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-464-focus-061",
+      "sourceRow": 61,
+      "floor": "04",
+      "roomNo": "464",
+      "spaceType": "Focus",
+      "displayName": "464 - Focus",
+      "regionId": "region-071",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-462-focus-062",
+      "sourceRow": 62,
+      "floor": "04",
+      "roomNo": "462",
+      "spaceType": "Focus",
+      "displayName": "462 - Focus",
+      "regionId": "region-070",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-460-huddle-room-b-063",
+      "sourceRow": 63,
+      "floor": "04",
+      "roomNo": "460",
+      "spaceType": "Huddle Room (B)",
+      "displayName": "460 - Huddle Room (B)",
+      "regionId": "region-069",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-456-collab-room-b-064",
+      "sourceRow": 64,
+      "floor": "04",
+      "roomNo": "456",
+      "spaceType": "Collab Room (B)",
+      "displayName": "456 - Collab Room (B)",
+      "regionId": "region-068",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-n-a-multi-space-065",
+      "sourceRow": 65,
+      "floor": "04",
+      "roomNo": "N/A",
+      "spaceType": "Multi-Space",
+      "displayName": "Multi-Space",
+      "regionId": "region-039",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light near wall",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "CP1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights in middle of room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "P7",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "felt shell hanging light at room end",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-450-focus-066",
+      "sourceRow": 66,
+      "floor": "04",
+      "roomNo": "450",
+      "spaceType": "Focus",
+      "displayName": "450 - Focus",
+      "regionId": "region-034",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-446-focus-067",
+      "sourceRow": 67,
+      "floor": "04",
+      "roomNo": "446",
+      "spaceType": "Focus",
+      "displayName": "446 - Focus",
+      "regionId": "region-022",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-442-focus-068",
+      "sourceRow": 68,
+      "floor": "04",
+      "roomNo": "442",
+      "spaceType": "Focus",
+      "displayName": "442 - Focus",
+      "regionId": "region-012",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-424-multi-space-069",
+      "sourceRow": 69,
+      "floor": "04",
+      "roomNo": "424",
+      "spaceType": "Multi-Space",
+      "displayName": "424 - Multi-Space",
+      "regionId": "region-003",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "PL1",
+          "expectedQty": 15,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "AL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light near wall",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "CP2",
+          "expectedQty": 11,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "microcylinder downlights around co-working and middle of room",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "H2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "track light near co-working room",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer; one seems to be in the middle of the room",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 4,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-424a-co-working-070",
+      "sourceRow": 70,
+      "floor": "04",
+      "roomNo": "424A",
+      "spaceType": "Co-Working",
+      "displayName": "424A - Co-Working",
+      "regionId": "region-005",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "P5",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "chain-hung dome light",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-440-focus-071",
+      "sourceRow": 71,
+      "floor": "04",
+      "roomNo": "440",
+      "spaceType": "Focus",
+      "displayName": "440 - Focus",
+      "regionId": "region-013",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-444-focus-072",
+      "sourceRow": 72,
+      "floor": "04",
+      "roomNo": "444",
+      "spaceType": "Focus",
+      "displayName": "444 - Focus",
+      "regionId": "region-023",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-436-focus-073",
+      "sourceRow": 73,
+      "floor": "04",
+      "roomNo": "436",
+      "spaceType": "Focus",
+      "displayName": "436 - Focus",
+      "regionId": "region-014",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-434-focus-074",
+      "sourceRow": 74,
+      "floor": "04",
+      "roomNo": "434",
+      "spaceType": "Focus",
+      "displayName": "434 - Focus",
+      "regionId": "region-015",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-432-collab-room-a-075",
+      "sourceRow": 75,
+      "floor": "04",
+      "roomNo": "432",
+      "spaceType": "Collab Room (A)",
+      "displayName": "432 - Collab Room (A)",
+      "regionId": "region-019",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-430-project-room-076",
+      "sourceRow": 76,
+      "floor": "04",
+      "roomNo": "430",
+      "spaceType": "Project Room",
+      "displayName": "430 - Project Room",
+      "regionId": "region-020",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-428-focus-077",
+      "sourceRow": 77,
+      "floor": "04",
+      "roomNo": "428",
+      "spaceType": "Focus",
+      "displayName": "428 - Focus",
+      "regionId": "region-011",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-426-focus-078",
+      "sourceRow": 78,
+      "floor": "04",
+      "roomNo": "426",
+      "spaceType": "Focus",
+      "displayName": "426 - Focus",
+      "regionId": "region-021",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-205",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-420-collab-room-b-079",
+      "sourceRow": 79,
+      "floor": "04",
+      "roomNo": "420",
+      "spaceType": "Collab Room (B)",
+      "displayName": "420 - Collab Room (B)",
+      "regionId": "region-010",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-418-collab-room-a-080",
+      "sourceRow": 80,
+      "floor": "04",
+      "roomNo": "418",
+      "spaceType": "Collab Room (A)",
+      "displayName": "418 - Collab Room (A)",
+      "regionId": "region-001",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-n-a-corridor-2-081",
+      "sourceRow": 81,
+      "floor": "04",
+      "roomNo": "N/A",
+      "spaceType": "Corridor",
+      "displayName": "Corridor-2",
+      "status": "not_inspected",
+      "regionId": "region-061",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 7,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "J2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed mount lights on perpendicular walls",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 7,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-448-storage-082",
+      "sourceRow": 82,
+      "floor": "04",
+      "roomNo": "448",
+      "spaceType": "Storage",
+      "displayName": "448 - Storage",
+      "regionId": "region-035",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-452-copy-print-083",
+      "sourceRow": 83,
+      "floor": "04",
+      "roomNo": "452",
+      "spaceType": "Copy/Print",
+      "displayName": "452 - Copy/Print",
+      "regionId": "region-056",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "2x2-ft LED troffer",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-438-storage-084",
+      "sourceRow": 84,
+      "floor": "04",
+      "roomNo": "438",
+      "spaceType": "Storage",
+      "displayName": "438 - Storage",
+      "regionId": "region-024",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S2b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 2-button dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-n-a-electrical-085",
+      "sourceRow": 85,
+      "floor": "04",
+      "roomNo": "N/A",
+      "spaceType": "Electrical",
+      "displayName": "Electrical",
+      "regionId": "region-051",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "emergency switch",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-n-a-comm-086",
+      "sourceRow": 86,
+      "floor": "04",
+      "roomNo": "N/A",
+      "spaceType": "Comm",
+      "displayName": "Comm",
+      "regionId": "region-028",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-414-mechanical-087",
+      "sourceRow": 87,
+      "floor": "04",
+      "roomNo": "414",
+      "spaceType": "Mechanical",
+      "displayName": "414 - Mechanical",
+      "regionId": "region-040",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Se",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "emergency switch",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-412-janitor-088",
+      "sourceRow": 88,
+      "floor": "04",
+      "roomNo": "412",
+      "spaceType": "Janitor",
+      "displayName": "412 - Janitor",
+      "regionId": "region-053",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "T1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Soc",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "occupancy sensor",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-404-service-point-area-089",
+      "sourceRow": 89,
+      "floor": "04",
+      "roomNo": "404",
+      "spaceType": "Service Point Area",
+      "displayName": "404 - Service Point Area",
+      "regionId": "region-036",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "AL2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "recessed linear light",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-406-technicians-090",
+      "sourceRow": 90,
+      "floor": "04",
+      "roomNo": "406",
+      "spaceType": "Technicians",
+      "displayName": "406 - Technicians",
+      "regionId": "region-048",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "A2",
+          "expectedQty": 5,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "2x2-ft LED troffer",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "04-c4-1-corridor-split-2-094",
+      "sourceRow": 94,
+      "floor": "04",
+      "roomNo": "C4.1",
+      "spaceType": "Corridor Split-2",
+      "displayName": "C4.1 - Corridor Split-2",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "WALC",
+          "expectedQty": null,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "floor": "03",
+  "plan": {
+    "file": "/floors/floor-03-base.svg",
+    "viewBox": "0 0 792 612"
+  },
+  "spaces": [
+    {
+      "id": "03-304-conference-room-009",
+      "sourceRow": 9,
+      "floor": "03",
+      "roomNo": "304",
+      "spaceType": "Conference Room",
+      "displayName": "304 - Conference Room",
+      "regionId": "region-002",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 10,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear chandelier",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "Sc3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless 3-scene controller",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-305-multifunctional-breakout-010",
+      "sourceRow": 10,
+      "floor": "03",
+      "roomNo": "305",
+      "spaceType": "Multifunctional Breakout",
+      "displayName": "305 - Multifunctional Breakout",
+      "regionId": "region-004",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "L2",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "uniform thin light on adjacent walls",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "L1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "uniform thin light rectangle on ceiling",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "C1",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-4",
+          "category": "lighting",
+          "deviceType": "J3",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "linear ceiling cove light offset from rectangle",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-5",
+          "category": "lighting",
+          "deviceType": "P4",
+          "expectedQty": 12,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "felt shell hanging light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-6",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall-station dimmer",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 3,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-3",
+          "category": "control",
+          "deviceType": "SCPPH-1500",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "photosensor",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "03-311-multifunctional-suite-1-011",
+      "sourceRow": 11,
+      "floor": "03",
+      "roomNo": "311",
+      "spaceType": "Multifunctional Suite 1",
+      "displayName": "311 - Multifunctional Suite 1",
+      "regionId": "region-006",
+      "status": "not_inspected",
+      "polygon": [],
+      "daylightZone": null,
+      "emergencyFixtures": null,
+      "testedBy": "",
+      "testedAt": null,
+      "notes": "",
+      "items": [
+        {
+          "id": "lighting-1",
+          "category": "lighting",
+          "deviceType": "C2",
+          "expectedQty": 6,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "4-in LED downlight",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-2",
+          "category": "lighting",
+          "deviceType": "PL5",
+          "expectedQty": 8,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "suspended ceiling louvre light",
+          "issueIds": []
+        },
+        {
+          "id": "lighting-3",
+          "category": "lighting",
+          "deviceType": "X1",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "exit sign",
+          "issueIds": []
+        },
+        {
+          "id": "control-1",
+          "category": "control",
+          "deviceType": "DT-305",
+          "expectedQty": 2,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "",
+          "issueIds": []
+        },
+        {
+          "id": "control-2",
+          "category": "control",
+          "deviceType": "S4b",
+          "expectedQty": 1,
+          "observedQty": null,
+          "result": "not_checked",
+          "notes": "wireless wall-station dimmer",
+          "issueIds": []
+        }
+      ],
+      "issueIds": []
+    }
+  ]
+}

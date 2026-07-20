@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "bootstrap:data": "node scripts/export-json-to-csv.mjs",
+    "build:data": "node scripts/build-spaces-json.mjs"
   },
   "dependencies": {
     "dexie": "^4.4.4",
