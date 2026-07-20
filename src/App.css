@@ -1482,3 +1482,57 @@ button:disabled {
     scrollbar-width: thin;
   }
 }
+
+.testing-device-group {
+  margin-bottom: 24px;
+  padding: 13px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.testing-device-group .fixture-reference-note {
+  margin-bottom: 12px;
+  background: #ffffff;
+}
+
+.testing-check-list {
+  display: grid;
+  gap: 9px;
+}
+
+.testing-check-card {
+  padding: 12px;
+  border: 1px solid #dbe3ee;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.testing-check-card.result-pass {
+  border-color: #bbf7d0;
+  background: #fbfffc;
+}
+
+.testing-check-card.result-issue {
+  border-color: #fecaca;
+  background: #fffafa;
+}
+
+.testing-check-card.result-not_applicable {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.testing-check-title strong {
+  display: block;
+  color: #1e3b34;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.testing-check-title p {
+  margin: 4px 0 0;
+  color: #648b71;
+  font-size: 11px;
+  line-height: 1.45;
+}

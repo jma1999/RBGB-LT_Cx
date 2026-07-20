@@ -13,6 +13,22 @@ export type ChecklistResult =
   | "issue"
   | "not_applicable";
 
+export interface TestDefinition {
+  id: string;
+  label: string;
+  instructions?: string;
+}
+
+export interface TestDraftResult {
+  checklistItemId: string;
+  testId: string;
+  deviceType: string;
+  category: string;
+  testLabel: string;
+  result: ChecklistResult;
+  notes: string;
+}
+
 export interface ChecklistItem {
   id: string;
   category: "lighting" | "control" | string;
@@ -24,6 +40,8 @@ export interface ChecklistItem {
   notes: string;
   /** Field observation saved to Google Sheets. */
   inspectionNotes?: string;
+  /** Functional tests configured in spaces.json. */
+  tests?: TestDefinition[];
   issueIds: string[];
 }
 

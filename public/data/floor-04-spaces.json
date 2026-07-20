@@ -1656,10 +1656,10 @@
           "id": "lighting-5",
           "category": "lighting",
           "deviceType": "L2",
-          "expectedQty": 5,
+          "expectedQty": 6,
           "observedQty": null,
           "result": "not_checked",
-          "notes": "uniform thin light at room end",
+          "notes": "uniform thin light at room end and adjacent wall",
           "issueIds": []
         },
         {

@@ -66,6 +66,20 @@ export interface SheetChecklistResult {
   revision: number;
 }
 
+export interface SheetTestResult {
+  floor: string;
+  spaceId: string;
+  checklistItemId: string;
+  testId: string;
+  deviceType: string;
+  testLabel: string;
+  result: ChecklistResult;
+  notes: string;
+  updatedBy: string;
+  updatedAt: string;
+  revision: number;
+}
+
 export type IssueStatus = "open" | "resolved";
 
 export interface SheetIssue {
@@ -580,6 +594,28 @@ export async function loadFloorChecklistResults(
     }));
 }
 
+export async function loadFloorTestResults(
+  floor: string,
+): Promise<SheetTestResult[]> {
+  const response = await getValues("TestResults!A2:K");
+
+  return (response.values ?? [])
+    .filter((row) => stringValue(row[0]) === floor)
+    .map((row) => ({
+      floor: stringValue(row[0]),
+      spaceId: stringValue(row[1]),
+      checklistItemId: stringValue(row[2]),
+      testId: stringValue(row[3]),
+      deviceType: stringValue(row[4]),
+      testLabel: stringValue(row[5]),
+      result: checklistResultValue(row[6]),
+      notes: stringValue(row[7]),
+      updatedBy: stringValue(row[8]),
+      updatedAt: stringValue(row[9]),
+      revision: numberValue(row[10]),
+    }));
+}
+
 export async function saveChecklistResults(
   inputResults: Array<
     Omit<SheetChecklistResult, "updatedAt" | "revision">
@@ -644,6 +680,86 @@ export async function saveChecklistResults(
   const firstResult = savedResults[0];
   await appendActivity({
     eventType: "inspection_saved",
+    floor: firstResult.floor,
+    regionId: "",
+    spaceId: firstResult.spaceId,
+    user: firstResult.updatedBy,
+    payload: savedResults,
+  });
+
+  return savedResults;
+}
+
+export async function saveTestResults(
+  inputResults: Array<
+    Omit<SheetTestResult, "updatedAt" | "revision">
+  >,
+): Promise<SheetTestResult[]> {
+  if (inputResults.length === 0) {
+    return [];
+  }
+
+  const response = await getValues("TestResults!A2:K");
+  const rows = response.values ?? [];
+  const now = new Date().toISOString();
+
+  const updates: BatchUpdateData[] = [];
+  const appends: Array<Array<string | number | boolean>> = [];
+  const savedResults: SheetTestResult[] = [];
+
+  for (const input of inputResults) {
+    const existingIndex = rows.findIndex(
+      (row) =>
+        stringValue(row[0]) === input.floor &&
+        stringValue(row[1]) === input.spaceId &&
+        stringValue(row[2]) === input.checklistItemId &&
+        stringValue(row[3]) === input.testId,
+    );
+
+    const saved: SheetTestResult = {
+      ...input,
+      updatedAt: now,
+      revision:
+        existingIndex >= 0
+          ? numberValue(rows[existingIndex][10]) + 1
+          : 1,
+    };
+
+    const values: Array<string | number | boolean> = [
+      saved.floor,
+      saved.spaceId,
+      saved.checklistItemId,
+      saved.testId,
+      saved.deviceType,
+      saved.testLabel,
+      saved.result,
+      saved.notes,
+      saved.updatedBy,
+      saved.updatedAt,
+      saved.revision,
+    ];
+
+    if (existingIndex >= 0) {
+      const sheetRow = existingIndex + 2;
+
+      updates.push({
+        range: `TestResults!A${sheetRow}:K${sheetRow}`,
+        values: [values],
+      });
+    } else {
+      appends.push(values);
+    }
+
+    savedResults.push(saved);
+  }
+
+  await batchUpdateValues(updates);
+  await appendValues("TestResults!A:K", appends);
+
+  const firstResult = savedResults[0];
+
+  await appendActivity({
+    eventType: "testing_saved",
     floor: firstResult.floor,
     regionId: "",
     spaceId: firstResult.spaceId,
