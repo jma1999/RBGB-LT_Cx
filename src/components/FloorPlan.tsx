@@ -1196,7 +1196,7 @@ export default function FloorPlan({
           centerOnInit
           limitToBounds={false}
           doubleClick={{ disabled: true }}
-          wheel={{ step: 0.025 }}
+          wheel={{ step: 0.005 }}
           panning={{ velocityDisabled: true }}
           onPanningStart={() => {
             didPanRef.current = false;
