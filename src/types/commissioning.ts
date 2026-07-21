@@ -38,6 +38,7 @@ export interface ChecklistItem {
   result: ChecklistResult;
   /** Read-only fixture/control description prepared in spaces.json. */
   notes: string;
+  locationNotes?: string;
   /** Field observation saved to Google Sheets. */
   inspectionNotes?: string;
   /** Functional tests configured in spaces.json. */

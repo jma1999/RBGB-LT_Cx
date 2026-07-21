@@ -75,6 +75,17 @@ function required(value, label) {
   return text;
 }
 
+function normalizeFloor(value, label) {
+  const raw = required(value, label);
+  const number = Number(raw);
+
+  if (!Number.isInteger(number)) {
+    throw new Error(`${label} must be a valid floor number.`);
+  }
+
+  return String(number).padStart(2, "0");
+}
+
 function nullableText(value) {
   const text = String(value ?? "").trim();
   return text || null;
@@ -248,7 +259,7 @@ const spacesById = new Map();
 const spaceIdsByFloor = new Map();
 
 for (const row of spacesRows) {
-  const floor = required(row.floor, "spaces.csv → floor");
+  const floor = normalizeFloor(row.floor, "floor");
   const spaceId = required(row.spaceId, "spaces.csv → spaceId");
   const config = FLOOR_CONFIG[floor];
 
@@ -304,9 +315,9 @@ for (const row of spacesRows) {
 const seenItemKeys = new Set();
 
 for (const row of itemRows) {
-  const floor = required(
+  const floor = normalizeFloor(
     row.floor,
-    "space-items.csv → floor",
+    "floor",
   );
   const spaceId = required(
     row.spaceId,
@@ -384,9 +395,8 @@ for (const row of itemRows) {
     expectedQty,
     observedQty: null,
     result: "not_checked",
-    notes:
-      String(row.itemNotesOverride ?? "").trim() ||
-      catalog.description,
+    notes: catalog.description,
+    locationNotes: String(row.locationNotes ?? "").trim(),
     tests: structuredClone(tests),
     issueIds: [],
   });

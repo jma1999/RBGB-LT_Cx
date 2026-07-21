@@ -299,10 +299,17 @@ export default function TestingPanel({
               <span>{tests.length} tests</span>
             </div>
 
-            {item.notes.trim() && (
+            {item.notes && (
               <div className="fixture-reference-note">
-                <span>Fixture reference</span>
+                <span>Fixture description</span>
                 <p>{item.notes}</p>
+              </div>
+            )}
+
+            {item.locationNotes && (
+              <div className="fixture-location-note">
+                <span>Where to find it</span>
+                <p>{item.locationNotes}</p>
               </div>
             )}
 
