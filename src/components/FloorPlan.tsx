@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   TransformComponent,
   TransformWrapper,
@@ -84,6 +84,35 @@ const STATUS_STYLES: Record<
     fill: "#f1f5f9",
     stroke: "#64748b",
     label: "Not applicable",
+  },
+};
+
+const TESTING_STATUS_STYLES: typeof STATUS_STYLES = {
+  ...STATUS_STYLES,
+
+  not_inspected: {
+    ...STATUS_STYLES.not_inspected,
+    label: "Not tested",
+  },
+
+  in_progress: {
+    ...STATUS_STYLES.in_progress,
+    label: "Testing in progress",
+  },
+
+  passed: {
+    ...STATUS_STYLES.passed,
+    label: "Testing passed",
+  },
+
+  issue: {
+    ...STATUS_STYLES.issue,
+    label: "Testing issue",
+  },
+
+  not_applicable: {
+    ...STATUS_STYLES.not_applicable,
+    label: "No tests / N/A",
   },
 };
 
@@ -202,7 +231,7 @@ function applyInspectionData(
         };
       });
 
-      const spaceIssues = issues.filter((issue) => issue.spaceId === space.id);
+      const checklistIssues = issues.filter((issue) => issue.spaceId === space.id && !issue.checklistItemId.startsWith("testing::"));
       const spaceResults = checklistResults
         .filter((result) => result.spaceId === space.id)
         .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
@@ -211,7 +240,7 @@ function applyInspectionData(
       return {
         ...space,
         items,
-        status: calculateSpaceStatus(items, spaceIssues),
+        status: calculateSpaceStatus(items, checklistIssues),
         testedBy: latestResult?.updatedBy ?? space.testedBy,
         testedAt: latestResult?.updatedAt ?? space.testedAt,
       };
@@ -292,6 +321,86 @@ function mergeTestResults(
   return merged;
 }
 
+function calculateTestingStatus(
+  space: CommissioningSpace,
+  results: SheetTestResult[],
+  issues: SheetIssue[],
+): SpaceStatus {
+  const configuredTestKeys = space.items.flatMap((item) =>
+    (item.tests ?? []).map(
+      (test) => `${item.id}::${test.id}`,
+    ),
+  );
+
+  if (configuredTestKeys.length === 0) {
+    return "not_applicable";
+  }
+
+  const resultsByKey = new Map(
+    results
+      .filter((result) => result.spaceId === space.id)
+      .map((result) => [
+        `${result.checklistItemId}::${result.testId}`,
+        result,
+      ]),
+  );
+
+  const relevantResults = configuredTestKeys.map((key) =>
+    resultsByKey.get(key),
+  );
+
+  const hasOpenTestingIssue = issues.some(
+    (issue) =>
+      issue.spaceId === space.id &&
+      issue.status === "open" &&
+      issue.checklistItemId.startsWith("testing::"),
+  );
+
+  if (
+    hasOpenTestingIssue ||
+    relevantResults.some(
+      (result) => result?.result === "issue",
+    )
+  ) {
+    return "issue";
+  }
+
+  const completedResults = relevantResults.filter(
+    (result) =>
+      result && result.result !== "not_checked",
+  );
+
+  if (completedResults.length === 0) {
+    return "not_inspected";
+  }
+
+  if (
+    completedResults.length < configuredTestKeys.length
+  ) {
+    return "in_progress";
+  }
+
+  if (
+    relevantResults.every(
+      (result) => result?.result === "not_applicable",
+    )
+  ) {
+    return "not_applicable";
+  }
+
+  if (
+    relevantResults.every(
+      (result) =>
+        result?.result === "pass" ||
+        result?.result === "not_applicable",
+    )
+  ) {
+    return "passed";
+  }
+
+  return "in_progress";
+}
+
 export default function FloorPlan({
   floor,
   googleUser,
@@ -300,7 +409,7 @@ export default function FloorPlan({
   const floorDataUrl = `/data/floor-${floor}-spaces.json`;
   const regionDataUrl = `/data/floor-${floor}-regions.json`;
   const assignmentStorageKey =
-    `lighting-cx-floor-${floor}-region-assignments-v5-cache`;
+    `lighting-cx-floor-${floor}-region-assignments-v6-cache`;
 
   const [floorData, setFloorData] = useState<FloorData | null>(null);
   const [regionData, setRegionData] = useState<RegionData | null>(null);
@@ -317,6 +426,7 @@ export default function FloorPlan({
   const [hoveredRegionId, setHoveredRegionId] = useState<string | null>(
     null,
   );
+  const didPanRef = useRef(false);
   const [loadError, setLoadError] = useState("");
   const [syncStatus, setSyncStatus] = useState<SyncStatus>("disconnected");
   const [syncMessage, setSyncMessage] = useState(
@@ -325,6 +435,10 @@ export default function FloorPlan({
   const [comments, setComments] = useState<SheetComment[]>([]);
   const [commentText, setCommentText] = useState("");
   const [commentsLoading, setCommentsLoading] = useState(false);
+  const activeStatusStyles =
+    mode === "testing"
+      ? TESTING_STATUS_STYLES
+      : STATUS_STYLES;
 
   useEffect(() => {
     async function loadData(): Promise<void> {
@@ -534,6 +648,23 @@ export default function FloorPlan({
     });
   }, [assignedSpaceIds, floorData, selectedRegion]);
 
+  const testingStatusBySpaceId = useMemo(() => {
+    const statusMap = new Map<string, SpaceStatus>();
+
+    for (const space of floorData?.spaces ?? []) {
+      statusMap.set(
+        space.id,
+        calculateTestingStatus(
+          space,
+          testResults,
+          sheetIssues,
+        ),
+      );
+    }
+
+    return statusMap;
+  }, [floorData, testResults, sheetIssues]);
+
   const assignedCount =
     regionData?.regions.filter((region) => region.assignedSpaceId).length ?? 0;
 
@@ -541,8 +672,20 @@ export default function FloorPlan({
     ? floorData.spaces.length - assignedSpaceIds.size
     : 0;
 
-  const selectedSpaceIssues = selectedAssignedSpace
-    ? sheetIssues.filter((issue) => issue.spaceId === selectedAssignedSpace.id)
+  const selectedChecklistIssues = selectedAssignedSpace
+    ? sheetIssues.filter(
+        (issue) =>
+          issue.spaceId === selectedAssignedSpace.id &&
+          !issue.checklistItemId.startsWith("testing::"),
+      )
+    : [];
+
+  const selectedTestingIssues = selectedAssignedSpace
+    ? sheetIssues.filter(
+        (issue) =>
+          issue.spaceId === selectedAssignedSpace.id &&
+          issue.checklistItemId.startsWith("testing::"),
+      )
     : [];
   
   const selectedSpaceTestResults = selectedAssignedSpace
@@ -1053,8 +1196,19 @@ export default function FloorPlan({
           centerOnInit
           limitToBounds={false}
           doubleClick={{ disabled: true }}
-          wheel={{ step: 0.12 }}
-          panning={{ excluded: ["region-shape"] }}
+          wheel={{ step: 0.025 }}
+          panning={{ velocityDisabled: true }}
+          onPanningStart={() => {
+            didPanRef.current = false;
+          }}
+          onPanning={() => {
+            didPanRef.current = true;
+          }}
+          onPanningStop={() => {
+            window.setTimeout(() => {
+              didPanRef.current = false;
+            }, 0);
+          }}
         >
           {({ zoomIn, zoomOut, resetTransform }) => (
             <>
@@ -1142,8 +1296,16 @@ export default function FloorPlan({
                     const assignedSpace = region.assignedSpaceId
                       ? spacesById.get(region.assignedSpaceId)
                       : undefined;
-                    const visualStatus = assignedSpace?.status ?? "unassigned";
-                    const style = STATUS_STYLES[visualStatus];
+                    const visualStatus:
+                      | SpaceStatus
+                      | "unassigned" = !assignedSpace
+                      ? "unassigned"
+                      : mode === "testing"
+                        ? testingStatusBySpaceId.get(
+                            assignedSpace.id,
+                          ) ?? "not_inspected"
+                        : assignedSpace.status;
+                    const style = activeStatusStyles[visualStatus];
                     const isSelected = selectedRegionId === region.id;
                     const isHovered = hoveredRegionId === region.id;
                     const [labelX, labelY] = region.centroid;
@@ -1168,6 +1330,11 @@ export default function FloorPlan({
                           onPointerLeave={() => setHoveredRegionId(null)}
                           onClick={(event) => {
                             event.stopPropagation();
+
+                            if (didPanRef.current) {
+                              return;
+                            }
+
                             selectRegion(region);
                           }}
                         >
@@ -1197,15 +1364,15 @@ export default function FloorPlan({
         </TransformWrapper>
 
         <div className="status-legend">
-          {(Object.keys(STATUS_STYLES) as Array<
-            keyof typeof STATUS_STYLES
+          {(Object.keys(activeStatusStyles) as Array<
+            keyof typeof activeStatusStyles
           >).map((status) => (
             <div className="legend-item" key={status}>
               <span
                 className="legend-swatch"
                 style={{
-                  background: STATUS_STYLES[status].fill,
-                  borderColor: STATUS_STYLES[status].stroke,
+                  background: activeStatusStyles[status].fill,
+                  borderColor: activeStatusStyles[status].stroke,
                 }}
               />
               <span>{STATUS_STYLES[status].label}</span>
@@ -1259,7 +1426,7 @@ export default function FloorPlan({
           <InspectionPanel
             space={selectedAssignedSpace}
             region={selectedRegion}
-            issues={selectedSpaceIssues}
+            issues={selectedChecklistIssues}
             comments={comments}
             commentsLoading={commentsLoading}
             googleConnected={Boolean(googleUser)}
@@ -1280,7 +1447,7 @@ export default function FloorPlan({
             space={selectedAssignedSpace}
             region={selectedRegion}
             savedResults={selectedSpaceTestResults}
-            issues={selectedSpaceIssues}
+            issues={selectedTestingIssues}
             googleConnected={Boolean(googleUser)}
             saving={syncStatus === "saving"}
             onSave={(results, descriptions) =>

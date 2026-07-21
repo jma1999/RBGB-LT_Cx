@@ -1,24 +1,39 @@
-﻿templateKey,testId,label,instructions,sortOrder
-lighting-standard,switching,Fixture switches on and off correctly,,1
-lighting-standard,correct-zone,Fixture responds with the correct lighting zone,,2
-lighting-standard,stable-output,Fixture operates without flicker or unexpected shutdown,,3
-lighting-standard,physical-condition,"Fixture is secure, aligned and free from visible damage",,4
-exit-sign,normal-operation,Exit sign is illuminated during normal operation,,1
-exit-sign,legend-direction,Legend and directional arrow are correct and clearly visible,,2
+templateKey,testId,label,instructions,sortOrder
+lighting-standard,switching,Fixture switches on and off correctly,Operate the assigned control and verify every fixture in this item turns on and off without an abnormal delay.,1
+lighting-standard,stable-output,Fixture operates without flicker or unexpected shutdown,"Observe the fixture at full output and after control changes. Note delayed starting, flicker, pulsing, intermittent operation or abnormal driver noise.",2
+lighting-standard,visual-consistency,Light output and color appear consistent across the fixture group,"Check for dead LEDs, dark sections, bright spots or visibly inconsistent color within fixtures of the same type.",3
+lighting-standard,physical-condition,"Fixture is secure, aligned and free from visible damage","Inspect the housing, trim, lens, diffuser and visible accessories for damage, looseness, contamination or missing parts.",4
+exit-sign,normal-operation,Exit sign is illuminated during normal operation,"Verify the complete legend is illuminated evenly without dark letters, flicker or intermittent operation.",1
+exit-sign,legend-direction,Legend and directional arrow are correct and clearly visible,Confirm the required face configuration and arrow direction match the egress drawings.,2
 exit-sign,physical-condition,Exit sign is secure and free from visible damage,,3
-exit-sign,emergency-operation,Exit sign remains illuminated during the approved emergency-power test,Perform only when the project testing procedure permits an emergency-power test.,4
-scene-controller,button-response,Each button responds correctly,,1
-scene-controller,correct-scenes,Each programmed scene recalls the correct lighting state,Test every scene applicable to the space.,2
-scene-controller,correct-zone,The controller operates only the intended lighting zones,,3
-scene-controller,labels-indicators,Labels and indicator lights are correct and visible,,4
-wall-dimmer,on-off,Wall station switches the assigned lighting on and off,,1
-wall-dimmer,raise-lower,Raise and lower controls adjust the assigned lighting correctly,,2
-wall-dimmer,smooth-dimming,Lighting dims smoothly without flicker,,3
-wall-dimmer,correct-zone,The wall station controls only the intended lighting zones,,4
-photosensor,daylight-response,Photosensor responds to changing daylight conditions,Use the approved method for simulating or varying daylight.,1
-photosensor,correct-zone,Photosensor controls only the intended daylight zone,,2
-photosensor,setpoint-response,Lighting output responds at the intended photosensor setpoint,,3
-photosensor,stable-operation,Photosensor operation is stable without hunting or rapid cycling,,4
-control-standard,device-response,Control device responds correctly,,1
-control-standard,correct-load,The correct lighting loads respond,,2
-control-standard,labels-indicators,Labels and indicators are correct and visible,,3
+scene-3-controller,button-response,Each button responds correctly,,1
+scene-3-controller,correct-scenes,Each programmed scene recalls the correct lighting state,Test every scene applicable to the space.,2
+scene-3-controller,correct-zone,The controller operates only the intended lighting zones,,3
+scene-3-controller,labels-indicators,Labels and indicator lights are correct and visible,,4
+scene-3-controller,scene-transition,Scene transitions are smooth and repeatable,"Cycle through the scenes more than once and check for delayed response, flicker, missed fixtures or inconsistent levels.",5
+wall-2-dimmer,on-off,Wall station switches the assigned lighting on and off,,1
+wall-2-dimmer,raise-lower,Raise and lower controls adjust the assigned lighting correctly,,2
+wall-2-dimmer,smooth-dimming,Lighting dims smoothly without flicker,,3
+wall-2-dimmer,correct-zone,The wall station controls only the intended lighting zones,,4
+wallstation-4-button,on-command,ON button turns the assigned lighting zone on,Press ON once and verify the correct zone turns on to the approved level.,1
+wallstation-4-button,off-command,OFF button turns the assigned lighting zone off,Press OFF once and verify the correct zone turns off.,2
+wallstation-4-button,raise-command,Raise button increases the assigned lighting level smoothly,Press and hold RAISE and verify the correct zone increases smoothly without affecting unrelated zones.,3
+wallstation-4-button,lower-command,Lower button decreases the assigned lighting level smoothly,Press and hold LOWER and verify the correct zone decreases smoothly to the programmed minimum.,4
+wallstation-4-button,correct-load,The wallstation controls only its assigned fixtures,Operate all buttons and confirm the intended fixtures respond while adjacent zones remain unchanged.,5
+wallstation-4-button,labeling-condition,"Button engraving, wallplate and mounting are correct and undamaged","Verify button labels match their programmed function and the station is secure, level and free from damage.",6
+photosensor,occupancy-response,Combined sensor detects occupancy throughout its intended area,,1
+photosensor,daylight-response,Electric lighting decreases as daylight increases and increases as daylight decreases,,2
+photosensor,correct-zone,Photosensor controls only the intended daylight zone,,3
+photosensor,override-reset,Manual override and return to automatic control operate correctly,"Change the zone from the associated wallstation, then verify automatic daylight control resumes at the approved vacancy, schedule or reset event.",4
+control-standard,device-response,Lighting fixtures in the zone respond to occupancy/motion,,1
+control-standard,correct-program,Lighting fixtures in the zone switch off when presence/motion absent,,2
+control-standard,indicator-response,Labels and indicator lights operate correctly,,3
+occupancy-dual-tech,detection-indicators,PIR and ultrasonic detection indicators respond to movement,,1
+occupancy-dual-tech,coverage,Sensor detects occupancy throughout the intended coverage area,,2
+occupancy-dual-tech,occupied-response,Lighting follows the approved occupied sequence,"Enter the space and verify automatic-on, partial-on or manual-on behavior matches the approved sequence of operation.",3
+occupancy-dual-tech,vacancy-response,Lighting follows the approved vacancy sequence after the programmed delay,"Leave the coverage area or remain still, then verify the zone dims or switches off after the configured delay.",4
+occupancy-dual-tech,manual-override,Manual controls interact correctly with occupancy control,Operate the associated wallstation and verify manual on/off or level changes persist and reset according to the approved sequence.,5
+occupancy-wall-switch,manual-on,Manual-on button operates the assigned lighting load,Press the wall-switch sensor button and verify the correct lighting load turns on.,1
+occupancy-wall-switch,occupied-hold,Detected occupancy keeps the assigned load on,Move within the intended coverage area and verify the load remains on while occupancy is present.,2
+occupancy-wall-switch,vacancy-off,The assigned load turns off after vacancy and the programmed delay,,3
+occupancy-wall-switch,condition,"Sensor, lens, button and wallplate are secure and undamaged","Inspect the device for damage, loose mounting, obstructed lens or incorrect labeling.",4

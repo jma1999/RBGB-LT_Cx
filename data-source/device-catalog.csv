@@ -17,8 +17,8 @@ D1,lighting,wall sconce light,lighting-standard
 D2,lighting,glass sconce lights,lighting-standard
 D3,lighting,sconce light,lighting-standard
 D4,lighting,folded LED sconce light,lighting-standard
-DT-205,control,Wattstopper occupancy sensor,control-standard
-DT-305,control,Wattstopper occupancy sensor,control-standard
+DT-205,control,Wattstopper occupancy sensor,occupancy-dual-tech
+DT-305,control,Wattstopper occupancy sensor,occupancy-dual-tech
 H2,lighting,track light,lighting-standard
 J1,lighting,linear perimeter light,lighting-standard
 J2,lighting,recessed mount light,lighting-standard
@@ -41,11 +41,11 @@ PL2,lighting,suspended linear light,lighting-standard
 PL3,lighting,linear chandelier,lighting-standard
 PL4,lighting,linear chandelier,lighting-standard
 PL5,lighting,suspended ceiling louvre light,lighting-standard
-S2b,control,wireless 2-button switch dimmer,control-standard
-S4b,control,wireless wall-station dimmer,wall-dimmer
-Sc3,control,wireless 3-scene controller,scene-controller
+S2b,control,wireless 2-button switch dimmer,wall-2-dimmer
+S4b,control,wireless wall-station dimmer,wallstation-4-button
+Sc3,control,wireless 3-scene controller,scene-3-controller
 SCPPH-1500,control,photosensor,photosensor
 Se,control,emergency switch,control-standard
-Soc,control,DSW-301 occupancy sensor,control-standard
+Soc,control,DSW-301 occupancy sensor,occupancy-wall-switch
 T1,lighting,suspended linear light,lighting-standard
 X1,lighting,exit sign,exit-sign
